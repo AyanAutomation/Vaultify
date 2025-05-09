@@ -24,7 +24,7 @@ public class Login_locaters {
 	private WebElement  OTP_page_Title;
 	@FindBy(xpath="//input")
 	public List <WebElement> inputs;
-	@FindBy(xpath="button")
+	@FindBy(xpath="(//button)[1]")
 	private WebElement  verify_otp_BUtton;
 	@FindBy(xpath="//*[@class='h-full']//button")
 	private WebElement  role_dropdown;

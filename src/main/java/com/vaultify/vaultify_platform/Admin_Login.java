@@ -42,6 +42,16 @@ public class Admin_Login  extends Base{
 		
 		}
 		w.until(ExpectedConditions.visibilityOf(p.Select_role_page()));
+		w.until(ExpectedConditions.visibilityOf(p.role_dropdown()));
+		p.role_dropdown().click();
+		w.until(ExpectedConditions.visibilityOf(p.drodpdowm_option()));
+		p.drodpdowm_option().click();
+		w.until(ExpectedConditions.visibilityOf(p.submit_button()));
+		p.submit_button().click();
+		try{w.until(ExpectedConditions.visibilityOfAllElements(p.success_Toast()));
+		System.out.println(p.success_Toast().getText());}
+		catch(Exception eee) {System.out.println("post login success toast not found");}
+		w.until(ExpectedConditions.visibilityOf(p.Login_confirmed()));
 	}
 	
     public void otp_filler() throws InterruptedException{
@@ -51,7 +61,7 @@ public class Admin_Login  extends Base{
     	
     	
 		Thread.sleep(800);
-		w.until(ExpectedConditions.visibilityOf(p.OTP_page_Title()));
+		//w.until(ExpectedConditions.visibilityOf(p.OTP_page_Title()));
 		w.until(ExpectedConditions.visibilityOfAllElements(p.inputs));
 		
 		List<String> otpValues = new ArrayList<>();
@@ -72,7 +82,7 @@ public class Admin_Login  extends Base{
 		w.until(ExpectedConditions.visibilityOfAllElements(p.verify_otp_BUtton()));
 		p.verify_otp_BUtton().click();
 		Thread.sleep(800);
-		w.until(ExpectedConditions.visibilityOfAllElements(p.success_Toast()));}
+		w.until(ExpectedConditions.visibilityOfAllElements(p.success_Toast()));
+		System.out.println(p.success_Toast().getText());	
 	
-	
-}
+}}
