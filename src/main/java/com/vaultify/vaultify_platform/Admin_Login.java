@@ -14,14 +14,23 @@ import org.testng.annotations.Test;
 
 import Locators.pom.Login_locaters;
 
-public class Admin_Login  extends Base{
+public class Admin_Login  {
 
-
+     WebDriver d;
+     
+     public Admin_Login(WebDriver d){
+    	 
+    	 
+    	 this.d=d;
+    	 
+    	 
+     }
+	
 	
     @Test
 	public void login() throws IOException, InterruptedException{
 		
-		Data_File_Reader dd = new Data_File_Reader();
+    	Data_File_Reader dd = new Data_File_Reader();
 		Login_locaters p = new Login_locaters(d);
 		WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
 	    JavascriptExecutor js = (JavascriptExecutor)d;

@@ -17,6 +17,9 @@ public class Base
     {
         d= new ChromeDriver();
         d.manage().window().maximize();
+        Admin_Login l = new Admin_Login(d);
+        l.login();
+        
        }
 	
 	
@@ -25,7 +28,7 @@ public class Base
 		
 		if(d!=null){
 			
-			d.quit();
+        d.quit();
 			
 		}}
 }

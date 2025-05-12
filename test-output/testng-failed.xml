@@ -3,13 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.vaultify.vaultify_platform.Admin_Login">
+      <class name="com.vaultify.vaultify_platform.Admin_Modules_Access_and_check">
         <methods>
-          <include name="login"/>
+          <include name="TalkToExpert"/>
+          <include name="Staff_Attendance_Management"/>
+          <include name="Property_Soceity_Management"/>
+          <include name="Private_Bid_Console"/>
           <include name="setUP"/>
+          <include name="Franchise_Management"/>
+          <include name="Relationships"/>
           <include name="driverkill"/>
         </methods>
-      </class> <!-- com.vaultify.vaultify_platform.Admin_Login -->
+      </class> <!-- com.vaultify.vaultify_platform.Admin_Modules_Access_and_check -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
