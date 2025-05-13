@@ -36,15 +36,15 @@ public class Admin_Modules_Access_and_check extends Base{
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
-        w.until(ExpectedConditions.visibilityOf(p.sideMenu()));
+        w.until(ExpectedConditions.visibilityOf(p.sideMenu()));   
         a.moveToElement(p.sideMenu()).build().perform();
         Thread.sleep(450);
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
 		p.Menu_modules.get(v+1).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -59,8 +59,8 @@ public class Admin_Modules_Access_and_check extends Base{
 		p.Menu_modules.get(v+2).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -75,8 +75,8 @@ public class Admin_Modules_Access_and_check extends Base{
 		p.Menu_modules.get(v+3).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -88,10 +88,10 @@ public class Admin_Modules_Access_and_check extends Base{
         JavascriptExecutor js = (JavascriptExecutor)d;
     
         IntStream.range(0, 3).forEach(i->{
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+4).click();
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.dropdown_module.get(0)));	
+    	p.dropdown_module.get(0).click();
 		w.until(ExpectedConditions.visibilityOf(p.dropdown_submenu.get(0)));
-		w.until(ExpectedConditions.visibilityOfAllElements(p.submenuitems));	
+		w.until(ExpectedConditions.visibilityOf(p.submenuitems.get(i)));	
 		p.submenuitems.get(i).click();
 		try {
 			Thread.sleep(800);
@@ -100,8 +100,8 @@ public class Admin_Modules_Access_and_check extends Base{
 			e.printStackTrace();
 		}
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);});}
 	
     @Test  
@@ -116,8 +116,8 @@ public class Admin_Modules_Access_and_check extends Base{
 		p.Menu_modules.get(v+5).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -132,8 +132,8 @@ public class Admin_Modules_Access_and_check extends Base{
 		p.Menu_modules.get(v+6).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -148,8 +148,8 @@ public class Admin_Modules_Access_and_check extends Base{
 		p.Menu_modules.get(v+7).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -164,8 +164,8 @@ public class Admin_Modules_Access_and_check extends Base{
 		p.Menu_modules.get(v+8).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -176,12 +176,15 @@ public class Admin_Modules_Access_and_check extends Base{
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+9).click();
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
+    	a.moveToElement((p.Menu_modules.get(1))).build().perform();
+    	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+10));
+    	Thread.sleep(800);	
+		p.Menu_modules.get(v+10).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -192,12 +195,15 @@ public class Admin_Modules_Access_and_check extends Base{
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
+    	a.moveToElement((p.Menu_modules.get(1))).build().perform();
+    	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+11));
+    	Thread.sleep(800);
 		p.Menu_modules.get(v+11).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -208,12 +214,15 @@ public class Admin_Modules_Access_and_check extends Base{
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
+    	a.moveToElement((p.Menu_modules.get(1))).build().perform();
+    	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+12));
+    	Thread.sleep(800);
 		p.Menu_modules.get(v+12).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -224,12 +233,15 @@ public class Admin_Modules_Access_and_check extends Base{
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+13).click();
+        w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
+    	a.moveToElement((p.Menu_modules.get(1))).build().perform();
+    	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+11));
+    	Thread.sleep(800);
+		p.Menu_modules.get(v+11).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
     @Test  
@@ -244,8 +256,8 @@ public class Admin_Modules_Access_and_check extends Base{
 		p.Menu_modules.get(v+14).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
+		StringBuffer b = new StringBuffer(" heading is ");
+        b.append(p.page_headeings().getText());
 		System.out.println(b);}
 /*	
     @Test  

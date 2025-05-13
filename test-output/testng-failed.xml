@@ -5,13 +5,8 @@
     <classes>
       <class name="com.vaultify.vaultify_platform.Admin_Modules_Access_and_check">
         <methods>
-          <include name="TalkToExpert"/>
-          <include name="Staff_Attendance_Management"/>
-          <include name="Property_Soceity_Management"/>
-          <include name="Private_Bid_Console"/>
           <include name="setUP"/>
           <include name="Franchise_Management"/>
-          <include name="Relationships"/>
           <include name="driverkill"/>
         </methods>
       </class> <!-- com.vaultify.vaultify_platform.Admin_Modules_Access_and_check -->

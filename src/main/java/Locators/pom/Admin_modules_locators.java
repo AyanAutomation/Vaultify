@@ -18,9 +18,9 @@ public class Admin_modules_locators {
 	@FindBy(xpath="//*[@class='rizzui-collapse-panel']//a")
 	public List <WebElement>  submenuitems; 
 	@FindBy(xpath="//*[@class='simplebar-content']")
-	private WebElement  sideMenu; /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  sideMenu; 
+	@FindBy(xpath="//*[@class='flex items-center']")
+	public List <WebElement> dropdown_module  ; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
