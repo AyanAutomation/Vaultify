@@ -2,6 +2,7 @@ package Locators.pom;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,13 +21,13 @@ public class Admin_modules_locators {
 	@FindBy(xpath="//*[@class='simplebar-content']")
 	private WebElement  sideMenu; 
 	@FindBy(xpath="//*[@class='flex items-center']")
-	public List <WebElement> dropdown_module  ; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	public List <WebElement> dropdown_module  ; 
+	@FindBy(xpath="//*[@class='mb-2 flex w-full items-center justify-between']")
+	private WebElement  Employee_list_section; 
+	@FindBy(xpath="//form")
+	private WebElement pop_up_employeeAdd_Form; 
+	@FindBy(name="username")
+	private WebElement username_field; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -87,15 +88,15 @@ public class Admin_modules_locators {
 	public WebElement page_headeings(){
 	return page_headeings;}  
 	public WebElement sideMenu(){
-	return sideMenu;} /*
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
+	return sideMenu;} 
+	public WebElement Employee_list_section(){
+	return Employee_list_section;}
+	public WebElement Employee_add_button(){
+	return  Employee_list_section.findElement(By.xpath(".//button[@type='button']")) ;}    
+	public WebElement pop_up_employeeAdd_Form(){
+	return pop_up_employeeAdd_Form;} 
+	public WebElement username_field(){
+	return username_field;} /*
 	public WebElement (){
 	return ;}
 	public WebElement (){

@@ -16,7 +16,7 @@ public class Admin_Modules_Access_and_check extends Base{
 	int v=0;
 
 	
-    @Test  
+    
 	public void dashboard_access() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -28,7 +28,7 @@ public class Admin_Modules_Access_and_check extends Base{
 		p.Menu_modules.get(v).click();
 		Thread.sleep(1250);}
 	
-    @Test  
+ 
 	public void Vaultify_Versity() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -47,7 +47,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+ 
 	public void UserManagement() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -63,7 +63,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+    
 	public void TeamManagement() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -79,7 +79,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+    
 	public void Property_Soceity_Management() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -104,7 +104,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);});}
 	
-    @Test  
+ 
 	public void SiteSetting() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -120,7 +120,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+  
 	public void Dynamic_Incentive_Setting() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -136,7 +136,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+  
 	public void Grivance_Management() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -152,7 +152,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+
 	public void Feedback_Management() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -168,7 +168,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+ 
 	public void Relationships() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -187,7 +187,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+
 	public void TalkToExpert() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -206,7 +206,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+
 	public void Staff_Attendance_Management() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -225,7 +225,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+    
 	public void Private_Bid_Console() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -244,7 +244,7 @@ public class Admin_Modules_Access_and_check extends Base{
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
 	
-    @Test  
+ 
 	public void Franchise_Management() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
