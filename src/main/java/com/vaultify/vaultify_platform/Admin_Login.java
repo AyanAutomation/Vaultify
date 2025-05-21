@@ -47,9 +47,7 @@ public class Admin_Login  {
 		w.until(ExpectedConditions.visibilityOf(p.submit_button()));
 		p.submit_button().click();
 		for(int k=0;k<2;k++){
-		otp_filler();
-		
-		}
+		otp_filler();}
 		w.until(ExpectedConditions.visibilityOf(p.Select_role_page()));
 		w.until(ExpectedConditions.visibilityOf(p.role_dropdown()));
 		p.role_dropdown().click();

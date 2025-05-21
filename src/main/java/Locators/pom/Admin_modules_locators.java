@@ -27,45 +27,47 @@ public class Admin_modules_locators {
 	@FindBy(xpath="//form")
 	private WebElement pop_up_employeeAdd_Form; 
 	@FindBy(name="username")
-	private WebElement username_field; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement username_field; 
+	@FindBy(name="password")
+	private WebElement password_field;;
+	@FindBy(name="name")
+	private WebElement Full_Name_feild;
+	@FindBy(name="father_name")
+	private WebElement father_name;
+	@FindBy(name="mother_name")
+	private WebElement  mother_name;
+	@FindBy(name="dob")
+	private WebElement dob;
+	@FindBy(name="email")
+	private WebElement email;
+	@FindBy(name="phoneNumber")
+	private WebElement phoneNumber;
+	@FindBy(xpath="//*[@class='h-full']//button")
+	private List <WebElement> dropdown_fields;
+	@FindBy(xpath="//*[@role='listbox']")
+	private List <WebElement> dropdown_list;
+	@FindBy(name="qualification")
+	private WebElement qualification;
+	@FindBy(xpath="//*[@role='listbox']//*[@role='option']")
+	private List <WebElement> options;
+	@FindBy(name="doj")
+	private WebElement date_of_joining;
+	@FindBy(xpath="(//*[@class=' css-13cymwt-control']//div)[1]")
+	private WebElement role_dropdown_field;
+	@FindBy(name="accountOwnerName")
+	private WebElement  accountOwnerName;
+	@FindBy(name="bankName")
+	private WebElement bankName;
+	@FindBy(name="accountNumber")
+	private WebElement  accountNumber;
+	@FindBy(name="ifscCode")
+	private WebElement ifscCode;
+	@FindBy(name="upiId")
+	private WebElement upiId;
+	@FindBy(xpath="//button[@type='submit']")
+	private WebElement submit_button;
+	@FindBy(name="experience")
+	private WebElement experience; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -96,49 +98,47 @@ public class Admin_modules_locators {
 	public WebElement pop_up_employeeAdd_Form(){
 	return pop_up_employeeAdd_Form;} 
 	public WebElement username_field(){
-	return username_field;} /*
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
+	return username_field;} 
+	public WebElement password_field(){
+	return password_field;}
+	public WebElement Full_Name_feild(){
+	return Full_Name_feild;}
+	public WebElement father_name(){
+	return father_name;}
+	public WebElement mother_name(){
+	return mother_name;}
+	public WebElement dob(){
+	return dob;}
+	public WebElement email(){
+	return email;}
+	public WebElement phoneNumber(){
+	return phoneNumber;}
+	public List <WebElement> dropdown_list(){
+	return dropdown_list;}
+	public WebElement qualification(){
+	return qualification;}
+	public List <WebElement> options(){
+	return options;}
+	public WebElement date_of_joining(){
+	return date_of_joining;}
+	public WebElement role_dropdown_field(){
+	return role_dropdown_field;}
+	public WebElement accountOwnerName(){
+	return accountOwnerName;}
+	public WebElement bankName(){
+	return bankName;}
+	public WebElement accountNumber(){
+	return accountNumber;}
+	public WebElement ifscCode(){
+	return ifscCode;}
+	public WebElement upiId(){
+	return upiId;}
+	public WebElement submit_button(){
+	return submit_button;} 
+	public List <WebElement> dropdown_fields(){
+	return dropdown_fields;} 
+	public WebElement experience(){
+	return experience;} /*
 	public WebElement (){
 	return ;}
 	public WebElement (){

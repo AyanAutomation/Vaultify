@@ -1,21 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-20T20:06:02 IST" name="Default suite" finished-at="2025-05-20T20:06:20 IST" duration-ms="17537">
+  <suite started-at="2025-05-21T18:12:45 IST" name="Default suite" finished-at="2025-05-21T18:13:55 IST" duration-ms="70123">
     <groups>
     </groups>
-    <test started-at="2025-05-20T20:06:02 IST" name="Default test" finished-at="2025-05-20T20:06:20 IST" duration-ms="17537">
+    <test started-at="2025-05-21T18:12:45 IST" name="Default test" finished-at="2025-05-21T18:13:55 IST" duration-ms="70123">
       <class name="com.vaultify.vaultify_platform.Staff_and_Team">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Staff_and_Team@662ac478]" started-at="2025-05-20T20:06:02 IST" name="setUP" finished-at="2025-05-20T20:06:15 IST" duration-ms="12855" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Staff_and_Team@1a677343]" started-at="2025-05-21T18:12:45 IST" name="setUP" finished-at="2025-05-21T18:13:55 IST" duration-ms="69847" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=109.0.5414.168)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c69a76224d9d8f4567f4dcda7be2be22, sendKeysToElement {value=[Ljava.lang.CharSequence;@5398edd0, id=9aee63bc-3690-4434-b47a-2a41623d5e29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51179/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c69a76224d9d8f4567f4dcda7be2be22)] -> xpath: //input]
+Session ID: c69a76224d9d8f4567f4dcda7be2be22]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=109.0.5414.168)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c69a76224d9d8f4567f4dcda7be2be22, sendKeysToElement {value=[Ljava.lang.CharSequence;@5398edd0, id=9aee63bc-3690-4434-b47a-2a41623d5e29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51179/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c69a76224d9d8f4567f4dcda7be2be22)] -> xpath: //input]
+Session ID: c69a76224d9d8f4567f4dcda7be2be22
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at com.vaultify.vaultify_platform.Admin_Login.otp_filler(Admin_Login.java:86)
+at com.vaultify.vaultify_platform.Admin_Login.login(Admin_Login.java:50)
+at com.vaultify.vaultify_platform.Base.setUP(Base.java:21)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="Employee_staff_Add()[pri:0, instance:com.vaultify.vaultify_platform.Staff_and_Team@662ac478]" started-at="2025-05-20T20:06:15 IST" name="Employee_staff_Add" finished-at="2025-05-20T20:06:20 IST" duration-ms="4641" status="PASS">
+        <test-method signature="Employee_staff_Add(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.vaultify.vaultify_platform.Staff_and_Team@1a677343]" started-at="2025-05-21T18:13:55 IST" name="Employee_staff_Add" data-provider="employeedata" finished-at="2025-05-21T18:13:55 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nikolai_ivanov]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pass@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Nikolai Ivanov]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sergei Ivanov]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Anna Ivanova]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12-03-1992]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[nikolai1246@yopmail.com]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[7981234567]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Engineering]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[10-02-2022]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Nikolai Ivanov]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Sberbank Russia]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[40817810099910012345]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[SBER0000111]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[nikolaiupi1246@ybl]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=109.0.5414.168)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c69a76224d9d8f4567f4dcda7be2be22, sendKeysToElement {value=[Ljava.lang.CharSequence;@5398edd0, id=9aee63bc-3690-4434-b47a-2a41623d5e29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51179/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c69a76224d9d8f4567f4dcda7be2be22)] -> xpath: //input]
+Session ID: c69a76224d9d8f4567f4dcda7be2be22]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=109.0.5414.168)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c69a76224d9d8f4567f4dcda7be2be22, sendKeysToElement {value=[Ljava.lang.CharSequence;@5398edd0, id=9aee63bc-3690-4434-b47a-2a41623d5e29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51179/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c69a76224d9d8f4567f4dcda7be2be22)] -> xpath: //input]
+Session ID: c69a76224d9d8f4567f4dcda7be2be22
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at com.vaultify.vaultify_platform.Admin_Login.otp_filler(Admin_Login.java:86)
+at com.vaultify.vaultify_platform.Admin_Login.login(Admin_Login.java:50)
+at com.vaultify.vaultify_platform.Base.setUP(Base.java:21)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Employee_staff_Add -->
-        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Staff_and_Team@662ac478]" started-at="2025-05-20T20:06:20 IST" name="driverkill" finished-at="2025-05-20T20:06:20 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Staff_and_Team@1a677343]" started-at="2025-05-21T18:13:55 IST" name="driverkill" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1747831435595" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverkill -->
