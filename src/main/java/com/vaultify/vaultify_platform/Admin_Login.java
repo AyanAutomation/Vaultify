@@ -1,5 +1,7 @@
 package com.vaultify.vaultify_platform;
 
+import java.awt.AWTException;
+import java.awt.Robot;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -28,13 +30,13 @@ public class Admin_Login  {
 	
 	
     @Test
-	public void login() throws IOException, InterruptedException{
+	public void login() throws IOException, InterruptedException, AWTException{
 		
     	Data_File_Reader dd = new Data_File_Reader();
 		Login_locaters p = new Login_locaters(d);
 		WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
 	    JavascriptExecutor js = (JavascriptExecutor)d;
-		
+		Robot r = new Robot();
 		
 		d.navigate().to(dd.DataKeys("Admin_url"));
 		Thread.sleep(800);
@@ -44,6 +46,8 @@ public class Admin_Login  {
 		p.phnum().sendKeys(dd.DataKeys("ph_number"));
 		w.until(ExpectedConditions.visibilityOf(p.password()));
 		p.password().sendKeys(dd.DataKeys("password"));
+		r.mouseWheel(4);
+		Thread.sleep(800);
 		w.until(ExpectedConditions.visibilityOf(p.submit_button()));
 		p.submit_button().click();
 		for(int k=0;k<2;k++){

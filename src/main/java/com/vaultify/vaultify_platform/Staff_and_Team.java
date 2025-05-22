@@ -3,6 +3,7 @@ package com.vaultify.vaultify_platform;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.time.Duration;
+import java.util.stream.IntStream;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
@@ -46,7 +47,7 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 		p.username_field().sendKeys(username);
 		w.until(ExpectedConditions.visibilityOf(p.password_field()));
 		p.password_field().clear();
-		p.username_field().sendKeys(password);
+		p.password_field().sendKeys(password);
 		w.until(ExpectedConditions.visibilityOf(p.Full_Name_feild()));
 		p.Full_Name_feild().sendKeys(fullname);
 		w.until(ExpectedConditions.visibilityOf(p.father_name()));
@@ -93,7 +94,21 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 		w.until(ExpectedConditions.visibilityOf(p.submit_button()));
 		p.submit_button().click();
 		Thread.sleep(800);
+		w.until(ExpectedConditions.visibilityOfAllElements(p.Employee_add_button()));
+		w.until(ExpectedConditions.visibilityOfAllElements(p.list_sort_buttons().get(0)));
+		w.until(ExpectedConditions.visibilityOfAllElements(p.first_name_inlist()));
+		if(!p.first_name_inlist().equals(username)){
+			
 		
+	/*	a.doubleClick(p.list_sort_buttons().get(0)).build().perform();
+		Thread.sleep(800); */
+			
+			IntStream.range(0, 1).forEach(i->{
+				w.until(ExpectedConditions.visibilityOfAllElements(p.list_sort_buttons().get(0)));
+				p.list_sort_buttons().get(0).click();
+			});}
+		w.until(ExpectedConditions.visibilityOfAllElements(p.first_name_inlist()));
+		System.out.println(p.first_name_inlist().getText().equalsIgnoreCase(username)?"Testcase Passed":"Testcase Failed");
 	}
 	
 	

@@ -1,5 +1,6 @@
 package com.vaultify.vaultify_platform;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
@@ -13,7 +14,7 @@ public class Base
 	
 	
 	@BeforeMethod
-    void setUP() throws IOException, InterruptedException
+    void setUP() throws IOException, InterruptedException, AWTException
     {
         d= new ChromeDriver();
         d.manage().window().maximize();
@@ -28,7 +29,7 @@ public class Base
 		
 		if(d!=null){
 			
-        //d.quit();
+         d.quit();
 			
 		}}
 }

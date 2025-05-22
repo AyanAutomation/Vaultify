@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\user1\AppData\Local\Temp\testng-eclipse--931330569\testng-customsuite.xml</span>
+                    <span>C:\Users\PC-129\AppData\Local\Temp\testng-eclipse--867119507\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -131,16 +131,15 @@
                   </a> <!-- Employee_staff_Add(nikolai_ivanov, Pass@123, Nikolai Ivanov, Sergei Ivanov, Anna Ivanova, 12-03-1992, nikolai1246@yopma...) -->
                   <span class="method-name">Employee_staff_Add</span>
                   <span class="parameters">(nikolai_ivanov, Pass@123, Nikolai Ivanov, Sergei Ivanov, Anna Ivanova, 12-03-1992, nikolai1246@yopmail.com, 7981234567, Engineering, 5, 10-02-2022, Nikolai Ivanov, Sberbank Russia, 40817810099910012345, SBER0000111, nikolaiupi1246@ybl)</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=109.0.5414.168)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;rizzui-button inline-flex font-medium items-center justify-center active:enabled:translate-y-px focus:outline-none focus-visible:ring-[1.8px] focus-visible:ring-offset-2 ring-offset-background transition-colors duration-200 px-5 py-2 text-base h-12 rounded-md border dark:backdrop-blur focus-visible:ring-muted dark:hover:bg-muted/70 cursor-not-allowed border-muted bg-muted/70 text-muted-foreground backdrop-blur-xl hover:border-muted hover:bg-muted/70 w-full&quot; type=&quot;submit&quot; disabled=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (295, 459). Other element would receive the click: &lt;div class=&quot;fixed inset-0 flex items-center justify-center bg-white bg-opacity-50 z-[9999]&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=136.0.7103.114)
 Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c69a76224d9d8f4567f4dcda7be2be22, sendKeysToElement {value=[Ljava.lang.CharSequence;@5398edd0, id=9aee63bc-3690-4434-b47a-2a41623d5e29}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51179/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (c69a76224d9d8f4567f4dcda7be2be22)] -&gt; xpath: //input]
-Session ID: c69a76224d9d8f4567f4dcda7be2be22
+Command: [30f18da21b94cd3f2ee341362aacfdc4, clickElement {id=f.7BCE1007ABE71E5643232DBC0E581FAD.d.8A0041E6C85EE1D534C89B22A13C016A.e.6}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49430}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49430/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (30f18da21b94cd3f2ee341362aacfdc4)] -&gt; xpath: (//button)[1]]
+Session ID: 30f18da21b94cd3f2ee341362aacfdc4
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -152,10 +151,14 @@ Session ID: c69a76224d9d8f4567f4dcda7be2be22
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at com.vaultify.vaultify_platform.Admin_Login.otp_filler(Admin_Login.java:86)
-	at com.vaultify.vaultify_platform.Admin_Login.login(Admin_Login.java:50)
-	at com.vaultify.vaultify_platform.Base.setUP(Base.java:21)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at com.vaultify.vaultify_platform.Admin_Login.otp_filler(Admin_Login.java:94)
+	at com.vaultify.vaultify_platform.Admin_Login.login(Admin_Login.java:54)
+	at com.vaultify.vaultify_platform.Base.setUP(Base.java:22)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -195,7 +198,7 @@ Session ID: c69a76224d9d8f4567f4dcda7be2be22
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\user1\AppData\Local\Temp\testng-eclipse--931330569\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\PC-129\AppData\Local\Temp\testng-eclipse--867119507\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -292,11 +295,11 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Employee_staff_Add(nikolai_ivanov, Pass@123, Nikolai Ivanov, Sergei Ivanov, Anna Ivanova, 12-03-1992, nikolai1246@yopma...)</span>
-                <span class="method-start">69911 ms</span>
+                <span class="method-start">11125 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverkill</span>
-                <span class="method-start">69916 ms</span>
+                <span class="method-start">11135 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

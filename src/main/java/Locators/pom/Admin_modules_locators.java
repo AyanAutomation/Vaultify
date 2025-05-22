@@ -67,11 +67,11 @@ public class Admin_modules_locators {
 	@FindBy(xpath="//button[@type='submit']")
 	private WebElement submit_button;
 	@FindBy(name="experience")
-	private WebElement experience; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement experience; 
+	@FindBy(xpath="//*[@class='inline-flex']")
+	private List <WebElement> list_sort_buttons;
+	@FindBy(xpath="(//*[@class='grid gap-0.5']//p)[1]")
+	private WebElement first_name_inlist; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -138,11 +138,11 @@ public class Admin_modules_locators {
 	public List <WebElement> dropdown_fields(){
 	return dropdown_fields;} 
 	public WebElement experience(){
-	return experience;} /*
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
+	return experience;} 
+	public List <WebElement> list_sort_buttons(){
+	return list_sort_buttons;}
+	public WebElement first_name_inlist(){
+	return first_name_inlist;} /*
 	public WebElement (){
 	return ;}
 	public WebElement (){
