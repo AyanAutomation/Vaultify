@@ -80,19 +80,25 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
     
-	public void Property_Soceity_Management() throws InterruptedException{
+	public void Property_Soceity_Management(int k) throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
     
-        IntStream.range(0, 3).forEach(i->{
+        IntStream.range(0, 1).forEach(i->{
     	w.until(ExpectedConditions.visibilityOfAllElements(p.dropdown_module.get(0)));	
+    	try {
+			Thread.sleep(800);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	p.dropdown_module.get(0).click();
 		w.until(ExpectedConditions.visibilityOf(p.dropdown_submenu.get(0)));
-		w.until(ExpectedConditions.visibilityOf(p.submenuitems.get(i)));	
-		p.submenuitems.get(i).click();
+		w.until(ExpectedConditions.visibilityOf(p.submenuitems.get(k)));	
+		p.submenuitems.get(k).click();
 		try {
 			Thread.sleep(800);
 		} catch (InterruptedException e) {

@@ -62,8 +62,8 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 		p.phoneNumber().sendKeys(phone);
 		w.until(ExpectedConditions.visibilityOf(p.dob()));
 		p.dob().sendKeys(dob);
-		w.until(ExpectedConditions.visibilityOf(p.dropdown_fields().get(1)));
-		p.dropdown_fields().get(1).click();
+		p.whatsapp_dropdown();
+		p.whatsapp_dropdown().click();
 		w.until(ExpectedConditions.visibilityOfAllElements(p.dropdown_list()));
 		w.until(ExpectedConditions.visibilityOf(p.options().get(1)));
 		p.options().get(1).click();
@@ -116,16 +116,16 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 	public Object[][] employeedata(){
 		
 		
-		Object[][] employee = new Object[][] { {
-	        "ahmed_samir", "Pass@123", "Ahmed Samir", "Samir Hussein", "Layla Samir",
-	        "18-06-1990", "ahmedsamir8754@yopmail.com", "971509998877", "Finance", "7",
-	        "15-01-2020", "Ahmed Samir", "Emirates NBD", "40817810099910056781", "EMIR0000456", "ahmedupi8754@ybl"
-	    },
+		Object[][] employee = new Object[][] { /*{
+            "staff_raj_kumar", "Pass@123", "Staff Raj Kumar", "Staff Ramesh Kumar", "Staff Sita Kumari",
+            "15-08-1990", "rajkumar8754@yopmail.com", "919810112233", "Finance", "6",
+            "12-07-2018", "Staff Raj Kumar", "State Bank of India", "40817810099910011111", "SBIN0000123", "rajupi8754@ybl"
+        },*/
 	    {
 	        "dmitri_petrov", "Pass@123", "Dmitri Petrov", "Alexei Petrov", "Irina Petrova",
 	        "22-11-1988", "dmitripetrov2048@yopmail.com", "79213456789", "Engineering", "10",
 	        "10-03-2015", "Dmitri Petrov", "VTB Bank", "40817810099910087653", "VTBR0000222", "dmitriupi2048@ybl"
-	    },
+	    },/*
 	    {
 	        "hassan_alkurdi", "Pass@123", "Hassan Alkurdi", "Mustafa Alkurdi", "Noor Alkurdi",
 	        "05-05-1991", "hassankurdi3127@yopmail.com", "966501234567", "Logistics", "6",
@@ -145,7 +145,7 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 	        "fahad_najeeb", "Pass@123", "Fahad Najeeb", "Najeeb Ul Hassan", "Ruqayya Najeeb",
 	        "14-02-1993", "fahadnajeeb4082@yopmail.com", "971502234556", "Computer Science", "4",
 	        "19-09-2021", "Fahad Najeeb", "First Abu Dhabi Bank", "40817810099910077889", "FABU0000455", "fahadupi4082@ybl"
-	    }};
+	    }*/};
 		return employee;
 		
 		

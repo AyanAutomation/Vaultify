@@ -8,7 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Admin_modules_locators {
+import com.vaultify.Repeat_codes.Repeatative_Codes;
+
+public class Admin_modules_locators extends Repeatative_Codes{
 	
 	@FindBy(xpath="//a[@class='group relative mx-3 my-0.5 flex items-center justify-between rounded-md px-3 py-2 font-medium capitalize lg:my-1 2xl:mx-5 2xl:my-2 text-gray-700 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-700/90']")
 	public List <WebElement> Menu_modules ;
@@ -44,6 +46,8 @@ public class Admin_modules_locators {
 	private WebElement phoneNumber;
 	@FindBy(xpath="//*[@class='h-full']//button")
 	private List <WebElement> dropdown_fields;
+    @FindBy(xpath="//div[@class='rizzui-select-root grid w-full grid-cols-1']//*[@class='h-full']//button")
+	private WebElement whatsapp_dropdown;
 	@FindBy(xpath="//*[@role='listbox']")
 	private List <WebElement> dropdown_list;
 	@FindBy(name="qualification")
@@ -79,72 +83,100 @@ public class Admin_modules_locators {
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
 	private WebElement  ;  */
 
 
 	public Admin_modules_locators(WebDriver d){
+	super(d);
 	PageFactory.initElements(d, this); }
 
 	public WebElement page_headeings(){
+	WebElement_wait(page_headeings);
 	return page_headeings;}  
 	public WebElement sideMenu(){
+	WebElement_wait(sideMenu);
 	return sideMenu;} 
 	public WebElement Employee_list_section(){
+	WebElement_wait(Employee_list_section);
 	return Employee_list_section;}
 	public WebElement Employee_add_button(){
-	return  Employee_list_section.findElement(By.xpath(".//button[@type='button']")) ;}    
+	WebElement_wait(Employee_list_section.findElement(By.xpath(".//button[@type='button']")));
+	return Employee_list_section.findElement(By.xpath(".//button[@type='button']"));}    
 	public WebElement pop_up_employeeAdd_Form(){
+	WebElement_wait(pop_up_employeeAdd_Form);
 	return pop_up_employeeAdd_Form;} 
 	public WebElement username_field(){
+	WebElement_wait(username_field);
 	return username_field;} 
 	public WebElement password_field(){
+	WebElement_wait(password_field);
 	return password_field;}
 	public WebElement Full_Name_feild(){
+	WebElement_wait(Full_Name_feild);
 	return Full_Name_feild;}
 	public WebElement father_name(){
+	WebElement_wait(father_name);
 	return father_name;}
 	public WebElement mother_name(){
+	WebElement_wait(mother_name);		
 	return mother_name;}
 	public WebElement dob(){
+	WebElement_wait(dob);	
 	return dob;}
 	public WebElement email(){
+	WebElement_wait(email);
 	return email;}
 	public WebElement phoneNumber(){
+	WebElement_wait(phoneNumber);
 	return phoneNumber;}
 	public List <WebElement> dropdown_list(){
+	WebElements_waits(dropdown_list);
 	return dropdown_list;}
 	public WebElement qualification(){
+	WebElement_wait(qualification);
 	return qualification;}
 	public List <WebElement> options(){
+	WebElements_waits(options);
 	return options;}
 	public WebElement date_of_joining(){
+	WebElement_wait(date_of_joining);
 	return date_of_joining;}
 	public WebElement role_dropdown_field(){
+	WebElement_wait(role_dropdown_field);
 	return role_dropdown_field;}
 	public WebElement accountOwnerName(){
+	WebElement_wait(accountOwnerName);
 	return accountOwnerName;}
 	public WebElement bankName(){
+	WebElement_wait(bankName);
 	return bankName;}
 	public WebElement accountNumber(){
+	WebElement_wait(accountNumber);
 	return accountNumber;}
 	public WebElement ifscCode(){
+	WebElement_wait(ifscCode);
 	return ifscCode;}
 	public WebElement upiId(){
+	WebElement_wait(upiId);
 	return upiId;}
 	public WebElement submit_button(){
+	WebElement_wait(submit_button);
 	return submit_button;} 
 	public List <WebElement> dropdown_fields(){
+	WebElements_waits(dropdown_fields);
 	return dropdown_fields;} 
 	public WebElement experience(){
+	WebElement_wait(experience);
 	return experience;} 
 	public List <WebElement> list_sort_buttons(){
+	WebElements_waits(list_sort_buttons);
 	return list_sort_buttons;}
 	public WebElement first_name_inlist(){
-	return first_name_inlist;} /*
-	public WebElement (){
-	return ;}
+	WebElement_wait(first_name_inlist);
+	return first_name_inlist;} 
+	public WebElement whatsapp_dropdown(){
+	WebElement_wait(whatsapp_dropdown);
+	return whatsapp_dropdown;} /*
 	public WebElement (){
 	return ;}
 	public WebElement (){

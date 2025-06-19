@@ -72,7 +72,7 @@ public class Admin_Login  {
     	
     	
 		Thread.sleep(800);
-		//w.until(ExpectedConditions.visibilityOf(p.OTP_page_Title()));
+		w.until(ExpectedConditions.visibilityOf(p.OTP_page_Title()));
 		w.until(ExpectedConditions.visibilityOfAllElements(p.inputs));
 		
 		List<String> otpValues = new ArrayList<>();
