@@ -1,5 +1,8 @@
 package com.vaultify.vaultify_platform;
 
+import java.awt.AWTException;
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import Locators.pom.Property_locaters;
@@ -10,7 +13,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
 	
 	
 	@Test
-	public void Property_Search(/*String Property_name4*/) throws InterruptedException{
+	public void Property_Search(/*String Property_name4*/) throws InterruptedException, IOException, AWTException{
 		
 		
 		Property_locaters p = new Property_locaters(d);

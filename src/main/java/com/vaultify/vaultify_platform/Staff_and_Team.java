@@ -2,6 +2,7 @@ package com.vaultify.vaultify_platform;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.stream.IntStream;
 
@@ -21,7 +22,7 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
             String mothername, String dob, String email, String phone,
             String qualification, String experience, String doj,
             String accOwner, String bankName, String accNumber,
-            String ifsc, String upi) throws InterruptedException, AWTException{
+            String ifsc, String upi) throws InterruptedException, AWTException, IOException{
 		
 		Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);

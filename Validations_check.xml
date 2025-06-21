@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.vaultify.vaultify_platform.AppTest"/>
+     <class name="Validations_check.Login_validations"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

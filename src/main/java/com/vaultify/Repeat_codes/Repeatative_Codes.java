@@ -3,6 +3,7 @@ package com.vaultify.Repeat_codes;
 import java.util.List;
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -25,19 +26,13 @@ public class Repeatative_Codes {
 		
 		WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
 		
-		w.until(ExpectedConditions.visibilityOf(element));
-		
-		
-		
-	}
+		w.until(ExpectedConditions.visibilityOf(element));}
 	
      public void WebElements_waits(List<WebElement> elements){
 		
 		WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
 		
-		w.until(ExpectedConditions.visibilityOfAllElements(elements));
-		
-	}
+		w.until(ExpectedConditions.visibilityOfAllElements(elements));}
      
      
      public void movetoElements(WebElement element) throws InterruptedException{
@@ -46,14 +41,13 @@ public class Repeatative_Codes {
     	 
     	 
     	 a.moveToElement(element).build().perform();
-    	 Thread.sleep(800);
-    	 
-    	 
-    	 
-    	 
-     }
+    	 Thread.sleep(800);}
      
-     
+     public String getTooltipMessage(WebElement element) {
+    	    JavascriptExecutor js = (JavascriptExecutor) d;
+    	    WebElement_wait(element);
+    	    return (String) js.executeScript("return arguments[0].validationMessage;", element);
+    	}
      
      
 }

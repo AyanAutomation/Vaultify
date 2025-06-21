@@ -37,9 +37,9 @@ public class Login_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//*[@class='mt-4 pb-3 3xl:mt-6']")
 	private WebElement  Login_confirmed; 
 	@FindBy(xpath="//*[@aria-live='polite']")
-	private WebElement  success_Toast; /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  success_Toast; 
+	@FindBy(xpath="//*[@class='text-red-500 text-sm']")
+	private WebElement error_message;/*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -91,8 +91,37 @@ public class Login_locaters extends Repeatative_Codes{
 		return Login_confirmed;}
 		public WebElement success_Toast(){
 		WebElement_wait(success_Toast);
-		return success_Toast;} /*
+		return success_Toast;} 
+		public WebElement error_message(){
+		WebElement_wait(error_message);
+		return error_message;} /*
 		public WebElement (){
-		return ;}  */
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;}
+		public WebElement (){
+		return ;} */
 
 }

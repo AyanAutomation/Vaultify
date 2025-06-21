@@ -7,25 +7,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Base 
-{
+public class Base {
 	public WebDriver d;
 	
 	
-	@BeforeMethod
-    void setUP() throws IOException, InterruptedException, AWTException
-    {
+  @BeforeMethod
+ public void setUP() throws IOException, InterruptedException, AWTException
+    { 
+		WebDriverManager.chromedriver().setup();
         d= new ChromeDriver();
-        d.manage().window().maximize();
-        Admin_Login l = new Admin_Login(d);
-        l.login();
-        
-       }
+        d.manage().window().maximize();}
 	
 	
 	@AfterMethod
-	void driverkill(){
+ public	void driverkill(){
 		
 		if(d!=null){
 			

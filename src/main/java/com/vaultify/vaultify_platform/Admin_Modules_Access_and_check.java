@@ -1,5 +1,7 @@
 package com.vaultify.vaultify_platform;
 
+import java.awt.AWTException;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.stream.IntStream;
 
@@ -11,31 +13,33 @@ import org.testng.annotations.Test;
 import Locators.pom.Admin_modules_locators;
 
 
-public class Admin_Modules_Access_and_check extends Base{
+public class Admin_Modules_Access_and_check extends Admin_Login{
 	
 	int v=0;
 
 	
     
-	public void dashboard_access() throws InterruptedException{
+	public void dashboard_access() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
 		p.Menu_modules.get(v).click();
 		Thread.sleep(1250);}
 	
  
-	public void Vaultify_Versity() throws InterruptedException{
+	   public void Vaultify_Versity() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
         w.until(ExpectedConditions.visibilityOf(p.sideMenu()));   
         a.moveToElement(p.sideMenu()).build().perform();
         Thread.sleep(450);
@@ -48,13 +52,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
  
-	public void UserManagement() throws InterruptedException{
+	public void UserManagement() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
 		p.Menu_modules.get(v+2).click();
 		Thread.sleep(750);
@@ -64,13 +69,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
     
-	public void TeamManagement() throws InterruptedException{
+	public void TeamManagement() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
 		p.Menu_modules.get(v+3).click();
 		Thread.sleep(750);
@@ -80,13 +86,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
     
-	public void Property_Soceity_Management(int k) throws InterruptedException{
+	public void Property_Soceity_Management(int k) throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
-    
+        
+        login();
         IntStream.range(0, 1).forEach(i->{
     	w.until(ExpectedConditions.visibilityOfAllElements(p.dropdown_module.get(0)));	
     	try {
@@ -111,13 +118,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);});}
 	
  
-	public void SiteSetting() throws InterruptedException{
+	public void SiteSetting() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
 		p.Menu_modules.get(v+5).click();
 		Thread.sleep(750);
@@ -127,13 +135,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
   
-	public void Dynamic_Incentive_Setting() throws InterruptedException{
+	public void Dynamic_Incentive_Setting() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
 		p.Menu_modules.get(v+6).click();
 		Thread.sleep(750);
@@ -143,13 +152,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
   
-	public void Grivance_Management() throws InterruptedException{
+	public void Grivance_Management() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
 		p.Menu_modules.get(v+7).click();
 		Thread.sleep(750);
@@ -159,13 +169,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
 
-	public void Feedback_Management() throws InterruptedException{
+	public void Feedback_Management() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
 		p.Menu_modules.get(v+8).click();
 		Thread.sleep(750);
@@ -175,13 +186,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
  
-	public void Relationships() throws InterruptedException{
+	public void Relationships() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
     	a.moveToElement((p.Menu_modules.get(1))).build().perform();
     	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+10));
@@ -194,13 +206,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
 
-	public void TalkToExpert() throws InterruptedException{
+	public void TalkToExpert() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
     	a.moveToElement((p.Menu_modules.get(1))).build().perform();
     	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+11));
@@ -213,13 +226,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
 
-	public void Staff_Attendance_Management() throws InterruptedException{
+	public void Staff_Attendance_Management() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
     	a.moveToElement((p.Menu_modules.get(1))).build().perform();
     	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+12));
@@ -232,13 +246,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
     
-	public void Private_Bid_Console() throws InterruptedException{
+	public void Private_Bid_Console() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
         w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
     	a.moveToElement((p.Menu_modules.get(1))).build().perform();
     	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+11));
@@ -251,13 +266,14 @@ public class Admin_Modules_Access_and_check extends Base{
 		System.out.println(b);}
 	
  
-	public void Franchise_Management() throws InterruptedException{
+	public void Franchise_Management() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
         
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
 		p.Menu_modules.get(v+14).click();
 		Thread.sleep(750);
