@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Validations_check.Property_search_Validation">
+      <class name="com.vaultify.vaultify_platform.Property_management">
         <methods>
-          <include name="Property_Search" invocation-numbers="0 1"/>
           <include name="setUP"/>
           <include name="driverkill"/>
+          <include name="propertydelete"/>
         </methods>
-      </class> <!-- Validations_check.Property_search_Validation -->
+      </class> <!-- com.vaultify.vaultify_platform.Property_management -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

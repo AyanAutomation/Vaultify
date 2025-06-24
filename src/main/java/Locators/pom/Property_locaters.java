@@ -2,6 +2,7 @@ package Locators.pom;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,13 +21,13 @@ public class Property_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//td//figcaption//p[1]")
 	private List <WebElement>  property_listNames;
 	@FindBy(xpath="(//div[@class='table-filter mb-4 flex items-center justify-between']//button)[2]")
-	private WebElement  Search_button; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  Search_button; 
+	@FindBy(xpath="//*[@class='rc-table-content']")
+	private WebElement slider;
+	@FindBy(xpath="//div[@class='flex items-center justify-end gap-3 pe-4']//button")
+	private List <WebElement>  list_buttons;
+	@FindBy(xpath="//div[@role='tooltip']")
+	private WebElement  popup_Tooltip;/*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -71,19 +72,20 @@ public class Property_locaters extends Repeatative_Codes{
 	return property_listNames;} 
 	public WebElement Search_button(){
 	WebElement_wait(Search_button);
-	return Search_button;} /*
-	public WebElement (){
-	wait_for_theElement();
-	return ;}
-	public WebElement (){
-	wait_for_theElement();	
-	return ;}
-	public WebElement (){
-	wait_for_theElement();
-	return ;}
-	public WebElement (){
-	wait_for_theElement();
-	return ;}
+	return Search_button;} 
+	public WebElement slider(){
+	WebElement_wait(slider);
+	return slider;}
+	public List <WebElement> list_buttons(){
+	WebElements_waits(list_buttons);	
+	return list_buttons;}
+	public WebElement popup_Tooltip(){
+	WebElement_wait(popup_Tooltip);
+	return popup_Tooltip;}
+	public List <WebElement> Tooltip_buttons(){
+	WebElement_wait(popup_Tooltip);
+	List<WebElement> buttons = popup_Tooltip.findElements(By.xpath(".//button"));
+	return buttons;}/*
 	public WebElement (){
 	wait_for_theElement();
 	return ;}
