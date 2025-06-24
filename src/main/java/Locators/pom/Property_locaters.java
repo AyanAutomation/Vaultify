@@ -17,10 +17,10 @@ public class Property_locaters extends Repeatative_Codes{
 	private WebElement  pagination_box;
 	@FindBy(xpath="//ul[@data-headlessui-state=\"open\"]//li")
 	private List <WebElement> pagination_options  ;
-	@FindBy(xpath="//td//figcaption//p")
-	private List <WebElement>  property_listNames;/*
-	@FindBy(xpath="")
-	private WebElement  ;
+	@FindBy(xpath="//td//figcaption//p[1]")
+	private List <WebElement>  property_listNames;
+	@FindBy(xpath="(//div[@class='table-filter mb-4 flex items-center justify-between']//button)[2]")
+	private WebElement  Search_button; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -67,11 +67,11 @@ public class Property_locaters extends Repeatative_Codes{
 	WebElements_waits(pagination_options);
 	return pagination_options;}
 	public List <WebElement> property_listNames(){
-		WebElements_waits(property_listNames);
-	return property_listNames;} /*
-	public WebElement (){
-	wait_for_theElement();
-	return ;}
+	WebElements_waits(property_listNames);
+	return property_listNames;} 
+	public WebElement Search_button(){
+	WebElement_wait(Search_button);
+	return Search_button;} /*
 	public WebElement (){
 	wait_for_theElement();
 	return ;}

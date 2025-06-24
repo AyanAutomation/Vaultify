@@ -10,8 +10,8 @@ import Locators.pom.Property_locaters;
 
 public class Property_management extends Admin_Modules_Access_and_check{
 	
-	public String Property_name;
-	public  String Resultant_propertyname;
+	String Property_name;
+	
 	
 	@Test
 	public void Property_Search() throws InterruptedException, IOException, AWTException{
@@ -27,12 +27,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
 		System.out.println("Extracted Property Name =  "+Property_name);
 		p.property_searchbar().sendKeys(Property_name);
 		Thread.sleep(800);
-		p.Search_button().click();
-		Thread.sleep(800);
-		String propertynamelabel= p.property_listNames().get(0).getText();
-    	String[] propertynamelabel_split = propertynamelabel.split(": ");
-		Resultant_propertyname = propertynamelabel_split[1];
-		System.out.println(Property_name.equalsIgnoreCase(Resultant_propertyname) ? "Testcase Passed search wokring" :"Testcase Failed search notwokring");
+		
 	}
 	
     public void Pagination_change() throws InterruptedException{
