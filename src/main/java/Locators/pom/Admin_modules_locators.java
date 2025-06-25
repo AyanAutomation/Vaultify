@@ -25,7 +25,7 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	@FindBy(xpath="//*[@class='flex items-center']")
 	public List <WebElement> dropdown_module  ; 
 	@FindBy(xpath="//*[@class='mb-2 flex w-full items-center justify-between']")
-	private WebElement  Employee_list_section; 
+	private WebElement Employee_list_section; 
 	@FindBy(xpath="//form")
 	private WebElement pop_up_employeeAdd_Form; 
 	@FindBy(name="username")
@@ -37,7 +37,7 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	@FindBy(name="father_name")
 	private WebElement father_name;
 	@FindBy(name="mother_name")
-	private WebElement  mother_name;
+	private WebElement mother_name;
 	@FindBy(name="dob")
 	private WebElement dob;
 	@FindBy(name="email")
@@ -75,15 +75,15 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	@FindBy(xpath="//*[@class='inline-flex']")
 	private List <WebElement> list_sort_buttons;
 	@FindBy(xpath="(//*[@class='grid gap-0.5']//p)[1]")
-	private WebElement first_name_inlist; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;  */
+	private WebElement first_name_inlist; 
+	@FindBy(xpath="//*[@class='flex space-x-4 border-b-2 border-gray-200']//button")
+	private List <WebElement> module_internal_Tabs;
+	@FindBy(xpath="//*[text()='Visit Status']")
+	private WebElement home_visit_pending_list_loaded;
+	@FindBy(xpath="//td[1]//figcaption[@class='grid gap-0.5']//p[1]")
+	private List <WebElement> Home_visit_pending_properties;
+	@FindBy(xpath="//div[@class='mt-4 flex items-center gap-3 @lg:mt-0']")
+	private WebElement  update_approval_request_button;  
 
 
 	public Admin_modules_locators(WebDriver d){
@@ -176,15 +176,19 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	return first_name_inlist;} 
 	public WebElement whatsapp_dropdown(){
 	WebElement_wait(whatsapp_dropdown);
-	return whatsapp_dropdown;} /*
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
+	return whatsapp_dropdown;} 
+	public List <WebElement> module_internal_Tabs(){
+	WebElements_waits(module_internal_Tabs);
+	return module_internal_Tabs;}
+	public WebElement home_visit_pending_list_loaded(){
+	WebElement_wait(home_visit_pending_list_loaded);
+	return home_visit_pending_list_loaded;}
+	public List <WebElement> Home_visit_pending_properties(){
+	WebElements_waits(Home_visit_pending_properties);
+	return Home_visit_pending_properties;}
+	public WebElement update_approval_request_button(){
+	WebElement_wait(update_approval_request_button);
+	return update_approval_request_button;}/*
 	public WebElement (){
 	return ;}
 	public WebElement (){

@@ -27,7 +27,29 @@ public class Property_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//div[@class='flex items-center justify-end gap-3 pe-4']//button")
 	private List <WebElement>  list_buttons;
 	@FindBy(xpath="//div[@role='tooltip']")
-	private WebElement  popup_Tooltip;/*
+	private WebElement  popup_Tooltip;
+	@FindBy(xpath="//*[text()='Update request Status']")
+	private WebElement  property_update_list_loaded; 
+	@FindBy(xpath="//td[1]//p[1]")
+	private List <WebElement> Pending_update_property_names; /*
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -85,13 +107,13 @@ public class Property_locaters extends Repeatative_Codes{
 	public List <WebElement> Tooltip_buttons(){
 	WebElement_wait(popup_Tooltip);
 	List<WebElement> buttons = popup_Tooltip.findElements(By.xpath(".//button"));
-	return buttons;}/*
-	public WebElement (){
-	wait_for_theElement();
-	return ;}
-	public WebElement (){
-	wait_for_theElement();
-	return ;}
+	return buttons;}
+	public WebElement property_update_list_loaded(){
+	WebElement_wait(property_update_list_loaded);
+	return property_update_list_loaded;}
+	public List<WebElement> Pending_update_property_names(){
+	WebElements_waits(Pending_update_property_names);
+	return Pending_update_property_names;}/*
 	public WebElement (){
 	wait_for_theElement();
 	return ;}

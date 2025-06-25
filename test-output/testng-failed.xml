@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
       <class name="com.vaultify.vaultify_platform.Property_management">
         <methods>
+          <include name="Home_visit_pending_property_Search"/>
           <include name="setUP"/>
+          <include name="Property_Update_Approval_Propertynames"/>
           <include name="driverkill"/>
-          <include name="propertydelete"/>
         </methods>
       </class> <!-- com.vaultify.vaultify_platform.Property_management -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

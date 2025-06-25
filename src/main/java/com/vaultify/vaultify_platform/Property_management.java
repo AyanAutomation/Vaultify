@@ -2,12 +2,15 @@ package com.vaultify.vaultify_platform;
 
 import java.awt.AWTException;
 import java.io.IOException;
+import java.util.List;
+import java.util.stream.IntStream;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 import com.vaultify.Repeat_codes.List_slide;
 
+import Locators.pom.Admin_modules_locators;
 import Locators.pom.Property_locaters;
 
 public class Property_management extends Admin_Modules_Access_and_check{
@@ -22,12 +25,11 @@ public class Property_management extends Admin_Modules_Access_and_check{
 		Property_locaters p = new Property_locaters(d);
 		
 		
-		
 		Property_Soceity_Management(0);
 		p.property_searchbar();
 		Pagination_change();
 		System.out.println("Extracted Property Name =  "+Property_name);
-		p.property_searchbar().sendKeys("Tell");
+		p.property_searchbar().sendKeys(Property_name);
 		Thread.sleep(800);
 		p.Search_button().click();
 		Thread.sleep(800);
@@ -35,8 +37,8 @@ public class Property_management extends Admin_Modules_Access_and_check{
     	String[] propertynamelabel_split = propertynamelabel.split(": ");
 		Resultant_propertyname = propertynamelabel_split[1];
 		System.out.println(Property_name.equalsIgnoreCase(Resultant_propertyname) ? "Testcase Passed search wokring" :"Testcase Failed search notwokring");
-		propertydelete();
-	}
+		//propertydelete();
+		}
 	
     public void Pagination_change() throws InterruptedException{
     	
@@ -55,15 +57,13 @@ public class Property_management extends Admin_Modules_Access_and_check{
     	p.property_listNames();
     	String propnamelabel= p.property_listNames().get(3).getText();
     	String[] propnamelabel_split = propnamelabel.split(": ");
-    	Property_name = propnamelabel_split[1];
-    }
+    	Property_name = propnamelabel_split[1];}
 
     
         @Test
         public void propertydelete() throws InterruptedException, IOException, AWTException{
         	
         Property_locaters p = new Property_locaters(d);
-        JavascriptExecutor js = (JavascriptExecutor)d; 	
         List_slide lsd = new List_slide(d);	
         
         Property_Soceity_Management(0);
@@ -74,11 +74,39 @@ public class Property_management extends Admin_Modules_Access_and_check{
         p.popup_Tooltip();
         Thread.sleep(400);	
         p.Tooltip_buttons().get(0).click();	
-        Thread.sleep(1400);
+        Thread.sleep(1400);}
+
+        @Test
+        public void Home_visit_pending_property_Search() throws IOException, InterruptedException, AWTException{
+        	
+        Property_locaters p = new Property_locaters(d);
+        Admin_modules_locators ad = new Admin_modules_locators(d);	
+        List_slide lsd = new List_slide(d);	
+        	
+        List<String> propertiesnames = Home_visit_Pending_Module_Access();
+        p.property_searchbar().sendKeys(propertiesnames.get(1));	
+        Thread.sleep(800);
+		p.Search_button().click();
+		Thread.sleep(800);	
+		ad.Home_visit_pending_properties();	
+        String pendingpropname = 	ad.Home_visit_pending_properties().get(0).getText();
+        System.out.println(propertiesnames.get(1).equalsIgnoreCase(pendingpropname) ? "Testcase Passed search wokring" :"Testcase Failed search notwokring");	
         }
-
-
-
+        
+        
+        @Test
+        public void Property_Update_Approval_Propertynames() throws InterruptedException, IOException, AWTException{
+        	
+        Property_locaters p = new Property_locaters(d);	
+        	
+        Property_Update_Approval_Module_Access();	
+        p.property_update_list_loaded();	
+        p.Pending_update_property_names();
+        IntStream.range(0, p.Pending_update_property_names().size()).forEach(nam->{
+        System.out.println("Update Pending Properties are "+p.Pending_update_property_names().get(nam));	
+        });
+        
+        }
 
 
 }

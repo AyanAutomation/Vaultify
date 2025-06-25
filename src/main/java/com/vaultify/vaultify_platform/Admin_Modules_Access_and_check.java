@@ -3,9 +3,12 @@ package com.vaultify.vaultify_platform;
 import java.awt.AWTException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -89,10 +92,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 	public void Property_Soceity_Management(int k) throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
-    	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor)d;
-        
+    	
         login();
         IntStream.range(0, 1).forEach(i->{
     	w.until(ExpectedConditions.visibilityOfAllElements(p.dropdown_module.get(0)));	
@@ -116,6 +117,27 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
 		System.out.println(b);});}
+	
+	
+	public List<String> Home_visit_Pending_Module_Access() throws IOException, InterruptedException, AWTException{
+		
+		
+		Admin_modules_locators p = new Admin_modules_locators(d);
+		
+    	
+        Property_Soceity_Management(0);
+        p.module_internal_Tabs();
+        p.module_internal_Tabs().get(1).click();
+		p.home_visit_pending_list_loaded();
+		p.Home_visit_pending_properties();
+		IntStream.range(0, p.Home_visit_pending_properties().size()).forEach(prop->{
+		System.out.println("Listed Homevisit pending Properties are "+p.Home_visit_pending_properties().get(prop).getText());});
+		List<String> propertiesnames = p.Home_visit_pending_properties().stream().map(WebElement::getText).collect(Collectors.toList());
+	    return propertiesnames;
+		
+	}
+	
+	   
 	
  
 	public void SiteSetting() throws InterruptedException, IOException, AWTException{
@@ -281,23 +303,21 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
 		System.out.println(b);}
-/*	
-    @Test  
-	public void Vaultify_Versity() throws InterruptedException{
+	
+
+	  public void Property_Update_Approval_Module_Access() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
-    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor)d;
+
         
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+1).click();
-		Thread.sleep(750);
-		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
-		System.out.println(b);}
-	
+        Property_Soceity_Management(0);
+        a.moveToElement(p.update_approval_request_button()).click().build().perform();
+        
+        
+        
+    	} 
+    /*
     @Test  
 	public void Vaultify_Versity() throws InterruptedException{
 		
