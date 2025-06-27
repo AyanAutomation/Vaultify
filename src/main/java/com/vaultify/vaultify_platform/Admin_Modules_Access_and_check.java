@@ -116,7 +116,9 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);});}
+		System.out.println(b);});
+        System.out.println();}
+	
 	
 	
 	public List<String> Home_visit_Pending_Module_Access() throws IOException, InterruptedException, AWTException{
@@ -128,11 +130,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
         Property_Soceity_Management(0);
         p.module_internal_Tabs();
         p.module_internal_Tabs().get(1).click();
-		p.home_visit_pending_list_loaded();
 		p.Home_visit_pending_properties();
-		IntStream.range(0, p.Home_visit_pending_properties().size()).forEach(prop->{
-		System.out.println("Listed Homevisit pending Properties are "+p.Home_visit_pending_properties().get(prop).getText());});
-		List<String> propertiesnames = p.Home_visit_pending_properties().stream().map(WebElement::getText).collect(Collectors.toList());
+	    List<String> propertiesnames = p.Home_visit_pending_properties().stream().map(WebElement::getText).collect(Collectors.toList());
 	    return propertiesnames;
 		
 	}
@@ -154,7 +153,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();}
 	
   
 	public void Dynamic_Incentive_Setting() throws InterruptedException, IOException, AWTException{
@@ -171,7 +171,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();}
 	
   
 	public void Grivance_Management() throws InterruptedException, IOException, AWTException{
@@ -188,7 +189,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();}
 	
 
 	public void Feedback_Management() throws InterruptedException, IOException, AWTException{
@@ -205,7 +207,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();}
 	
  
 	public void Relationships() throws InterruptedException, IOException, AWTException{
@@ -225,7 +228,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();}
 	
 
 	public void TalkToExpert() throws InterruptedException, IOException, AWTException{
@@ -245,7 +249,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();}
 	
 
 	public void Staff_Attendance_Management() throws InterruptedException, IOException, AWTException{
@@ -265,7 +270,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();}
 	
     
 	public void Private_Bid_Console() throws InterruptedException, IOException, AWTException{
@@ -285,7 +291,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();}
 	
  
 	public void Franchise_Management() throws InterruptedException, IOException, AWTException{
@@ -302,7 +309,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();}
 	
 
 	  public void Property_Update_Approval_Module_Access() throws InterruptedException, IOException, AWTException{
@@ -332,7 +340,8 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(p.page_headeings().getText());
         b.append(" heading is ");
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();}
 	
     @Test  
 	public void Vaultify_Versity() throws InterruptedException{

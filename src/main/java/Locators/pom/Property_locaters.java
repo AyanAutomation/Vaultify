@@ -24,22 +24,22 @@ public class Property_locaters extends Repeatative_Codes{
 	private WebElement  Search_button; 
 	@FindBy(xpath="//*[@class='rc-table-content']")
 	private WebElement slider;
-	@FindBy(xpath="//div[@class='flex items-center justify-end gap-3 pe-4']//button")
-	private List <WebElement>  list_buttons;
+	@FindBy(xpath="//*[@aria-label='Delete Item")
+	private List <WebElement>  list_Delete_buttons;
 	@FindBy(xpath="//div[@role='tooltip']")
 	private WebElement  popup_Tooltip;
 	@FindBy(xpath="//*[text()='Update request Status']")
 	private WebElement  property_update_list_loaded; 
 	@FindBy(xpath="//td[1]//p[1]")
-	private List <WebElement> Pending_update_property_names; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement> Pending_update_property_names; 
+	@FindBy(xpath="//*[@aria-label='View Property']")
+	private List <WebElement>  list_view_buttons;
+	@FindBy(xpath="//*[text()='Assign Employee']")
+	private WebElement  Assign_Employee_button;
+	@FindBy(xpath="//*[@class='space-y-4']//h4")
+	private List <WebElement> Role_Names;
+	@FindBy(xpath="//*[@class='space-y-4']//p")
+	private List <WebElement> employees_in_role;/*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -98,9 +98,9 @@ public class Property_locaters extends Repeatative_Codes{
 	public WebElement slider(){
 	WebElement_wait(slider);
 	return slider;}
-	public List <WebElement> list_buttons(){
-	WebElements_waits(list_buttons);	
-	return list_buttons;}
+	public List <WebElement> list_Delete_buttons(){
+	WebElements_waits(list_Delete_buttons);	
+	return list_Delete_buttons;}
 	public WebElement popup_Tooltip(){
 	WebElement_wait(popup_Tooltip);
 	return popup_Tooltip;}
@@ -113,19 +113,19 @@ public class Property_locaters extends Repeatative_Codes{
 	return property_update_list_loaded;}
 	public List<WebElement> Pending_update_property_names(){
 	WebElements_waits(Pending_update_property_names);
-	return Pending_update_property_names;}/*
-	public WebElement (){
-	wait_for_theElement();
-	return ;}
-	public WebElement (){
-	wait_for_theElement();	
-	return ;}
-	public WebElement (){
-	wait_for_theElement();
-	return ;}
-	public WebElement (){
-	wait_for_theElement();
-	return ;} 
+	return Pending_update_property_names;}
+	public List<WebElement> list_view_buttons(){
+	WebElements_waits(list_view_buttons);
+	return list_view_buttons;}
+	public WebElement Assign_Employee_button(){
+	WebElement_wait(Assign_Employee_button);	
+	return Assign_Employee_button;}
+	public List<WebElement> Role_Names(){
+	WebElements_waits(Role_Names);
+	return Role_Names;}
+	public List<WebElement> employees_in_role(){
+	WebElements_waits(employees_in_role);
+	return employees_in_role;} /*
 	*/
 	
 	

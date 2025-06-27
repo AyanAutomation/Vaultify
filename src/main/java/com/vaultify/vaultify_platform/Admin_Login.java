@@ -54,9 +54,11 @@ public class Admin_Login extends Base{
 		p.submit_button().click();
 		try{Thread.sleep(800);
 	    p.success_Toast();
-		System.out.println(p.success_Toast().getText());}
+		System.out.println(p.success_Toast().getText());
+		System.out.println();}
 		catch(Exception eee){
-		System.out.println("post login success toast not found");}
+		System.out.println("post login success toast not found");
+		System.out.println();}
 		p.Login_confirmed();
 	}
 	
