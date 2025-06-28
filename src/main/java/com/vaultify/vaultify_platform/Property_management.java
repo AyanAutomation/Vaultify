@@ -3,11 +3,14 @@ package com.vaultify.vaultify_platform;
 import java.awt.AWTException;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.stream.IntStream;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.vaultify.Repeat_codes.List_slide;
@@ -44,7 +47,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
 		//propertydelete();
 		}
 	
-    public TreeSet Pagination_change() throws InterruptedException{
+    public TreeSet<String> Pagination_change() throws InterruptedException{
     	
     	Property_locaters p = new Property_locaters(d);
     	JavascriptExecutor js = (JavascriptExecutor)d;
@@ -122,20 +125,22 @@ public class Property_management extends Admin_Modules_Access_and_check{
         p.Pending_update_property_names();
         IntStream.range(0, p.Pending_update_property_names().size()).forEach(nam->{
         tree.add(p.Pending_update_property_names().get(nam).getText());});
-        System.out.print(tree);
-        System.out.println();
+        for(String eachtreevalue : tree) {
+        System.out.print(eachtreevalue);
+        System.out.println();}
         }
         
         
         
         
-        
+        int rc;
         @Test
        public void Property_Staff_assign() throws InterruptedException, IOException, AWTException{
         	
        Property_locaters p = new Property_locaters(d);
-       TreeMap <String,String> treemap = new TreeMap();
+       TreeMap <String,String> treemap = new TreeMap<String, String>();
        List_slide lsd = new List_slide(d);	
+       JavascriptExecutor js = (JavascriptExecutor)d;
        
        Property_Soceity_Management(0);
 	   p.property_searchbar();	
@@ -146,17 +151,43 @@ public class Property_management extends Admin_Modules_Access_and_check{
        p.Role_Names();
        p.employees_in_role(); 	
        IntStream.range(0, p.Role_Names().size()).forEach(rc->{
-       treemap.put( p.Role_Names().get(rc).getText(),  p.employees_in_role().get(rc).getText());   
-       System.out.println("Role and Employees are  "+treemap);	   
-    	   
-    	   
-    	   
+       treemap.put(p.Role_Names().get(rc).getText(),  p.employees_in_role().get(rc).getText());
+       if(p.Role_Names().get(rc).getText().equalsIgnoreCase("Civil Engineers *")){
+       	   js.executeScript("arguments[0].scrollIntoView(true);",p.Role_Names().get(rc));	
+       	   p.Role_Names().get(rc).click();
+    	   try {
+			Civil_engineer_assign();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}}
+      //
+       
        }); 	
-        	
-        	
-        	
-        	
-        }
+       for(Map.Entry<String, String> Eachtreemap_value:treemap.entrySet()){
+       System.out.println("Role and Employees are  "+Eachtreemap_value);	   
+       System.out.println();}
+       Thread.sleep(800);}
+        
+        
+        
+        
+        
+      public void Civil_engineer_assign() throws InterruptedException{
+    	  
+      Property_locaters p = new Property_locaters(d);	
+      JavascriptExecutor js = (JavascriptExecutor)d;
+      
+      
+       Thread.sleep(800);
+       p.inside_employees();
+       Thread.sleep(800);
+   	   IntStream.range(0, p.inside_employees().size()).forEach(roleemp->{
+	   System.out.println("Civil Engineers * are   "+p.inside_employees().get(roleemp).getText());
+          /* if(p.inside_employees().get(roleemp).getText().contains("Vaultify_Civil_Engineer@yopmail.com")){
+	    	   p.inside_employees().get(roleemp).findElement(By.xpath(".//button")).click();*/});}
+    	  
+      
 
 
 }

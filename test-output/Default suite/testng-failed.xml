@@ -5,8 +5,8 @@
     <classes>
       <class name="com.vaultify.vaultify_platform.Property_management">
         <methods>
-          <include name="Home_visit_pending_property_Search"/>
           <include name="setUP"/>
+          <include name="Property_Staff_assign"/>
           <include name="driverkill"/>
         </methods>
       </class> <!-- com.vaultify.vaultify_platform.Property_management -->

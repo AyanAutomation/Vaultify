@@ -39,9 +39,9 @@ public class Property_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//*[@class='space-y-4']//h4")
 	private List <WebElement> Role_Names;
 	@FindBy(xpath="//*[@class='space-y-4']//p")
-	private List <WebElement> employees_in_role;/*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement> employees_in_role;
+	@FindBy(xpath="//tr[@class='hover:bg-gray-100']")
+	private List <WebElement> inside_employees;/*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -125,7 +125,13 @@ public class Property_locaters extends Repeatative_Codes{
 	return Role_Names;}
 	public List<WebElement> employees_in_role(){
 	WebElements_waits(employees_in_role);
-	return employees_in_role;} /*
+	return employees_in_role;} 
+	public List<WebElement> inside_employees(){
+	WebElements_waits(inside_employees);
+	return inside_employees;}
+	
+	
+	/*
 	*/
 	
 	
