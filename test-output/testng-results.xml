@@ -2,20 +2,20 @@
 <testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-29T00:48:46 IST" name="Default suite" finished-at="2025-06-29T00:49:22 IST" duration-ms="35605">
+  <suite started-at="2025-06-30T00:02:30 IST" name="Default suite" finished-at="2025-06-30T00:03:33 IST" duration-ms="63398">
     <groups>
     </groups>
-    <test started-at="2025-06-29T00:48:46 IST" name="Default test" finished-at="2025-06-29T00:49:22 IST" duration-ms="35605">
+    <test started-at="2025-06-30T00:02:30 IST" name="Default test" finished-at="2025-06-30T00:03:33 IST" duration-ms="63398">
       <class name="com.vaultify.vaultify_platform.Property_management">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Property_management@24269709]" started-at="2025-06-29T00:48:46 IST" name="setUP" finished-at="2025-06-29T00:48:49 IST" duration-ms="2230" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Property_management@2a5c8d3f]" started-at="2025-06-30T00:02:30 IST" name="setUP" finished-at="2025-06-30T00:02:33 IST" duration-ms="2871" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="Property_Staff_assign()[pri:0, instance:com.vaultify.vaultify_platform.Property_management@24269709]" started-at="2025-06-29T00:48:49 IST" name="Property_Staff_assign" finished-at="2025-06-29T00:49:21 IST" duration-ms="32711" status="PASS">
+        <test-method signature="Property_Staff_assign()[pri:0, instance:com.vaultify.vaultify_platform.Property_management@2a5c8d3f]" started-at="2025-06-30T00:02:33 IST" name="Property_Staff_assign" finished-at="2025-06-30T00:03:33 IST" duration-ms="59771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Property_Staff_assign -->
-        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Property_management@24269709]" started-at="2025-06-29T00:49:21 IST" name="driverkill" finished-at="2025-06-29T00:49:22 IST" duration-ms="628" status="PASS">
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Property_management@2a5c8d3f]" started-at="2025-06-30T00:03:33 IST" name="driverkill" finished-at="2025-06-30T00:03:33 IST" duration-ms="716" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverkill -->

@@ -41,13 +41,13 @@ public class Property_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//*[@class='space-y-4']//p")
 	private List <WebElement> employees_in_role;
 	@FindBy(xpath="//tr[@class='hover:bg-gray-100']")
-	private List <WebElement> inside_employees;/*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement> inside_employees;
+	@FindBy(xpath="//*[@class='mb-4 flex items-center justify-between']//button")
+	private WebElement  modal_close_button;
+	@FindBy(xpath="//*[@class='rizzui-switch col-span-full']//label")
+	private List <WebElement> property_toggle_buttons;
+	@FindBy(xpath="//*[text()='Approve This Property']")
+	private WebElement  approve_property_button;/*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -129,8 +129,15 @@ public class Property_locaters extends Repeatative_Codes{
 	public List<WebElement> inside_employees(){
 	WebElements_waits(inside_employees);
 	return inside_employees;}
-	
-	
+	public WebElement modal_close_button(){
+	WebElement_wait(modal_close_button);	
+	return modal_close_button;}
+	public List<WebElement> property_toggle_buttons(){
+	WebElements_waits(property_toggle_buttons);
+	return property_toggle_buttons;}
+	public WebElement approve_property_button(){
+	WebElement_wait(approve_property_button);	
+	return approve_property_button;}
 	/*
 	*/
 	

@@ -21,7 +21,9 @@ import Locators.pom.Property_locaters;
 public class Property_management extends Admin_Modules_Access_and_check{
 	
 	
-	public  String Resultant_propertyname;
+	public String Resultant_propertyname;
+	public List<WebElement> rolespresent;
+	public List<WebElement> employeepresent_in_eachroles;
 	
 	@Test
 	public void Property_Search() throws InterruptedException, IOException, AWTException{
@@ -64,9 +66,9 @@ public class Property_management extends Admin_Modules_Access_and_check{
     	Thread.sleep(800);
     	p.property_listNames();
     	IntStream.range(0, p.property_listNames().size()).forEach(pname->{
-    		String propnamelabel= p.property_listNames().get(pname).getText();
-    		String[] propnamelabel_split = propnamelabel.split(": ");
-    		tree.add(propnamelabel_split[1]);
+    	String propnamelabel= p.property_listNames().get(pname).getText();
+    	String[] propnamelabel_split = propnamelabel.split(": ");
+    	tree.add(propnamelabel_split[1]);
     	});
     	
     	return tree;
@@ -132,9 +134,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
         
         
         
-        
-        int rc;
-        @Test
+         @Test
        public void Property_Staff_assign() throws InterruptedException, IOException, AWTException{
         	
        Property_locaters p = new Property_locaters(d);
@@ -142,33 +142,49 @@ public class Property_management extends Admin_Modules_Access_and_check{
        List_slide lsd = new List_slide(d);	
        JavascriptExecutor js = (JavascriptExecutor)d;
        
+       
+       
        Property_Soceity_Management(0);
 	   p.property_searchbar();	
        lsd.List_slide();
        p.list_view_buttons();	
-       p.list_view_buttons().get(2).click();	
+       p.list_view_buttons().get(0).click();	
        p.Assign_Employee_button().click();
-       p.Role_Names();
-       p.employees_in_role(); 	
-       IntStream.range(0, p.Role_Names().size()).forEach(rc->{
-       treemap.put(p.Role_Names().get(rc).getText(),  p.employees_in_role().get(rc).getText());
-       if(p.Role_Names().get(rc).getText().equalsIgnoreCase("Civil Engineers *")){
-       	   js.executeScript("arguments[0].scrollIntoView(true);",p.Role_Names().get(rc));	
-       	   p.Role_Names().get(rc).click();
-    	   try {
-			Civil_engineer_assign();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}}
-      //
+       Thread.sleep(600);
+       rolespresent =   p.Role_Names();
+       employeepresent_in_eachroles = p.employees_in_role();
+       IntStream.range(0, rolespresent.size()).forEach(rc->{
+       treemap.put(rolespresent.get(rc).getText(),employeepresent_in_eachroles.get(rc).getText());});
+       System.out.println(treemap);
+       System.out.println();
+       try {
+       Civil_engineer_assign();}catch(Exception e){
+       System.out.println("Exception found in Civil engineer assign");}try{
+       loan_adviser_assign();}catch(Exception f){
+       System.out.println("Exception found in loan_adviser_assign");
+       System.out.println();}try{
+       lawyer_assign();}catch(Exception g){
+ 	   System.out.println("Exception found in lawyer_assign");
+ 	   System.out.println();}
+ 	   try{Relationship_Managers_assign();}catch(Exception h){
+ 	   System.out.println("Exception found in Relationship_Managers_assign");
+ 	   System.out.println();}
+ 	   try{CA_assign();}catch(Exception i){
+ 	   System.out.println("Exception found in CA_assign");
+ 	   System.out.println();}
+ 	   try{Investment_Advisors_assign();}catch(Exception jk){
+ 	   System.out.println("Exception found in Investment_Advisors_assign");
+ 	   System.out.println();}
+ 	   try{Multitasking_Partner_assign();}catch(Exception kj){
+ 	   System.out.println("Exception found in Multitasking_Partner_assign");
+ 	   System.out.println();}
+ 	   p.modal_close_button().click();
+ 	   Thread.sleep(500);
+ 	   try{p.approve_property_button();}catch(Exception mo){
+ 	   System.out.println("post assigning all employee assign property button don't appear thereby have to refresh the page");
+ 	   d.navigate().refresh();
+ 	   p.approve_property_button();}}
        
-       }); 	
-       for(Map.Entry<String, String> Eachtreemap_value:treemap.entrySet()){
-       System.out.println("Role and Employees are  "+Eachtreemap_value);	   
-       System.out.println();}
-       Thread.sleep(800);}
-        
         
         
         
@@ -179,15 +195,146 @@ public class Property_management extends Admin_Modules_Access_and_check{
       JavascriptExecutor js = (JavascriptExecutor)d;
       
       
-       Thread.sleep(800);
-       p.inside_employees();
-       Thread.sleep(800);
-   	   IntStream.range(0, p.inside_employees().size()).forEach(roleemp->{
-	   System.out.println("Civil Engineers * are   "+p.inside_employees().get(roleemp).getText());
-          /* if(p.inside_employees().get(roleemp).getText().contains("Vaultify_Civil_Engineer@yopmail.com")){
-	    	   p.inside_employees().get(roleemp).findElement(By.xpath(".//button")).click();*/});}
-    	  
+      for(WebElement rolepresent:rolespresent){
+   	  if(rolepresent.getText().equalsIgnoreCase("Civil Engineers *")){
+   		   js.executeScript("arguments[0].scrollIntoView(true);",rolepresent); 
+   		   rolepresent.click();
+   		   Thread.sleep(700);
+   		   List <WebElement> employees_inside_roles = p.inside_employees();
+   		   Thread.sleep(600);
+   		   for(WebElement eachemployee: employees_inside_roles){
+   		   		 if(!eachemployee.getText().contains("Assigned")){
+   		   			System.out.println("Civil engineer Assigned is  "+eachemployee.getText());
+   		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
+   		   			break;}}}}}
       
+      
+      public void loan_adviser_assign() throws InterruptedException{
+    	  
+          Property_locaters p = new Property_locaters(d);	
+          JavascriptExecutor js = (JavascriptExecutor)d;
+        
+	
+         
+          for(WebElement rolepresent:rolespresent){
+       	  
+              if(rolepresent.getText().equalsIgnoreCase("Loan Advisors *")){
+       		   js.executeScript("arguments[0].scrollIntoView(true);",rolepresent); 
+       		   rolepresent.click();
+       		   Thread.sleep(700);
+       		   List <WebElement> employees_inside_roles = p.inside_employees();
+       		   Thread.sleep(600);
+       		   for(WebElement eachemployee: employees_inside_roles){
+       		   		 if(!eachemployee.getText().contains("Assigned")){
+       		   			System.out.println("Loan Advisors Assigned is  "+eachemployee.getText());
+       		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
+       		   			break;}}}}}
 
+        public void lawyer_assign() throws InterruptedException{
+    	  
+          Property_locaters p = new Property_locaters(d);	
+          JavascriptExecutor js = (JavascriptExecutor)d;
+        	
+         
+          for(WebElement rolepresent:rolespresent){
+       	  
+              if(rolepresent.getText().equalsIgnoreCase("Lawyers *")){
+       		   js.executeScript("arguments[0].scrollIntoView(true);",rolepresent); 
+       		   rolepresent.click();
+       		   Thread.sleep(700);
+       		   List <WebElement> employees_inside_roles = p.inside_employees();
+       		   Thread.sleep(600);
+       		   for(WebElement eachemployee: employees_inside_roles){
+       		   		 if(!eachemployee.getText().contains("Assigned")){
+       		   			System.out.println("Lawyers Assigned is  "+eachemployee.getText());
+       		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
+       		   			break;}}}}}
+        
+        public void Relationship_Managers_assign() throws InterruptedException{
+      	  
+            Property_locaters p = new Property_locaters(d);	
+            JavascriptExecutor js = (JavascriptExecutor)d;
+          
+           
+            for(WebElement rolepresent:rolespresent){
+         	  
+                if(rolepresent.getText().equalsIgnoreCase("Relationship Managers *")){
+         		   js.executeScript("arguments[0].scrollIntoView(true);",rolepresent); 
+         		   rolepresent.click();
+         		   Thread.sleep(700);
+         		   List <WebElement> employees_inside_roles = p.inside_employees();
+         		   Thread.sleep(600);
+         		   for(WebElement eachemployee: employees_inside_roles){
+         		   		 if(!eachemployee.getText().contains("Assigned")){
+         		   			System.out.println("Relationship Managers Assigned is  "+eachemployee.getText());
+         		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
+         		   			break;}}}}}
+        
+        
+        
+        public void CA_assign() throws InterruptedException{
+        	  
+            Property_locaters p = new Property_locaters(d);	
+            JavascriptExecutor js = (JavascriptExecutor)d;
+          
+
+           
+            for(WebElement rolepresent:rolespresent){
+         	  
+                if(rolepresent.getText().equalsIgnoreCase("CA *")){
+         		   js.executeScript("arguments[0].scrollIntoView(true);",rolepresent); 
+         		   rolepresent.click();
+         		   Thread.sleep(700);
+         		   List <WebElement> employees_inside_roles = p.inside_employees();
+         		   Thread.sleep(600);
+         		   for(WebElement eachemployee: employees_inside_roles){
+         		   		 if(!eachemployee.getText().contains("Assigned")){
+         		   			System.out.println("CA Assigned is  "+eachemployee.getText());
+         		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
+         		   			break;}}}}}
+        
+        
+        public void Investment_Advisors_assign() throws InterruptedException{
+      	  
+            Property_locaters p = new Property_locaters(d);	
+            JavascriptExecutor js = (JavascriptExecutor)d;
+          
+
+           
+            for(WebElement rolepresent:rolespresent){
+         	  
+                if(rolepresent.getText().equalsIgnoreCase("Investment Advisors *")){
+         		   js.executeScript("arguments[0].scrollIntoView(true);",rolepresent); 
+         		   rolepresent.click();
+         		   Thread.sleep(700);
+         		   List <WebElement> employees_inside_roles = p.inside_employees();
+         		   Thread.sleep(600);
+         		   for(WebElement eachemployee: employees_inside_roles){
+         		   		 if(!eachemployee.getText().contains("Assigned")){
+         		   			System.out.println("Investment Advisors Assigned is  "+eachemployee.getText());
+         		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
+         		   			break;}}}}}
+        
+        
+        public void Multitasking_Partner_assign() throws InterruptedException{
+        	  
+            Property_locaters p = new Property_locaters(d);	
+            JavascriptExecutor js = (JavascriptExecutor)d;
+          
+           
+            for(WebElement rolepresent:rolespresent){
+         	  
+                if(rolepresent.getText().equalsIgnoreCase("Multitasking Partner *")){
+         		   js.executeScript("arguments[0].scrollIntoView(true);",rolepresent); 
+         		   rolepresent.click();
+         		   Thread.sleep(700);
+         		   List <WebElement> employees_inside_roles = p.inside_employees();
+         		   Thread.sleep(600);
+         		   for(WebElement eachemployee: employees_inside_roles){
+         		   		 if(!eachemployee.getText().contains("Assigned")){
+         		   			System.out.println("Multitasking Partner Assigned is  "+eachemployee.getText());
+         		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
+         		   			break;}}}}}
+      
 
 }
