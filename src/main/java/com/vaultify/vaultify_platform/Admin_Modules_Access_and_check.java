@@ -3,6 +3,7 @@ package com.vaultify.vaultify_platform;
 import java.awt.AWTException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -14,6 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import Locators.pom.Admin_modules_locators;
+import Locators.pom.Property_locaters;
 
 
 public class Admin_Modules_Access_and_check extends Admin_Login{
@@ -72,21 +74,32 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 		System.out.println(b);}
 	
     
-	public void TeamManagement() throws InterruptedException, IOException, AWTException{
+	public List<String> TeamManagement() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
-    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+    	Property_locaters pp = new Property_locaters(d);
         JavascriptExecutor js = (JavascriptExecutor)d;
+        List<String> names_of_staffs = new ArrayList<String>();
         
         login();
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+3).click();
+    	p.Menu_modules();	
+		p.Menu_modules().get(v+3).click();
 		Thread.sleep(750);
-		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
+		p.page_headeings();
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();
+		js.executeScript("arguments[0].scrollIntoView(true);",p.employee_search_button());
+	    Thread.sleep(800);
+	    pp.property_listNames();
+		List <WebElement> employeenames = pp.property_listNames();
+		for(WebElement employeename:employeenames){
+			names_of_staffs.add(employeename.getText());
+		}
+	    return names_of_staffs;
+	}
 	
     
 	public void Property_Soceity_Management(int k) throws InterruptedException, IOException, AWTException{

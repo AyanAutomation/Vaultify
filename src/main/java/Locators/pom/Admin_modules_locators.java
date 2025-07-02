@@ -83,7 +83,9 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	@FindBy(xpath="//td[1]//figcaption[@class='grid gap-0.5']//p[1]")
 	private List <WebElement> Home_visit_pending_properties;
 	@FindBy(xpath="//div[@class='mt-4 flex items-center gap-3 @lg:mt-0']")
-	private WebElement  update_approval_request_button;  
+	private WebElement update_approval_request_button;  
+	@FindBy(xpath="//input")
+	private WebElement employee_search_button;
 
 
 	public Admin_modules_locators(WebDriver d){
@@ -188,11 +190,13 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	return Home_visit_pending_properties;}
 	public WebElement update_approval_request_button(){
 	WebElement_wait(update_approval_request_button);
-	return update_approval_request_button;}/*
-	public WebElement (){
-	return ;}
-	public WebElement (){
-	return ;}
+	return update_approval_request_button;}
+	public WebElement employee_search_button(){
+	WebElement_wait(employee_search_button);
+	return employee_search_button;}
+	public List <WebElement> Menu_modules(){
+	WebElements_waits(Menu_modules);
+	return Menu_modules;}/*
 	public WebElement (){
 	return ;}
 	public WebElement (){

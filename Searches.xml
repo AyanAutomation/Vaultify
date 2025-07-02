@@ -5,8 +5,17 @@
     <classes>
       <class name="com.vaultify.vaultify_platform.Property_management">
       <methods>
-      <include name="Home_visit_pending_property_Search"/>
-      <include name="Property_Update_Approval_Propertynames"/>
+      <include name="Property_Search"/>
+      </methods>
+      </class>
+      <class name="com.vaultify.vaultify_platform.user_module">
+      <methods>
+      <include name="user_Search"/>
+      </methods>
+      </class>   
+      <class name="com.vaultify.vaultify_platform.Staff_and_Team">
+      <methods>
+      <include name="employeesearch"/>
       </methods>
       </class>
     </classes>

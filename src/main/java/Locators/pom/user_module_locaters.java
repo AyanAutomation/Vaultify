@@ -16,9 +16,9 @@ public class user_module_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//*[text()='Search']")
 	private WebElement  Search_button;
 	@FindBy(xpath="//a[@rel='nofollow']")
-	private List <WebElement> Pagination_change_button;/*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement> Pagination_change_button;
+	@FindBy(xpath="//label//button")
+	private WebElement search_clear_crossButton; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -66,10 +66,10 @@ public class user_module_locaters extends Repeatative_Codes{
 		return Search_button;} 
 		public List <WebElement> Pagination_change_button(){
 		WebElements_waits(Pagination_change_button);
-		return Pagination_change_button;}/*
-		public WebElement (){
-			WebElement_wait();
-		return ;}
+		return Pagination_change_button;}
+		public WebElement search_clear_crossButton(){
+		WebElement_wait(search_clear_crossButton);
+		return search_clear_crossButton;}/*
 		public WebElement (){
 			WebElement_wait();
 		return ;}

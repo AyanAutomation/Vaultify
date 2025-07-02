@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 import java.util.stream.IntStream;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -14,8 +15,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Locators.pom.Admin_modules_locators;
+import Locators.pom.Property_locaters;
 
 public class Staff_and_Team extends Admin_Modules_Access_and_check{
+	
+	String search_result;
 	
 	@Test(dataProvider="employeedata")
 	public void Employee_staff_Add(String username, String password, String fullname, String fathername,
@@ -26,78 +30,71 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 		
 		Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
-    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+    	
         JavascriptExecutor js = (JavascriptExecutor)d;
         Robot r = new Robot();
         
         
         TeamManagement();
+        Thread.sleep(800);	
         js.executeScript("arguments[0].scrollIntoView(true);",p.Employee_add_button());
-        Thread.sleep(800);
-        js.executeScript("window.scrollBy(0,-150)");
-        Thread.sleep(800);
-        w.until(ExpectedConditions.visibilityOfAllElements(p.Employee_add_button()));
-		p.Employee_add_button().click();
-		w.until(ExpectedConditions.visibilityOfAllElements(p.pop_up_employeeAdd_Form()));
+	    Thread.sleep(800);
+	    js.executeScript("window.scrollBy(0,-150)");
+        p.Employee_add_button();
+        p.Employee_add_button().click();
+		p.pop_up_employeeAdd_Form();
 		a.moveToElement(p.pop_up_employeeAdd_Form()).build().perform();
 		Thread.sleep(800);
 		js.executeScript("window.scrollBy(0,-150)");
-		w.until(ExpectedConditions.visibilityOf(p.username_field()));
+		p.username_field();
 		js.executeScript("document.querySelector(\"input[name='username']\").scrollIntoView({ behavior: \"smooth\", block: \"center\" });");
 		Thread.sleep(800);
 		p.username_field().sendKeys(username);
-		w.until(ExpectedConditions.visibilityOf(p.password_field()));
+		p.password_field();
 		p.password_field().clear();
 		p.password_field().sendKeys(password);
-		w.until(ExpectedConditions.visibilityOf(p.Full_Name_feild()));
+		p.Full_Name_feild();
 		p.Full_Name_feild().sendKeys(fullname);
-		w.until(ExpectedConditions.visibilityOf(p.father_name()));
+		p.father_name();
 		p.father_name().sendKeys(fathername);
-		w.until(ExpectedConditions.visibilityOf(p.mother_name()));
+		p.mother_name();
 		p.mother_name().sendKeys(mothername);
-        w.until(ExpectedConditions.visibilityOf(p.email()));
+        p.email();
 		p.email().sendKeys(email);
 		r.mouseWheel(4);
 		Thread.sleep(800);
-		w.until(ExpectedConditions.visibilityOf(p.phoneNumber()));
-		p.phoneNumber().sendKeys(phone);
-		w.until(ExpectedConditions.visibilityOf(p.dob()));
+        p.phoneNumber().sendKeys(phone);
+		p.dob();
 		p.dob().sendKeys(dob);
 		p.whatsapp_dropdown();
 		p.whatsapp_dropdown().click();
-		w.until(ExpectedConditions.visibilityOfAllElements(p.dropdown_list()));
-		w.until(ExpectedConditions.visibilityOf(p.options().get(1)));
+		p.dropdown_list();
+		p.options().get(1);
 		p.options().get(1).click();
-		w.until(ExpectedConditions.visibilityOf(p.qualification()));
+		p.qualification();
 		p.qualification().sendKeys(qualification);
-		w.until(ExpectedConditions.visibilityOf(p.experience()));
+		p.experience();
 		p.experience().sendKeys(experience);
-		w.until(ExpectedConditions.visibilityOf(p.date_of_joining()));
+		p.date_of_joining();
 		p.date_of_joining().sendKeys(doj);
 		r.mouseWheel(3);
 		Thread.sleep(800);
-		w.until(ExpectedConditions.visibilityOf(p.role_dropdown_field()));
+		p.role_dropdown_field();
 		p.role_dropdown_field().click();
-		w.until(ExpectedConditions.visibilityOf(p.dropdown_list().get(0)));
-		w.until(ExpectedConditions.visibilityOf(p.options().get(1)));
+		p.dropdown_list().get(0);
+		p.options().get(1);
 		p.options().get(1).click();
-		w.until(ExpectedConditions.visibilityOf(p.accountOwnerName()));
 		p.accountOwnerName().sendKeys(accOwner);
-		w.until(ExpectedConditions.visibilityOf(p.bankName()));
 		p.bankName().sendKeys(bankName);
-		w.until(ExpectedConditions.visibilityOf(p.accountNumber()));
 		p.accountNumber().sendKeys(accNumber);
-		w.until(ExpectedConditions.visibilityOf(p.ifscCode()));
 		p.ifscCode().sendKeys(ifsc);
-		w.until(ExpectedConditions.visibilityOf(p.upiId()));
 		p.upiId().sendKeys(upi);
 		r.mouseWheel(4);
-		w.until(ExpectedConditions.visibilityOf(p.submit_button()));
 		p.submit_button().click();
 		Thread.sleep(800);
-		w.until(ExpectedConditions.visibilityOfAllElements(p.Employee_add_button()));
-		w.until(ExpectedConditions.visibilityOfAllElements(p.list_sort_buttons().get(0)));
-		w.until(ExpectedConditions.visibilityOfAllElements(p.first_name_inlist()));
+		p.Employee_add_button();
+		p.list_sort_buttons();
+		p.first_name_inlist();
 		if(!p.first_name_inlist().equals(username)){
 			
 		
@@ -105,10 +102,10 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 		Thread.sleep(800); */
 			
 			IntStream.range(0, 1).forEach(i->{
-				w.until(ExpectedConditions.visibilityOfAllElements(p.list_sort_buttons().get(0)));
+				p.list_sort_buttons().get(0);
 				p.list_sort_buttons().get(0).click();
 			});}
-		w.until(ExpectedConditions.visibilityOfAllElements(p.first_name_inlist()));
+		p.first_name_inlist();
 		System.out.println(p.first_name_inlist().getText().equalsIgnoreCase(username)?"Testcase Passed":"Testcase Failed");
 	}
 	
@@ -147,9 +144,29 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 	        "14-02-1993", "fahadnajeeb4082@yopmail.com", "971502234556", "Computer Science", "4",
 	        "19-09-2021", "Fahad Najeeb", "First Abu Dhabi Bank", "40817810099910077889", "FABU0000455", "fahadupi4082@ybl"
 	    }*/};
-		return employee;
+		return employee;}
+	
+	
+	       @Test
+	       public void employeesearch() throws InterruptedException, IOException, AWTException{
 		
-		
+		   Admin_modules_locators p = new Admin_modules_locators(d);
+		   JavascriptExecutor js = (JavascriptExecutor)d;
+		   Property_locaters pp = new Property_locaters(d);
+		   
+		   
+		   
+		    List <String> names= TeamManagement();
+	        js.executeScript("arguments[0].scrollIntoView(true);",p.employee_search_button());
+	        Thread.sleep(800);
+	        js.executeScript("window.scrollBy(0,-150)");
+	        Thread.sleep(800);
+	        p.employee_search_button();
+		    p.employee_search_button().sendKeys(names.get(5));
+		    pp.Search_button().click();
+		    Thread.sleep(1200);
+		    search_result= pp.property_listNames().get(0).getText();
+		    System.out.println(names.get(5).equalsIgnoreCase(search_result) ? "Testcase passed "+search_result+" name shown in search result ": "Testcase passed"+search_result+" name not shown in search result " );
 		
 		
 	}
