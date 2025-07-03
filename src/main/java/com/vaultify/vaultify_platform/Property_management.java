@@ -37,14 +37,14 @@ public class Property_management extends Admin_Modules_Access_and_check{
 		tree = Pagination_change();
 		System.out.println("Extracted Property Names =  "+tree);
 		System.out.println();
-		p.property_searchbar().sendKeys(tree.last());
+		p.property_searchbar().sendKeys(tree.getLast());
 		Thread.sleep(800);
 		p.Search_button().click();
 		Thread.sleep(800);
 		String propertynamelabel= p.property_listNames().get(0).getText();
     	String[] propertynamelabel_split = propertynamelabel.split(": ");
 		Resultant_propertyname = propertynamelabel_split[1];
-		System.out.println(tree.last().equalsIgnoreCase(Resultant_propertyname) ? "Testcase Passed search wokring" :"Testcase Failed search notwokring");
+		System.out.println(tree.getLast().equalsIgnoreCase(Resultant_propertyname) ? "Testcase Passed search wokring" :"Testcase Failed search notwokring");
 		System.out.println();
 		//propertydelete();
 		}
