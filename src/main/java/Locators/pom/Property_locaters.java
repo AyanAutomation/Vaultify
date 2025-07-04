@@ -47,13 +47,13 @@ public class Property_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//*[@class='rizzui-switch col-span-full']//label")
 	private List <WebElement> property_toggle_buttons;
 	@FindBy(xpath="//*[text()='Approve This Property']")
-	private WebElement  approve_property_button;/*
+	private WebElement  approve_property_button;
+	@FindBy(xpath="//*[@class='mt-1 text-sm text-gray-600']//div")
+	private List <WebElement>  property_card_details; 
+	@FindBy(xpath="//*[@class='col-span-5 @container']//ul")
+	private List <WebElement> property_details_below_Datas ;/*
 	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  ;      /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -138,9 +138,104 @@ public class Property_locaters extends Repeatative_Codes{
 	public WebElement approve_property_button(){
 	WebElement_wait(approve_property_button);	
 	return approve_property_button;}
-	/*
+	public List<WebElement> property_card_details(){
+	WebElements_waits(property_card_details);	
+	return property_card_details;}
+	public List <WebElement> property_details_below_Datas(){
+	WebElements_waits(property_details_below_Datas);	
+	return property_details_below_Datas;} /*
+	public List <WebElement> (){
+	WebElements_waits();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	public WebElement (){
+	WebElement_wait();	
+	return ;}
+	
+	
 	*/
-	
-	
 
 }

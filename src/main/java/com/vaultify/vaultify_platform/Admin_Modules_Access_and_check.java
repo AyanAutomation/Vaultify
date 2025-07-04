@@ -102,7 +102,7 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 	}
 	
     
-	public void Property_Soceity_Management(int k) throws InterruptedException, IOException, AWTException{
+public void Property_Soceity_Management(int k) throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));

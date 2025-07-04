@@ -196,9 +196,10 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	return employee_search_button;}
 	public List <WebElement> Menu_modules(){
 	WebElements_waits(Menu_modules);
-	return Menu_modules;}/*
-	public WebElement (){
-	return ;}
+	return Menu_modules;}
+	public List <WebElement> submenuitems(){
+	WebElements_waits(submenuitems);
+	return submenuitems;}/*
 	public WebElement (){
 	return ;}
 	public WebElement (){

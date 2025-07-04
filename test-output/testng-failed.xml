@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.vaultify.vaultify_platform.Staff_and_Team">
+      <class name="com.vaultify.vaultify_platform.Society_management">
         <methods>
-          <include name="employeesearch"/>
           <include name="setUP"/>
+          <include name="Society_add" invocation-numbers="0"/>
           <include name="driverkill"/>
         </methods>
-      </class> <!-- com.vaultify.vaultify_platform.Staff_and_Team -->
+      </class> <!-- com.vaultify.vaultify_platform.Society_management -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

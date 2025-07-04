@@ -11,12 +11,14 @@ import java.util.stream.IntStream;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.vaultify.Repeat_codes.List_slide;
 
 import Locators.pom.Admin_modules_locators;
 import Locators.pom.Property_locaters;
+import Locators.pom.Society_locaters;
 
 public class Property_management extends Admin_Modules_Access_and_check{
 	
@@ -336,5 +338,109 @@ public class Property_management extends Admin_Modules_Access_and_check{
          		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
          		   			break;}}}}}
       
+        
+        
+        @Test
+        public void property_details_Data_fetch()throws InterruptedException, IOException, AWTException{
+        	
+        	 Property_locaters p = new Property_locaters(d);
+             TreeMap <String,String> Tmap = new TreeMap<String, String>();
+             List_slide lsd = new List_slide(d);	
+             JavascriptExecutor js = (JavascriptExecutor)d;
+        	
+        	 Property_Soceity_Management(0);
+      	     p.property_searchbar();	
+             lsd.List_slide();
+             p.list_view_buttons();	
+             p.list_view_buttons().get(0).click();
+        	 p.property_card_details();
+        	 p.property_details_below_Datas();
+        	 System.out.println("property_card_details list size "+p.property_card_details().size());
+        	 System.out.println();
+        	 System.out.println("property_details_below_Datas list size "+p.property_details_below_Datas().size());
+        	 System.out.println();
+             IntStream.range(0, Math.min(p.property_card_details().size(), p.property_details_below_Datas().size())).forEach(vb->{
+            	Tmap.put(p.property_card_details().get(vb).getText(),  p.property_details_below_Datas().get(vb).getText());});
 
-}
+        	 for(Map.Entry<String,String>topcarddetail :Tmap.entrySet() ){
+        		 
+        		 System.out.println(topcarddetail);
+        		 System.out.println();}}}
+
+        
+        class Society_management extends Property_management{
+        	
+            @Test(dataProvider="getSocietyData")	
+        	public void Society_add(String name, String area, String landmark, String address, String shortDescription)throws InterruptedException, IOException, AWTException{
+        		
+        	Society_locaters p = new Society_locaters(d); 
+        	Property_locaters pp = new Property_locaters(d);	
+        	
+        		
+        	Property_Soceity_Management(2);
+        	p.society_Add_button().click();
+        	p.landed_in_society_add_form();
+        	Thread.sleep(600);
+        	p.input_fields();
+        	p.input_fields().get(0).sendKeys(name);
+        	p.input_fields().get(1).sendKeys(area);	
+        	p.input_fields().get(2).sendKeys(landmark);		
+        	p.input_fields().get(3).sendKeys(address);	
+        	p.input_fields().get(4).sendKeys(shortDescription);
+        	p.submit_button().click();
+        	Thread.sleep(600);;
+        	System.out.println(p.success_Toast().getText());
+        	System.out.println();
+        	p.society_names_in_list();
+        	for(WebElement societyname:p.society_names_in_list()){
+            	
+            	if(societyname.getText().contains(name)) {
+            		
+            		System.out.println("Testcase passed "+societyname.getText()+" is present in list");
+            		System.out.println();}}}
+            
+            
+        	@DataProvider
+            public Object[][] getSocietyData() {
+        		
+        		return new Object[][] {
+                    {
+                        "Green Acres", 
+                        "Ballygunge", 
+                        "Near City Center Mall", 
+                        "25B, Gariahat Road, Kolkata - 700019", 
+                        "A peaceful society with all modern amenities."
+                    },
+                    {
+                        "Lakeview Residency", 
+                        "Salt Lake Sector V", 
+                        "Opposite Infosys Building", 
+                        "Plot 145, Sector V, Kolkata - 700091", 
+                        "Spacious apartments facing the lake."
+                    },
+                    {
+                        "Sundarban Enclave", 
+                        "New Town", 
+                        "Near Eco Park", 
+                        "DA 203, Action Area I, Kolkata - 700156", 
+                        "Luxury living with lush green surroundings."
+                    } 
+                };
+            }	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        }
+
+
+
