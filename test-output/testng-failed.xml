@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.vaultify.vaultify_platform.Society_management">
+      <class name="com.vaultify.vaultify_platform.Bidding_management">
         <methods>
           <include name="setUP"/>
-          <include name="Society_add" invocation-numbers="0"/>
+          <include name="privateBid_console_search"/>
           <include name="driverkill"/>
         </methods>
-      </class> <!-- com.vaultify.vaultify_platform.Society_management -->
+      </class> <!-- com.vaultify.vaultify_platform.Bidding_management -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

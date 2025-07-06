@@ -11,7 +11,9 @@ import org.testng.annotations.BeforeMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
-	public WebDriver d;
+	
+	
+public WebDriver d;
 	
 	
   @BeforeMethod
@@ -40,7 +42,7 @@ public class Base {
 		
 		if(d!=null){
 			
-         d.quit();
+        d.quit();
 			
 		}}
 }

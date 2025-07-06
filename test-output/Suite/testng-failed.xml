@@ -3,27 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.vaultify.vaultify_platform.user_module">
+      <class name="com.vaultify.vaultify_platform.Society_management">
         <methods>
-          <include name="setUP"/>
-          <include name="user_Search"/>
-          <include name="driverkill"/>
-        </methods>
-      </class> <!-- com.vaultify.vaultify_platform.user_module -->
-      <class name="com.vaultify.vaultify_platform.Staff_and_Team">
-        <methods>
-          <include name="employeesearch"/>
+          <include name="checking_added_society_in_propertyDetails" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11"/>
           <include name="setUP"/>
           <include name="driverkill"/>
         </methods>
-      </class> <!-- com.vaultify.vaultify_platform.Staff_and_Team -->
-      <class name="com.vaultify.vaultify_platform.Property_management">
-        <methods>
-          <include name="Property_Search"/>
-          <include name="setUP"/>
-          <include name="driverkill"/>
-        </methods>
-      </class> <!-- com.vaultify.vaultify_platform.Property_management -->
+      </class> <!-- com.vaultify.vaultify_platform.Society_management -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

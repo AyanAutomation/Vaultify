@@ -14,6 +14,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+
+import com.vaultify.Repeat_codes.List_slide;
+
 import Locators.pom.Admin_modules_locators;
 import Locators.pom.Property_locaters;
 
@@ -21,7 +24,7 @@ import Locators.pom.Property_locaters;
 public class Admin_Modules_Access_and_check extends Admin_Login{
 	
 	int v=0;
-
+    List <String> allbid_stats;
 	
     
 	public void dashboard_access() throws InterruptedException, IOException, AWTException{
@@ -287,12 +290,13 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
 		System.out.println();}
 	
     
-	public void Private_Bid_Console() throws InterruptedException, IOException, AWTException{
+	public List<String> Private_Bid_Console() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
+        List_slide lstsl = new List_slide(d);
         
         login();
         w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
@@ -305,7 +309,15 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
 		System.out.println(b);
-		System.out.println();}
+		System.out.println();
+		lstsl.List_slide();
+		Thread.sleep(800);
+		w.until(ExpectedConditions.visibilityOfAllElements(p.PropertyBid_statuses()));
+		Thread.sleep(800);
+	    for(WebElement bidstatus:p.PropertyBid_statuses()){
+	    	allbid_stats.add(bidstatus.getText());}
+	    return allbid_stats;
+	}
 	
  
 	public void Franchise_Management() throws InterruptedException, IOException, AWTException{

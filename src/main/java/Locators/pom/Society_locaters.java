@@ -22,17 +22,17 @@ public class Society_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//*[@aria-live='polite']")
 	private WebElement  success_Toast;
 	@FindBy(xpath="//td[1]//p")
-	private List <WebElement> society_names_in_list; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement> society_names_in_list; 
+	@FindBy(xpath="(//*[@class='ml-8']//button)[2]")
+	private WebElement Add_society_button_property_details;
+	@FindBy(xpath="(//*[@class='h-full']//button)")
+	private WebElement dropdown;
+	@FindBy(xpath="(//*[@class='h-full'])//ul//li")
+	private List <WebElement>  dropdown_options; 
+	@FindBy(xpath="(//*[@class='mx-auto w-[94%] sticky bottom-0'])//button")
+	private WebElement Assign_button; 
+	@FindBy(xpath="//*[@class='md:w-1/2']//h2")
+	private WebElement below_society_value; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -74,22 +74,22 @@ public class Society_locaters extends Repeatative_Codes{
 	return success_Toast;} 
 	public List <WebElement> society_names_in_list(){
 	WebElements_waits(society_names_in_list);
-	return society_names_in_list;}/*
-	public WebElement (){
-	WebElement_wait();	
-	return ;}
-	public WebElement (){
-	WebElement_wait();
-	return ;}
-	public WebElement (){
-	WebElement_wait();
-	return ;}
-	public WebElement (){
-	WebElement_wait();
-	return ;}
-	public WebElement (){
-	WebElement_wait();
-	return ;}
+	return society_names_in_list;}
+	public WebElement Add_society_button_property_details(){
+	WebElement_wait(Add_society_button_property_details);	
+	return Add_society_button_property_details;}
+	public WebElement dropdown(){
+	WebElement_wait(dropdown);
+	return dropdown;}
+	public List <WebElement> dropdown_options(){
+	WebElements_waits(dropdown_options);
+	return dropdown_options;}  
+	public WebElement Assign_button(){
+	WebElement_wait(Assign_button);
+	return Assign_button;} 
+	public WebElement below_society_value(){
+	WebElement_wait(below_society_value);
+	return below_society_value;} /*
 	public WebElement (){
 	WebElement_wait();
 	return ;}

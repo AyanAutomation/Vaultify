@@ -26,6 +26,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
 	public String Resultant_propertyname;
 	public List<WebElement> rolespresent;
 	public List<WebElement> employeepresent_in_eachroles;
+	public List<String> societies_in_list;
 	
 	@Test
 	public void Property_Search() throws InterruptedException, IOException, AWTException{
@@ -136,21 +137,16 @@ public class Property_management extends Admin_Modules_Access_and_check{
         
         
         
-         @Test
+       @Test
        public void Property_Staff_assign() throws InterruptedException, IOException, AWTException{
         	
        Property_locaters p = new Property_locaters(d);
        TreeMap <String,String> treemap = new TreeMap<String, String>();
-       List_slide lsd = new List_slide(d);	
        JavascriptExecutor js = (JavascriptExecutor)d;
        
        
        
-       Property_Soceity_Management(0);
-	   p.property_searchbar();	
-       lsd.List_slide();
-       p.list_view_buttons();	
-       p.list_view_buttons().get(0).click();	
+       property_view_details_accessor(0);
        p.Assign_Employee_button().click();
        Thread.sleep(600);
        rolespresent =   p.Role_Names();
@@ -159,7 +155,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
        treemap.put(rolespresent.get(rc).getText(),employeepresent_in_eachroles.get(rc).getText());});
        System.out.println(treemap);
        System.out.println();
-       try {
+       try{
        Civil_engineer_assign();}catch(Exception e){
        System.out.println("Exception found in Civil engineer assign");}try{
        loan_adviser_assign();}catch(Exception f){
@@ -186,6 +182,24 @@ public class Property_management extends Admin_Modules_Access_and_check{
  	   System.out.println("post assigning all employee assign property button don't appear thereby have to refresh the page");
  	   d.navigate().refresh();
  	   p.approve_property_button();}}
+         
+      
+         
+         
+         
+       
+       public void property_view_details_accessor(int l)throws InterruptedException, IOException, AWTException{
+    	   
+    	   Property_locaters p = new Property_locaters(d);
+    	   List_slide lsd = new List_slide(d);	
+    	   
+    	   Property_Soceity_Management(0);
+    	   p.property_searchbar();	
+           lsd.List_slide();
+           p.list_view_buttons();	
+           p.list_view_buttons().get(l).click();
+           p.Assign_Employee_button();
+           Thread.sleep(800);}  
        
         
         
@@ -348,11 +362,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
              List_slide lsd = new List_slide(d);	
              JavascriptExecutor js = (JavascriptExecutor)d;
         	
-        	 Property_Soceity_Management(0);
-      	     p.property_searchbar();	
-             lsd.List_slide();
-             p.list_view_buttons();	
-             p.list_view_buttons().get(0).click();
+             property_view_details_accessor(2);
         	 p.property_card_details();
         	 p.property_details_below_Datas();
         	 System.out.println("property_card_details list size "+p.property_card_details().size());
@@ -360,80 +370,183 @@ public class Property_management extends Admin_Modules_Access_and_check{
         	 System.out.println("property_details_below_Datas list size "+p.property_details_below_Datas().size());
         	 System.out.println();
              IntStream.range(0, Math.min(p.property_card_details().size(), p.property_details_below_Datas().size())).forEach(vb->{
-            	Tmap.put(p.property_card_details().get(vb).getText(),  p.property_details_below_Datas().get(vb).getText());});
+             Tmap.put(p.property_card_details().get(vb).getText(),  p.property_details_below_Datas().get(vb).getText());});
 
         	 for(Map.Entry<String,String>topcarddetail :Tmap.entrySet() ){
         		 
         		 System.out.println(topcarddetail);
         		 System.out.println();}}}
 
+
+
         
         class Society_management extends Property_management{
         	
             @Test(dataProvider="getSocietyData")	
-        	public void Society_add(String name, String area, String landmark, String address, String shortDescription)throws InterruptedException, IOException, AWTException{
+        	public void Society_add(TreeMap<String, String> data)throws InterruptedException, IOException, AWTException{
         		
         	Society_locaters p = new Society_locaters(d); 
-        	Property_locaters pp = new Property_locaters(d);	
+        	TreeSet <String> tst = new TreeSet<String>();
         	
-        		
         	Property_Soceity_Management(2);
         	p.society_Add_button().click();
         	p.landed_in_society_add_form();
         	Thread.sleep(600);
         	p.input_fields();
-        	p.input_fields().get(0).sendKeys(name);
-        	p.input_fields().get(1).sendKeys(area);	
-        	p.input_fields().get(2).sendKeys(landmark);		
-        	p.input_fields().get(3).sendKeys(address);	
-        	p.input_fields().get(4).sendKeys(shortDescription);
+        	p.input_fields().get(0).sendKeys(data.get("Societyname"));
+        	p.input_fields().get(1).sendKeys(data.get("Area"));	
+        	p.input_fields().get(2).sendKeys(data.get("Landmark"));		
+        	p.input_fields().get(3).sendKeys(data.get("AddressAddress"));	
+        	p.input_fields().get(4).sendKeys(data.get("Short Description"));
         	p.submit_button().click();
         	Thread.sleep(600);;
         	System.out.println(p.success_Toast().getText());
         	System.out.println();
         	p.society_names_in_list();
         	for(WebElement societyname:p.society_names_in_list()){
-            	
-            	if(societyname.getText().contains(name)) {
+            	  
+        		  tst.add(societyname.getText());
+            	if(societyname.getText().contains(data.get("Societyname"))) {
             		
             		System.out.println("Testcase passed "+societyname.getText()+" is present in list");
-            		System.out.println();}}}
+            		System.out.println();
+            		break;}}}
+            
+            
+            
+            
             
             
         	@DataProvider
             public Object[][] getSocietyData() {
         		
-        		return new Object[][] {
-                    {
-                        "Green Acres", 
-                        "Ballygunge", 
-                        "Near City Center Mall", 
-                        "25B, Gariahat Road, Kolkata - 700019", 
-                        "A peaceful society with all modern amenities."
-                    },
-                    {
-                        "Lakeview Residency", 
-                        "Salt Lake Sector V", 
-                        "Opposite Infosys Building", 
-                        "Plot 145, Sector V, Kolkata - 700091", 
-                        "Spacious apartments facing the lake."
-                    },
-                    {
-                        "Sundarban Enclave", 
-                        "New Town", 
-                        "Near Eco Park", 
-                        "DA 203, Action Area I, Kolkata - 700156", 
-                        "Luxury living with lush green surroundings."
-                    } 
-                };
-            }	
+        		
+        		TreeMap<String, String> tmap1 = new TreeMap<>();
+                tmap1.put("Societyname", "Silver Sand Residency");
+                tmap1.put("Area", "Naktala");
+                tmap1.put("Landmark", "Near Usha Bus Stop");
+                tmap1.put("AddressAddress", "22, Garia Main Road, Naktala, Kolkata - 700047");
+                tmap1.put("Short Description", "Quiet family-centric flats near schools and parks.");
+
+                TreeMap<String, String> tmap2 = new TreeMap<>();
+                tmap2.put("Societyname", "Amber Heights");
+                tmap2.put("Area", "Teghoria");
+                tmap2.put("Landmark", "Opposite Haldiram Flyover");
+                tmap2.put("AddressAddress", "99, V.I.P Road, Teghoria, Kolkata - 700059");
+                tmap2.put("Short Description", "Urban-styled tower with 360° rooftop lounge.");
+
+                TreeMap<String, String> tmap3 = new TreeMap<>();
+                tmap3.put("Societyname", "Shree Durga Residency");
+                tmap3.put("Area", "Sodepur");
+                tmap3.put("Landmark", "Next to Panihati Municipality");
+                tmap3.put("AddressAddress", "Ghoshpara Road, Sodepur, Kolkata - 700110");
+                tmap3.put("Short Description", "Spiritual vibe with temple complex and aarti mandap.");
+
+                TreeMap<String, String> tmap4 = new TreeMap<>();
+                tmap4.put("Societyname", "Eastern Harmony");
+                tmap4.put("Area", "Kalikapur");
+                tmap4.put("Landmark", "Beside Metro Cash & Carry");
+                tmap4.put("AddressAddress", "Kalikapur Bypass, Kolkata - 700099");
+                tmap4.put("Short Description", "Corporate-friendly flats near IT hubs with concierge.");
+
+                TreeMap<String, String> tmap5 = new TreeMap<>();
+                tmap5.put("Societyname", "Navya Niketan");
+                tmap5.put("Area", "Jadavpur");
+                tmap5.put("Landmark", "Near 8B Bus Stand");
+                tmap5.put("AddressAddress", "Gariahat Road (South), Jadavpur, Kolkata - 700032");
+                tmap5.put("Short Description", "Gated society with indoor games and library corner.");
+
+                TreeMap<String, String> tmap6 = new TreeMap<>();
+                tmap6.put("Societyname", "Sunset Heights");
+                tmap6.put("Area", "Joka");
+                tmap6.put("Landmark", "Near IIM Calcutta");
+                tmap6.put("AddressAddress", "Diamond Harbour Road, Joka, Kolkata - 700104");
+                tmap6.put("Short Description", "Modern apartments built for students and families alike.");
+
+                TreeMap<String, String> tmap7 = new TreeMap<>();
+                tmap7.put("Societyname", "Rose Garden Estates");
+                tmap7.put("Area", "Manicktala");
+                tmap7.put("Landmark", "Adjacent to Manicktala Market");
+                tmap7.put("AddressAddress", "2A, Vivekananda Road, Manicktala, Kolkata - 700054");
+                tmap7.put("Short Description", "Boutique apartments with terrace café and library.");
+
+                TreeMap<String, String> tmap8 = new TreeMap<>();
+                tmap8.put("Societyname", "Starview Apartments");
+                tmap8.put("Area", "Baghajatin");
+                tmap8.put("Landmark", "Next to Peerless Hospital");
+                tmap8.put("AddressAddress", "47, Baghajatin Station Road, Kolkata - 700086");
+                tmap8.put("Short Description", "Compact flats perfect for small families and seniors.");
+
+                return new Object[][] {
+                    {tmap1},
+                    {tmap2},
+                    {tmap3},
+                    {tmap4},
+                    {tmap5},
+                    {tmap6},
+                    {tmap7},
+                    {tmap8}
+                };}	
         	
         	
+        	@Test(dataProvider="getSocietyData")
+        	public void checking_added_society_in_propertyDetails(TreeMap<String, String> data) throws InterruptedException, IOException, AWTException{
+        		
+        		
+        		Society_locaters p = new Society_locaters(d);
+        		JavascriptExecutor js = (JavascriptExecutor)d;
+        		
+        		
+        		property_view_details_accessor(1);	
+        		p.Add_society_button_property_details().click();
+        		p.dropdown().click();
+        		p.dropdown_options();
+        		for(WebElement societyname:p.dropdown_options()){
+        			
+        		 if(societyname.getText().equalsIgnoreCase(data.get("Societyname"))){
+        				System.out.println(societyname.getText()+" is present thereby Testcase passed");
+        				System.out.println();
+        				societyname.click();
+        				break;}}
+        		Thread.sleep(800);
+        		p.Assign_button().click();
+        		Thread.sleep(800);
+        		js.executeScript("window.scrollBy(0,1450)"); 
+        		Thread.sleep(1800);
+        		System.out.println(p.below_society_value().getText().equalsIgnoreCase(data.get("Societyname"))?" Testcase Passed society selected is shown below":" Testcase Failed society selected is not shown below");
+        		System.out.println();
+        	} 
         	
-        	
-        	
-        	
-        	
+        	@Test
+        	public void Society_search()throws InterruptedException, IOException, AWTException{
+        		
+        		Society_locaters p = new Society_locaters(d);
+        		JavascriptExecutor js = (JavascriptExecutor)d;
+        		Pagination_nextpage_navigation pgn = new Pagination_nextpage_navigation();
+        		Property_locaters pp = new Property_locaters(d);
+        		
+        		
+        		Property_Soceity_Management(2);
+        		List <WebElement> soceities_inList = p.society_names_in_list();
+        		for(WebElement Societyname:soceities_inList){
+        			societies_in_list.add(Societyname.getText());}
+        		pp.property_searchbar().sendKeys(societies_in_list.get(2));
+        		pp.Search_button().click();
+        		Thread.sleep(2200);
+        		String Society_search_result_firstpage = p.society_names_in_list().get(0).getText();
+        		System.out.println(Society_search_result_firstpage.equalsIgnoreCase(societies_in_list.get(2))?" Testcase Passes society search result of first page matches searched society":" Testcase Failed society search result of first page doesn't matches searched society");
+        		System.out.println();try {
+        		pgn.nextpage_navigate(d);
+        		pp.property_searchbar().sendKeys(societies_in_list.get(2));
+        		pp.Search_button().click();
+        		Thread.sleep(2200);
+        		String Society_search_result_secondpage = p.society_names_in_list().get(0).getText();
+        		System.out.println(Society_search_result_secondpage.equalsIgnoreCase(societies_in_list.get(2))?" Testcase Passes society search result second page also matches with searched society":" Testcase Failed society search result second page also doesn't match with searched society");
+        		}catch(Exception kog){
+        			System.out.println("pagination not implemented in Society list");
+        			System.out.println();	
+        		}
+        	}
         	
         	
         	

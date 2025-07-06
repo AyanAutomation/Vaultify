@@ -18,6 +18,11 @@
       <include name="employeesearch"/>
       </methods>
       </class>
+      <class name="com.vaultify.vaultify_platform.Society_management">
+      <methods>
+      <include name="Society_search"/>
+      </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

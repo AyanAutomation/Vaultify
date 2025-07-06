@@ -86,6 +86,10 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	private WebElement update_approval_request_button;  
 	@FindBy(xpath="//input")
 	private WebElement employee_search_button;
+	@FindBy(xpath="//td//div[@class='flex items-center']//p[@class='rizzui-text-p ms-2 font-medium text-gray-600']")
+	private List <WebElement> PropertyBid_statuses;
+	
+	
 
 
 	public Admin_modules_locators(WebDriver d){
@@ -199,9 +203,10 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	return Menu_modules;}
 	public List <WebElement> submenuitems(){
 	WebElements_waits(submenuitems);
-	return submenuitems;}/*
-	public WebElement (){
-	return ;}
+	return submenuitems;}
+	public List <WebElement> PropertyBid_statuses(){
+	WebElements_waits(PropertyBid_statuses);
+	return PropertyBid_statuses;}/*
 	public WebElement (){
 	return ;}
 	public WebElement (){
