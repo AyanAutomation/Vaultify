@@ -1,6 +1,7 @@
 package com.vaultify.vaultify_platform;
 
 import java.awt.AWTException;
+import java.awt.Robot;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ import Locators.pom.Property_locaters;
 public class Admin_Modules_Access_and_check extends Admin_Login{
 	
 	int v=0;
-    List <String> allbid_stats;
+    List <String> allbid_stats = new ArrayList<String>();
 	
     
 	public void dashboard_access() throws InterruptedException, IOException, AWTException{
@@ -296,7 +297,8 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
-        List_slide lstsl = new List_slide(d);
+        //List_slide lstsl = new List_slide(d);
+        Robot r = new Robot();
         
         login();
         w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
@@ -310,9 +312,12 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
         b.append(p.page_headeings().getText());
 		System.out.println(b);
 		System.out.println();
-		lstsl.List_slide();
+		//lstsl.List_slide();
 		Thread.sleep(800);
 		w.until(ExpectedConditions.visibilityOfAllElements(p.PropertyBid_statuses()));
+		js.executeScript("arguments[0].scrollIntoView(true);",p.PropertyBid_statuses().get(0));
+		Thread.sleep(800);
+		r.mouseWheel(6);
 		Thread.sleep(800);
 	    for(WebElement bidstatus:p.PropertyBid_statuses()){
 	    	allbid_stats.add(bidstatus.getText());}

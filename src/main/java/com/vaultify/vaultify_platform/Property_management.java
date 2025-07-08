@@ -2,6 +2,8 @@ package com.vaultify.vaultify_platform;
 
 import java.awt.AWTException;
 import java.io.IOException;
+import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -11,6 +13,8 @@ import java.util.stream.IntStream;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -26,7 +30,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
 	public String Resultant_propertyname;
 	public List<WebElement> rolespresent;
 	public List<WebElement> employeepresent_in_eachroles;
-	public List<String> societies_in_list;
+	public List<String> societies_in_list = new ArrayList<>();;
 	
 	@Test
 	public void Property_Search() throws InterruptedException, IOException, AWTException{
@@ -521,15 +525,20 @@ public class Property_management extends Admin_Modules_Access_and_check{
         	public void Society_search()throws InterruptedException, IOException, AWTException{
         		
         		Society_locaters p = new Society_locaters(d);
-        		JavascriptExecutor js = (JavascriptExecutor)d;
         		Pagination_nextpage_navigation pgn = new Pagination_nextpage_navigation();
         		Property_locaters pp = new Property_locaters(d);
-        		
+     
         		
         		Property_Soceity_Management(2);
-        		List <WebElement> soceities_inList = p.society_names_in_list();
-        		for(WebElement Societyname:soceities_inList){
+        		Thread.sleep(800);
+        	   Thread.sleep(800);
+        		for(WebElement Societyname:p.society_names_in_list()){
+        			System.out.println("Society names are =  "+Societyname.getText());
+        			System.out.println();
+        			Thread.sleep(200);
         			societies_in_list.add(Societyname.getText());}
+        		System.out.println("Society name that is searched is "+societies_in_list.get(2));
+    			System.out.println();
         		pp.property_searchbar().sendKeys(societies_in_list.get(2));
         		pp.Search_button().click();
         		Thread.sleep(2200);

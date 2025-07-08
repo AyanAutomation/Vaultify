@@ -21,7 +21,7 @@ public class Society_locaters extends Repeatative_Codes{
 	private WebElement submit_button;
 	@FindBy(xpath="//*[@aria-live='polite']")
 	private WebElement  success_Toast;
-	@FindBy(xpath="//td[1]//p")
+	@FindBy(xpath="//td[1]//p[@class='rizzui-text-p font-normal text-sm']")
 	private List <WebElement> society_names_in_list; 
 	@FindBy(xpath="(//*[@class='ml-8']//button)[2]")
 	private WebElement Add_society_button_property_details;
