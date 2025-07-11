@@ -26,7 +26,7 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 	
 	int v=0;
     List <String> allbid_stats = new ArrayList<String>();
-	
+    List <String> onlyStatuses = new ArrayList<String>();
     
 	public void dashboard_access() throws InterruptedException, IOException, AWTException{
 		
@@ -297,7 +297,6 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
-        //List_slide lstsl = new List_slide(d);
         Robot r = new Robot();
         
         login();
@@ -312,16 +311,22 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
         b.append(p.page_headeings().getText());
 		System.out.println(b);
 		System.out.println();
-		//lstsl.List_slide();
+	
 		Thread.sleep(800);
 		w.until(ExpectedConditions.visibilityOfAllElements(p.PropertyBid_statuses()));
-		js.executeScript("arguments[0].scrollIntoView(true);",p.PropertyBid_statuses().get(0));
+		js.executeScript("arguments[0].scrollIntoView(true);",p.PropertyBid_statuses().get(1));
 		Thread.sleep(800);
 		r.mouseWheel(6);
 		Thread.sleep(800);
-	    for(WebElement bidstatus:p.PropertyBid_statuses()){
-	    	allbid_stats.add(bidstatus.getText());}
-	    return allbid_stats;
+		List <WebElement> properstatus = p.PropertyBid_statuses();
+		for(int m=0;m<=p.PropertyBid_statuses().size();m++){
+			
+			onlyStatuses.add(properstatus.get(m+1).getText());
+		}
+		
+		
+	    
+	    return onlyStatuses;
 	}
 	
  

@@ -46,12 +46,12 @@
     <artifactId>webdrivermanager</artifactId>
     <version>6.1.0</version>
 </dependency>
- <dependency>
-<groupId>org.testng</groupId>
-<artifactId>testng</artifactId>
-<version>6.14.3</version>
-   <type>jar</type>
-    </dependency>
+<dependency>
+  <groupId>org.testng</groupId>
+  <artifactId>testng</artifactId>
+  <version>7.11.0</version>
+  <scope>test</scope>
+</dependency>
 <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
 <dependency>
     <groupId>com.relevantcodes</groupId>
@@ -100,6 +100,7 @@
   <artifactId>slf4j-simple</artifactId>
   <version>1.7.30</version>
 </dependency>
+
 <dependency>
       <groupId>work.eddiejamsession</groupId>
       <artifactId>jam-file-utils</artifactId>

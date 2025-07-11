@@ -86,7 +86,7 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	private WebElement update_approval_request_button;  
 	@FindBy(xpath="//input")
 	private WebElement employee_search_button;
-	@FindBy(xpath="//td//div[@class='flex items-center']//p[@class='rizzui-text-p ms-2 font-medium text-gray-600']")
+	@FindBy(xpath="//td//div[@class='flex items-center']")
 	private List <WebElement> PropertyBid_statuses;
 	
 	
