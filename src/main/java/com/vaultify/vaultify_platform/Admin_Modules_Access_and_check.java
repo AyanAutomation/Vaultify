@@ -291,6 +291,7 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
 		System.out.println();}
 	
     
+	
 	public List<String> Private_Bid_Console() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -311,23 +312,22 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
         b.append(p.page_headeings().getText());
 		System.out.println(b);
 		System.out.println();
-	
-		Thread.sleep(800);
+	    Thread.sleep(800);
 		w.until(ExpectedConditions.visibilityOfAllElements(p.PropertyBid_statuses()));
 		js.executeScript("arguments[0].scrollIntoView(true);",p.PropertyBid_statuses().get(1));
 		Thread.sleep(800);
 		r.mouseWheel(6);
 		Thread.sleep(800);
 		List <WebElement> properstatus = p.PropertyBid_statuses();
-		for(int m=0;m<=p.PropertyBid_statuses().size();m++){
-			
-			onlyStatuses.add(properstatus.get(m+1).getText());
-		}
+		int count = p.PropertyBid_statuses().size();
+		
+		for(int m=0;m<count;m++){
+            if(m%2!=0){
+			onlyStatuses.add(properstatus.get(m).getText());
+			}}
 		
 		
-	    
-	    return onlyStatuses;
-	}
+	    return onlyStatuses;}
 	
  
 	public void Franchise_Management() throws InterruptedException, IOException, AWTException{

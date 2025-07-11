@@ -70,10 +70,8 @@ public class Bidding_management extends Property_management{
 		trmap.put(each_propertyName.getText(), statuses.get(v));
 	  System.out.println(each_propertyName.getText() +"   "+ statuses.get(v));
 	  System.out.println();
-	v++;
-	if(v>=statuses.size()){
-		break;
-	}}}
+	  v++;
+	}}
 	
 	@Test
 	public void bid_filter_checker() throws InterruptedException, IOException, AWTException{
@@ -85,11 +83,13 @@ public class Bidding_management extends Property_management{
 		Robot r = new Robot();
 		List<String> allbidstats = new ArrayList<>();
 		
-		Private_Bid_Console();
+		bidstatus_checker();
 		d.navigate().refresh();
 		p.filter_button().click();
 		p.dropdown_button().click();
-		System.out.println("Status selected "+p.filter_dropdown_options().get(0).getText());
+		String selected_option= p.filter_dropdown_options().get(0).getText();
+		System.out.println("Status selected "+selected_option);
+		System.out.println();
 		p.filter_dropdown_options().get(0).click();
 		p.filter_result_submit_Button().click();
 		w.until(ExpectedConditions.visibilityOfAllElements(pp.PropertyBid_statuses()));
@@ -97,17 +97,14 @@ public class Bidding_management extends Property_management{
 		Thread.sleep(800);
 		r.mouseWheel(pp.PropertyBid_statuses().size());
 		Thread.sleep(800);
-		
-	    for(WebElement bidstats:pp.PropertyBid_statuses()){
-	    	allbidstats.add(bidstats.getText());}
-		for(WebElement each_propertyName:p.property_names_inbidlist()){
-			if(g>pp.PropertyBid_statuses().size()){
-				break;
-			}
+		for(int kk=0;kk<=pp.PropertyBid_statuses().size();kk++){
+			if(kk%2!=0){
+				allbidstats.add(pp.PropertyBid_statuses().get(kk).getText());}}
+	    System.out.println(allbidstats.contains(selected_option)?"Testcase passed filtered status shown in list ":" Testcase Failed filtered status shown in list ");
+	    System.out.println();
+	    for(WebElement each_propertyName:p.property_names_inbidlist()){
 		  System.out.println(each_propertyName.getText() +"   "+ allbidstats.get(g));
 		  System.out.println();
-		g++;
-		}}
-	}
+		g++;}}}
 	
 
