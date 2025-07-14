@@ -36,17 +36,16 @@ public class Bidding_management extends Property_management{
 		
 		Property_locaters pp = new Property_locaters(d);
 		Bidding_Management_Locaters p = new Bidding_Management_Locaters(d);	
-	    List <String> names = new  ArrayList <String>();
+	    
 		
 		
 		bidstatus_checker();
 	    List <WebElement> propertynames= p.property_names_inbidlist();
-	    for(WebElement propname :propertynames){
-	    	names.add(propname.getText());}
-		pp.property_searchbar().sendKeys(names.get(2));
+	    pp.property_searchbar();
+		pp.property_searchbar().sendKeys(trmap.get("started"));
 		pp.Search_button().click();
 		Thread.sleep(1800);
-		System.out.println(propertynames.get(0).getText().equalsIgnoreCase(names.get(2))?"Testcase Passed Search working "+names.get(2)+" shown as result" :"Testcase failed Search not working "+names.get(2)+" not shown as result");
+		System.out.println(propertynames.get(0).getText().equalsIgnoreCase(trmap.get("started"))?"Testcase Passed Search working "+trmap.get("started")+" shown as result" :"Testcase failed Search not working "+trmap.get("started")+" not shown as result");
 	
 	}
 
@@ -67,8 +66,8 @@ public class Bidding_management extends Property_management{
 	
 	
 	for(WebElement each_propertyName:p.property_names_inbidlist()){
-		trmap.put(each_propertyName.getText(), statuses.get(v));
-	  System.out.println(each_propertyName.getText() +"   "+ statuses.get(v));
+		trmap.put(statuses.get(v) , each_propertyName.getText());
+	  System.out.println(statuses.get(v) +"   "+ each_propertyName.getText());
 	  System.out.println();
 	  v++;
 	}}
