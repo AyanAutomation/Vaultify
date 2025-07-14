@@ -39,7 +39,7 @@ public class Refund_Management extends Property_management {
 		  Property_locaters pp = new Property_locaters(d);
 		  
 		   refund_list_status_checker();
-		  pp.property_searchbar().sendKeys(maptree.get("3"));
+		  pp.property_searchbar().sendKeys(maptree.get("6"));
 		  pp.Search_button().click();
 		  Thread.sleep(800);
 		  p.propnames_in_refund_list();
