@@ -3,14 +3,14 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.vaultify.vaultify_platform.Property_management">
+      <class name="com.vaultify.vaultify_platform.Bidding_management">
       <methods>
-      <include name="Property_Search"/>
+      <include name="bid_filter_checker"/>
       </methods>
       </class>
-      <class name="com.vaultify.vaultify_platform.user_module">
+      <class name="com.vaultify.vaultify_platform.Property_management">
       <methods>
-      <include name="user_Search"/>
+      <include name="propertyList_filtercheck"/>
       </methods>
       </class>   
       <class name="com.vaultify.vaultify_platform.Staff_and_Team">
@@ -26,11 +26,6 @@
        <class name="com.vaultify.vaultify_platform.Bidding_management">
       <methods>
       <include name="privateBid_console_search"/>
-      </methods>
-      </class>
-        <class name="com.vaultify.vaultify_platform.Refund_Management">
-      <methods>
-      <include name="Refund_list_search"/>
       </methods>
       </class>
     </classes>

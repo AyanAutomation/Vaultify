@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.vaultify.vaultify_platform.Bidding_management">
+      <class name="com.vaultify.vaultify_platform.Refund_Management">
         <methods>
           <include name="setUP"/>
-          <include name="bid_filter_checker"/>
+          <include name="refund_list_status_checker"/>
           <include name="driverkill"/>
         </methods>
-      </class> <!-- com.vaultify.vaultify_platform.Bidding_management -->
+      </class> <!-- com.vaultify.vaultify_platform.Refund_Management -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

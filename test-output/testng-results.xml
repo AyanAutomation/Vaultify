@@ -1,25 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
+<testng-results ignored="37" total="42" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-12T00:45:52 IST" name="Default suite" finished-at="2025-07-12T00:46:23 IST" duration-ms="31032">
+  <suite started-at="2025-07-14T16:22:29 IST" name="Suite" finished-at="2025-07-14T16:24:22 IST" duration-ms="112620">
     <groups>
     </groups>
-    <test started-at="2025-07-12T00:45:52 IST" name="Default test" finished-at="2025-07-12T00:46:23 IST" duration-ms="31032">
+    <test started-at="2025-07-14T16:22:29 IST" name="Test" finished-at="2025-07-14T16:24:22 IST" duration-ms="112620">
       <class name="com.vaultify.vaultify_platform.Bidding_management">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Bidding_management@4c178a76]" started-at="2025-07-12T00:45:52 IST" name="setUP" finished-at="2025-07-12T00:45:54 IST" duration-ms="2705" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Bidding_management@1a4013]" started-at="2025-07-14T16:24:02 IST" name="setUP" finished-at="2025-07-14T16:24:03 IST" duration-ms="863" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="bid_filter_checker()[pri:0, instance:com.vaultify.vaultify_platform.Bidding_management@4c178a76]" started-at="2025-07-12T00:45:54 IST" name="bid_filter_checker" finished-at="2025-07-12T00:46:22 IST" duration-ms="27447" status="PASS">
+        <test-method signature="privateBid_console_search()[pri:0, instance:com.vaultify.vaultify_platform.Bidding_management@1a4013]" started-at="2025-07-14T16:24:03 IST" name="privateBid_console_search" finished-at="2025-07-14T16:24:22 IST" duration-ms="18440" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bid_filter_checker -->
-        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Bidding_management@4c178a76]" started-at="2025-07-12T00:46:22 IST" name="driverkill" finished-at="2025-07-12T00:46:23 IST" duration-ms="843" status="PASS">
+        </test-method> <!-- privateBid_console_search -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Bidding_management@1a4013]" started-at="2025-07-14T16:24:22 IST" name="driverkill" finished-at="2025-07-14T16:24:22 IST" duration-ms="210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverkill -->
       </class> <!-- com.vaultify.vaultify_platform.Bidding_management -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.vaultify.vaultify_platform.Staff_and_Team">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Staff_and_Team@a2431d0]" started-at="2025-07-14T16:23:15 IST" name="setUP" finished-at="2025-07-14T16:23:16 IST" duration-ms="805" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="employeesearch()[pri:0, instance:com.vaultify.vaultify_platform.Staff_and_Team@a2431d0]" started-at="2025-07-14T16:23:16 IST" name="employeesearch" finished-at="2025-07-14T16:23:31 IST" duration-ms="15252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- employeesearch -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Staff_and_Team@a2431d0]" started-at="2025-07-14T16:23:31 IST" name="driverkill" finished-at="2025-07-14T16:23:31 IST" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+      </class> <!-- com.vaultify.vaultify_platform.Staff_and_Team -->
+      <class name="com.vaultify.vaultify_platform.Society_management">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Society_management@1cbb87f3]" started-at="2025-07-14T16:23:31 IST" name="setUP" finished-at="2025-07-14T16:23:32 IST" duration-ms="817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="Society_search()[pri:0, instance:com.vaultify.vaultify_platform.Society_management@1cbb87f3]" started-at="2025-07-14T16:23:32 IST" name="Society_search" finished-at="2025-07-14T16:24:02 IST" duration-ms="30302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Society_search -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Society_management@1cbb87f3]" started-at="2025-07-14T16:24:02 IST" name="driverkill" finished-at="2025-07-14T16:24:02 IST" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+      </class> <!-- com.vaultify.vaultify_platform.Society_management -->
+      <class name="com.vaultify.vaultify_platform.Property_management">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Property_management@19d481b]" started-at="2025-07-14T16:22:29 IST" name="setUP" finished-at="2025-07-14T16:22:35 IST" duration-ms="6216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="Property_Search()[pri:0, instance:com.vaultify.vaultify_platform.Property_management@19d481b]" started-at="2025-07-14T16:22:35 IST" name="Property_Search" finished-at="2025-07-14T16:22:54 IST" duration-ms="18586" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Property_Search -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Property_management@19d481b]" started-at="2025-07-14T16:22:54 IST" name="driverkill" finished-at="2025-07-14T16:22:54 IST" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+      </class> <!-- com.vaultify.vaultify_platform.Property_management -->
+      <class name="com.vaultify.vaultify_platform.user_module">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.user_module@31e5415e]" started-at="2025-07-14T16:22:54 IST" name="setUP" finished-at="2025-07-14T16:22:56 IST" duration-ms="1305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="user_Search()[pri:0, instance:com.vaultify.vaultify_platform.user_module@31e5415e]" started-at="2025-07-14T16:22:56 IST" name="user_Search" finished-at="2025-07-14T16:23:15 IST" duration-ms="18921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_Search -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.user_module@31e5415e]" started-at="2025-07-14T16:23:15 IST" name="driverkill" finished-at="2025-07-14T16:23:15 IST" duration-ms="189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+      </class> <!-- com.vaultify.vaultify_platform.user_module -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

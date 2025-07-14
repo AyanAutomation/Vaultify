@@ -21,6 +21,7 @@ import org.testng.annotations.Test;
 import com.vaultify.Repeat_codes.List_slide;
 
 import Locators.pom.Admin_modules_locators;
+import Locators.pom.Bidding_Management_Locaters;
 import Locators.pom.Property_locaters;
 import Locators.pom.Society_locaters;
 
@@ -31,6 +32,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
 	public List<WebElement> rolespresent;
 	public List<WebElement> employeepresent_in_eachroles;
 	public List<String> societies_in_list = new ArrayList<>();;
+	List<String> hiddengems_status = new ArrayList<>();
 	
 	@Test
 	public void Property_Search() throws InterruptedException, IOException, AWTException{
@@ -379,7 +381,44 @@ public class Property_management extends Admin_Modules_Access_and_check{
         	 for(Map.Entry<String,String>topcarddetail :Tmap.entrySet() ){
         		 
         		 System.out.println(topcarddetail);
-        		 System.out.println();}}}
+        		 System.out.println();}}
+        
+        @Test 
+        public void propertyList_filtercheck()throws InterruptedException, IOException, AWTException{
+    	  
+        Property_locaters p = new Property_locaters(d);
+        Bidding_Management_Locaters pp = new Bidding_Management_Locaters(d); 
+        TreeSet<String> settr = new TreeSet<String>();
+        
+        Property_Soceity_Management(0);
+		p.property_searchbar();  
+		 p.property_list_hiddenGems_data();
+		for(WebElement gems:p.property_list_hiddenGems_data()){
+			hiddengems_status.add(gems.getText());
+		}
+    	pp.filter_button().click();
+        p.filter_dropdowns().get(0).click();
+        String selected_option= pp.filter_dropdown_options().get(0).getText();
+		System.out.println("Status selected "+selected_option);
+		System.out.println();
+    	pp.filter_dropdown_options().get(0).click();  
+    	Thread.sleep(1800);
+    	try { p.property_list_hiddenGems_data();
+    	for(WebElement hiddengem: p.property_list_hiddenGems_data()){
+    		
+    		System.out.println(hiddengem.getText());
+    		settr.add(hiddengem.getText());
+    		} 
+    	if(hiddengems_status.contains("Marked")) {
+    	if(settr.contains("Not Marked")){
+    		
+    		System.out.println(" testcase failed filter not working selected hidden gems showing non hidden gems");
+    		System.out.println();}
+    	}}catch(Exception keo){
+    		
+    		System.out.println(" testcase failed filter not working selected hidden gems showing not hidden gems");
+    		System.out.println();
+    		}}}
 
 
 

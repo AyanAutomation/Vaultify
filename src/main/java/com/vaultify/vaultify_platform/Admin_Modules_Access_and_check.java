@@ -20,6 +20,7 @@ import com.vaultify.Repeat_codes.List_slide;
 
 import Locators.pom.Admin_modules_locators;
 import Locators.pom.Property_locaters;
+import Locators.pom.Refund_Module_Locators;
 
 
 public class Admin_Modules_Access_and_check extends Admin_Login{
@@ -360,25 +361,40 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
         
         
     	} 
-    /*
+    
     @Test  
-	public void Vaultify_Versity() throws InterruptedException{
+	public List<String> Refund_management_access() throws InterruptedException, AWTException, IOException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor)d;
+    	JavascriptExecutor js = (JavascriptExecutor)d;
+    	Refund_Module_Locators rf = new Refund_Module_Locators(d);
+    	List<String> names = new ArrayList<String>();
+    	
+   
+        login();
+        w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
+     	a.moveToElement((p.Menu_modules.get(1))).build().perform();
+     	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+15));
+     	Thread.sleep(800);
+ 		p.Menu_modules.get(v+15).click();
+ 		Thread.sleep(750);
+ 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
+ 		StringBuffer b = new StringBuffer(" heading is ");
+         b.append(p.page_headeings().getText());
+ 		System.out.println(b);
+ 		System.out.println();
+ 	    Thread.sleep(800);
+ 	    rf.propnames_in_refund_list();
+        for(WebElement propnam:rf.propnames_in_refund_list()){
+        	
+        	names.add(propnam.getText());}
         
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+1).click();
-		Thread.sleep(750);
-		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
-		System.out.println(b);
-		System.out.println();}
+        return names;
+    }     
 	
-    @Test  
+    /*Test  
 	public void Vaultify_Versity() throws InterruptedException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);

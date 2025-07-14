@@ -51,13 +51,13 @@ public class Property_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//*[@class='mt-1 text-sm text-gray-600']//div")
 	private List <WebElement>  property_card_details; 
 	@FindBy(xpath="//*[@class='col-span-5 @container']//ul")
-	private List <WebElement> property_details_below_Datas ;/*
-	@FindBy(xpath="")
-	private WebElement  ;      /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement> property_details_below_Datas ;
+	@FindBy(xpath="//div[@class='flex h-full flex-col p-5']//button[@aria-expanded='false']")
+	private List <WebElement> filter_dropdowns;      
+	@FindBy(xpath="//td[4]//p")
+	private List <WebElement>  property_list_hiddenGems_data; 
+	@FindBy(xpath="//td//p[2]")
+	private List <WebElement>  property_datas_inList;       /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -143,16 +143,16 @@ public class Property_locaters extends Repeatative_Codes{
 	return property_card_details;}
 	public List <WebElement> property_details_below_Datas(){
 	WebElements_waits(property_details_below_Datas);	
-	return property_details_below_Datas;} /*
-	public List <WebElement> (){
-	WebElements_waits();	
-	return ;}
-	public WebElement (){
-	WebElement_wait();	
-	return ;}
-	public WebElement (){
-	WebElement_wait();	
-	return ;}
+	return property_details_below_Datas;} 
+	public List <WebElement> filter_dropdowns(){
+	WebElements_waits(filter_dropdowns);	
+	return filter_dropdowns;} 
+	public List <WebElement> property_list_hiddenGems_data(){
+	WebElements_waits(property_list_hiddenGems_data);	
+	return property_list_hiddenGems_data;}
+	public List <WebElement> property_datas_inList(){
+	WebElements_waits(property_datas_inList);	
+	return property_datas_inList;}   /*
 	public WebElement (){
 	WebElement_wait();	
 	return ;}
