@@ -68,8 +68,8 @@ public class Refund_Management extends Property_management {
 	    	  Thread.sleep(800);
 	      }catch(Exception ll){
 	    	  
-	    	  System.out.println("Filter not working");
-	    	  
+	    	  System.out.println("Refund Filter not working");
+	    	  System.out.println();
 	    	  
 	    	  
 	      }
