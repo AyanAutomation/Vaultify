@@ -7,6 +7,7 @@ import java.util.TreeMap;
 
 import org.testng.annotations.Test;
 
+import Locators.pom.Bidding_Management_Locaters;
 import Locators.pom.Property_locaters;
 import Locators.pom.Refund_Module_Locators;
 
@@ -38,7 +39,7 @@ public class Refund_Management extends Property_management {
 		  Refund_Module_Locators p = new Refund_Module_Locators(d);
 		  Property_locaters pp = new Property_locaters(d);
 		  
-		   refund_list_status_checker();
+		  refund_list_status_checker();
 		  pp.property_searchbar().sendKeys(maptree.get("6"));
 		  pp.Search_button().click();
 		  Thread.sleep(800);
@@ -50,8 +51,29 @@ public class Refund_Management extends Property_management {
 	  }
 	
 	
-	
-	
+	  @Test
+	  public void Refund_filter_check() throws InterruptedException, IOException, AWTException{
+	  
+		  Refund_Module_Locators p = new Refund_Module_Locators(d);
+	      Bidding_Management_Locaters pp = new Bidding_Management_Locaters(d); 
+	  
+		  refund_list_status_checker();
+	      pp.filter_button().click();
+	      p.filter_dropdowns().get(0).click();;
+	      p.date_in_dropdown_calender().click();
+	      try{
+	    	  p.filter_dropdowns().get(1).click();;
+	    	  p.date_in_dropdown_calender().click();
+	    	  p.filter_result_submit_button().click();
+	    	  Thread.sleep(800);
+	      }catch(Exception ll){
+	    	  
+	    	  System.out.println("Filter not working");
+	    	  
+	    	  
+	    	  
+	      }
+	  }
 	
 	
 	
