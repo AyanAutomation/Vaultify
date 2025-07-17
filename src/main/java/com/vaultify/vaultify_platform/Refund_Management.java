@@ -16,7 +16,7 @@ public class Refund_Management extends Property_management {
 	TreeMap<String, String> maptree = new TreeMap<String,String>();
 	
 	
-	@Test
+
 	public TreeMap<String, String> refund_list_status_checker()throws InterruptedException, IOException, AWTException{
 		
 		Property_locaters p = new Property_locaters(d);

@@ -414,13 +414,121 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
 		System.out.println(b);
 		System.out.println();
 		w.until(ExpectedConditions.visibilityOfAllElements(p.cms_cards()));
-		return p.cms_cards();
-    
-    
-    
-    } 
+		return p.cms_cards();} 
 
-
+    /* 
+    
+      @Test  
+	public void Vaultify_Versity() throws InterruptedException{
+		
+    	Admin_modules_locators p = new Admin_modules_locators(d);
+    	Actions a = new Actions(d);
+    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+        JavascriptExecutor js = (JavascriptExecutor)d;
+        
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
+		p.Menu_modules.get(v+1).click();
+		Thread.sleep(750);
+		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
+		StringBuffer b = new StringBuffer(p.page_headeings().getText());
+        b.append(" heading is ");
+		System.out.println(b);}
+	
+    @Test  
+	public void Vaultify_Versity() throws InterruptedException{
+		
+    	Admin_modules_locators p = new Admin_modules_locators(d);
+    	Actions a = new Actions(d);
+    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+        JavascriptExecutor js = (JavascriptExecutor)d;
+        
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
+		p.Menu_modules.get(v+1).click();
+		Thread.sleep(750);
+		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
+		StringBuffer b = new StringBuffer(p.page_headeings().getText());
+        b.append(" heading is ");
+		System.out.println(b);}
+	
+    @Test  
+	public void Vaultify_Versity() throws InterruptedException{
+		
+    	Admin_modules_locators p = new Admin_modules_locators(d);
+    	Actions a = new Actions(d);
+    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+        JavascriptExecutor js = (JavascriptExecutor)d;
+        
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
+		p.Menu_modules.get(v+1).click();
+		Thread.sleep(750);
+		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
+		StringBuffer b = new StringBuffer(p.page_headeings().getText());
+        b.append(" heading is ");
+		System.out.println(b);}
+	
+    @Test  
+	public void Vaultify_Versity() throws InterruptedException{
+		
+    	Admin_modules_locators p = new Admin_modules_locators(d);
+    	Actions a = new Actions(d);
+    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+        JavascriptExecutor js = (JavascriptExecutor)d;
+        
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
+		p.Menu_modules.get(v+1).click();
+		Thread.sleep(750);
+		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
+		StringBuffer b = new StringBuffer(p.page_headeings().getText());
+        b.append(" heading is ");
+		System.out.println(b);}
+	
+    @Test  
+	public void Vaultify_Versity() throws InterruptedException{
+		
+    	Admin_modules_locators p = new Admin_modules_locators(d);
+    	Actions a = new Actions(d);
+    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+        JavascriptExecutor js = (JavascriptExecutor)d;
+        
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
+		p.Menu_modules.get(v+1).click();
+		Thread.sleep(750);
+		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
+		StringBuffer b = new StringBuffer(p.page_headeings().getText());
+        b.append(" heading is ");
+		System.out.println(b);}
+	
+    @Test  
+	public void Vaultify_Versity() throws InterruptedException{
+		
+    	Admin_modules_locators p = new Admin_modules_locators(d);
+    	Actions a = new Actions(d);
+    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+        JavascriptExecutor js = (JavascriptExecutor)d;
+        
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
+		p.Menu_modules.get(v+1).click();
+		Thread.sleep(750);
+		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
+		StringBuffer b = new StringBuffer(p.page_headeings().getText());
+        b.append(" heading is ");
+		System.out.println(b);}
+	
+    @Test  
+	public void Vaultify_Versity() throws InterruptedException{
+		
+    	Admin_modules_locators p = new Admin_modules_locators(d);
+    	Actions a = new Actions(d);
+    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+        JavascriptExecutor js = (JavascriptExecutor)d;
+        
+    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
+		p.Menu_modules.get(v+1).click();
+		Thread.sleep(750);
+		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
+		StringBuffer b = new StringBuffer(p.page_headeings().getText());
+        b.append(" heading is ");
+		System.out.println(b);}*/
 	
 
 }
