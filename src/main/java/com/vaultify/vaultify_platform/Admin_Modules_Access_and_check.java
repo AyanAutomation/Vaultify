@@ -16,8 +16,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import com.vaultify.Repeat_codes.List_slide;
-
 import Locators.pom.Admin_modules_locators;
 import Locators.pom.Property_locaters;
 import Locators.pom.Refund_Module_Locators;
@@ -118,7 +116,7 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
     	try {
 			Thread.sleep(800);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
     	p.dropdown_module.get(0).click();
@@ -128,7 +126,7 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
 		try {
 			Thread.sleep(800);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
@@ -363,7 +361,9 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
     	} 
     
     @Test  
-	public List<String> Refund_management_access() throws InterruptedException, AWTException, IOException{
+    public List<String> Refund_management_access() throws InterruptedException, AWTException, IOException{
+
+
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
@@ -391,136 +391,36 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
         	
         	names.add(propnam.getText());}
         
+
         return names;
-    }     
-	
-    /*Test  
-	public void Vaultify_Versity() throws InterruptedException{
-		
+    }
+    
+    
+    public List<WebElement> CMS_Module_Accessor() throws InterruptedException, IOException, AWTException{
+    	
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
-        
+    	
+    	
+        login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+1).click();
+		p.Menu_modules.get(v).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(p.page_headeings().getText());
         b.append(" heading is ");
-		System.out.println(b);}
+		System.out.println(b);
+		System.out.println();
+		w.until(ExpectedConditions.visibilityOfAllElements(p.cms_cards()));
+		return p.cms_cards();
+    
+    
+    
+    } 
+
+
 	
-    @Test  
-	public void Vaultify_Versity() throws InterruptedException{
-		
-    	Admin_modules_locators p = new Admin_modules_locators(d);
-    	Actions a = new Actions(d);
-    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor)d;
-        
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+1).click();
-		Thread.sleep(750);
-		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
-		System.out.println(b);}
-	
-    @Test  
-	public void Vaultify_Versity() throws InterruptedException{
-		
-    	Admin_modules_locators p = new Admin_modules_locators(d);
-    	Actions a = new Actions(d);
-    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor)d;
-        
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+1).click();
-		Thread.sleep(750);
-		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
-		System.out.println(b);}
-	
-    @Test  
-	public void Vaultify_Versity() throws InterruptedException{
-		
-    	Admin_modules_locators p = new Admin_modules_locators(d);
-    	Actions a = new Actions(d);
-    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor)d;
-        
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+1).click();
-		Thread.sleep(750);
-		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
-		System.out.println(b);}
-	
-    @Test  
-	public void Vaultify_Versity() throws InterruptedException{
-		
-    	Admin_modules_locators p = new Admin_modules_locators(d);
-    	Actions a = new Actions(d);
-    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor)d;
-        
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+1).click();
-		Thread.sleep(750);
-		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
-		System.out.println(b);}
-	
-    @Test  
-	public void Vaultify_Versity() throws InterruptedException{
-		
-    	Admin_modules_locators p = new Admin_modules_locators(d);
-    	Actions a = new Actions(d);
-    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor)d;
-        
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+1).click();
-		Thread.sleep(750);
-		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
-		System.out.println(b);}
-	
-    @Test  
-	public void Vaultify_Versity() throws InterruptedException{
-		
-    	Admin_modules_locators p = new Admin_modules_locators(d);
-    	Actions a = new Actions(d);
-    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor)d;
-        
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+1).click();
-		Thread.sleep(750);
-		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
-		System.out.println(b);}
-	
-    @Test  
-	public void Vaultify_Versity() throws InterruptedException{
-		
-    	Admin_modules_locators p = new Admin_modules_locators(d);
-    	Actions a = new Actions(d);
-    	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor)d;
-        
-    	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+1).click();
-		Thread.sleep(750);
-		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
-		StringBuffer b = new StringBuffer(p.page_headeings().getText());
-        b.append(" heading is ");
-		System.out.println(b);}
-	
-*/
+
 }

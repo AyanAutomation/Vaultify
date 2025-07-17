@@ -88,6 +88,8 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	private WebElement employee_search_button;
 	@FindBy(xpath="//td//div[@class='flex items-center']")
 	private List <WebElement> PropertyBid_statuses;
+    @FindBy(xpath="//li")
+	private List <WebElement> cms_cards;
 	
 	
 
@@ -206,9 +208,10 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	return submenuitems;}
 	public List <WebElement> PropertyBid_statuses(){
 	WebElements_waits(PropertyBid_statuses);
-	return PropertyBid_statuses;}/*
-	public WebElement (){
-	return ;}
+	return PropertyBid_statuses;}
+	public List <WebElement> cms_cards(){
+	WebElements_waits(cms_cards); 
+	return cms_cards;} /*
 	public WebElement (){
 	return ;}
 	public WebElement (){

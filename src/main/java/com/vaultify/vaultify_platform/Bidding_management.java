@@ -55,7 +55,6 @@ public class Bidding_management extends Property_management{
 		
 	
 	Bidding_Management_Locaters p = new Bidding_Management_Locaters(d);	
-	List<String> All_Propertnames_inBid_list= new ArrayList<String>();
 	
 	statuses = Private_Bid_Console();
 	System.out.println("number of statused in bid list "+statuses.size());

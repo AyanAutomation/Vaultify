@@ -6,7 +6,7 @@
       <class name="com.vaultify.vaultify_platform.Bidding_management">
         <methods>
           <include name="setUP"/>
-          <include name="privateBid_console_search"/>
+          <include name="bidstatus_checker"/>
           <include name="driverkill"/>
         </methods>
       </class> <!-- com.vaultify.vaultify_platform.Bidding_management -->
