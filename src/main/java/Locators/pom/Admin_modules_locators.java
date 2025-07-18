@@ -24,7 +24,7 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	private WebElement  sideMenu; 
 	@FindBy(xpath="//*[@class='flex items-center']")
 	public List <WebElement> dropdown_module  ; 
-	@FindBy(xpath="//*[@class='mb-2 flex w-full items-center justify-between']")
+	@FindBy(xpath="(//header[@class='mb-6 @container xs:-mt-2 lg:mb-7']//div[@class='flex flex-col @lg:flex-row @lg:items-center @lg:justify-between'])[2]")
 	private WebElement Employee_list_section; 
 	@FindBy(xpath="//form")
 	private WebElement pop_up_employeeAdd_Form; 
@@ -42,7 +42,7 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	private WebElement dob;
 	@FindBy(name="email")
 	private WebElement email;
-	@FindBy(name="phoneNumber")
+	@FindBy(xpath="//input[@type='tel']")
 	private WebElement phoneNumber;
 	@FindBy(xpath="//*[@class='h-full']//button")
 	private List <WebElement> dropdown_fields;

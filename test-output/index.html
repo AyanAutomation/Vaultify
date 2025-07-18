@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,12 +21,11 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\user1\AppData\Local\Temp\testng-eclipse-1616583083\testng-customsuite.xml</span>
+                    <span>C:\Users\PC-129\AppData\Local\Temp\testng-eclipse-432123932\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">6 methods, 3 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="Employee_staff_Add({accNumber=40817810099911567890, accOwner=Rachel Nguyen, bankName=Vietcombank, dob=06-12-1993, doj=1...)">Employee_staff_Add({accNumber=40817810099911567890, accOwner=Rachel Nguyen, bankName=Vietcombank, dob=06-12-1993, doj=1...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="Employee_staff_Add({accNumber=40817810099911123456, accOwner=Emilia Grace, bankName=Barclays Bank, dob=23-03-1991, doj=...)">Employee_staff_Add({accNumber=40817810099911123456, accOwner=Emilia Grace, bankName=Barclays Bank, dob=23-03-1991, doj=...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="Employee_staff_Add({accNumber=40817810099911678901, accOwner=Aditya Pandey, bankName=Union Bank of India, dob=18-02-199...)">Employee_staff_Add({accNumber=40817810099911678901, accOwner=Aditya Pandey, bankName=Union Bank of India, dob=18-02-199...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +127,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.vaultify.vaultify_platform.cms_and_versity" class="method navigator-link" hash-for-method="Cms_Page_list_checker">Cms_Page_list_checker</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="Employee_staff_Add({accNumber=40817810099911234567, accOwner=Omid Nasiri, bankName=Afghanistan International Bank, dob=...)">Employee_staff_Add({accNumber=40817810099911234567, accOwner=Omid Nasiri, bankName=Afghanistan International Bank, dob=...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="Employee_staff_Add({accNumber=40817810099911456789, accOwner=Bilal Sultan, bankName=Habib Bank Ltd, dob=29-05-1990, doj...)">Employee_staff_Add({accNumber=40817810099911456789, accOwner=Bilal Sultan, bankName=Habib Bank Ltd, dob=29-05-1990, doj...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="Employee_staff_Add({accNumber=40817810099911345678, accOwner=Sofia Lindgren, bankName=SEB Bank Sweden, dob=17-09-1994, ...)">Employee_staff_Add({accNumber=40817810099911345678, accOwner=Sofia Lindgren, bankName=SEB Bank Sweden, dob=17-09-1994, ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,17 +152,241 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.vaultify.vaultify_platform.cms_and_versity</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.vaultify.vaultify_platform.Staff_and_Team</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Cms_Page_list_checker">
-                  </a> <!-- Cms_Page_list_checker -->
-                  <span class="method-name">Cms_Page_list_checker</span>
+                  <a name="Employee_staff_Add({accNumber=40817810099911567890, accOwner=Rachel Nguyen, bankName=Vietcombank, dob=06-12-1993, doj=1...)">
+                  </a> <!-- Employee_staff_Add({accNumber=40817810099911567890, accOwner=Rachel Nguyen, bankName=Vietcombank, dob=06-12-1993, doj=1...) -->
+                  <span class="method-name">Employee_staff_Add</span>
+                  <span class="parameters">({accNumber=40817810099911567890, accOwner=Rachel Nguyen, bankName=Vietcombank, dob=06-12-1993, doj=10-03-2017, email=rachel.nguyen@vaultify.com, experience=7, fathername=David Nguyen, fullname=Rachel Nguyen, ifsc=VCBM0009876, mothername=Thao Nguyen, password=Rachel@456, phone=849811234567, qualification=Financial Auditing, upi=rachelnguyen@ybl, username=rachel_nguyen})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//*[text()=&apos;OTP.&apos;])&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElement_wait(Repeatative_Codes.java:29)
+	at Locators.pom.Login_locaters.OTP_page_Title(Login_locaters.java:75)
+	at com.vaultify.vaultify_platform.Admin_Login.otp_filler(Admin_Login.java:72)
+	at com.vaultify.vaultify_platform.Admin_Login.login(Admin_Login.java:47)
+	at com.vaultify.vaultify_platform.Admin_Modules_Access_and_check.TeamManagement(Admin_Modules_Access_and_check.java:88)
+	at com.vaultify.vaultify_platform.Staff_and_Team.Employee_staff_Add(Staff_and_Team.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[text()=&apos;OTP.&apos;])&quot;}
+  (Session info: chrome=138.0.7204.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c1f19b7529672a8b763aa2297c9ec831, findElement {value=(//*[text()=&apos;OTP.&apos;]), using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58185}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58185/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c1f19b7529672a8b763aa2297c9ec831
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 32 more
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Employee_staff_Add({accNumber=40817810099911123456, accOwner=Emilia Grace, bankName=Barclays Bank, dob=23-03-1991, doj=...)">
+                  </a> <!-- Employee_staff_Add({accNumber=40817810099911123456, accOwner=Emilia Grace, bankName=Barclays Bank, dob=23-03-1991, doj=...) -->
+                  <span class="method-name">Employee_staff_Add</span>
+                  <span class="parameters">({accNumber=40817810099911123456, accOwner=Emilia Grace, bankName=Barclays Bank, dob=23-03-1991, doj=03-06-2015, email=emilia.grace@vaultify.com, experience=8, fathername=Jonathan Grace, fullname=Emilia Grace, ifsc=BARC0001022, mothername=Rachel Grace, password=Emilia@2024, phone=447911234567, qualification=Human Resource Management, upi=emiliagrace@ybl, username=emilia_grace})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [[[ChromeDriver: chrome on windows (c73cf524caca626de8fe7ce8ad21608f)] -&gt; xpath: //*[@class=&apos;inline-flex&apos;]], [[ChromeDriver: chrome on windows (c73cf524caca626de8fe7ce8ad21608f)] -&gt; xpath: //*[@class=&apos;inline-flex&apos;]], [[ChromeDriver: chrome on windows (c73cf524caca626de8fe7ce8ad21608f)] -&gt; xpath: //*[@class=&apos;inline-flex&apos;]], [[ChromeDriver: chrome on windows (c73cf524caca626de8fe7ce8ad21608f)] -&gt; xpath: //*[@class=&apos;inline-flex&apos;]], [[ChromeDriver: chrome on windows (c73cf524caca626de8fe7ce8ad21608f)] -&gt; xpath: //*[@class=&apos;inline-flex&apos;]]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58025}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58025/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c73cf524caca626de8fe7ce8ad21608f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Admin_modules_locators.list_sort_buttons(Admin_modules_locators.java:180)
+	at com.vaultify.vaultify_platform.Staff_and_Team.Employee_staff_Add(Staff_and_Team.java:92)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Employee_staff_Add({accNumber=40817810099911678901, accOwner=Aditya Pandey, bankName=Union Bank of India, dob=18-02-199...)">
+                  </a> <!-- Employee_staff_Add({accNumber=40817810099911678901, accOwner=Aditya Pandey, bankName=Union Bank of India, dob=18-02-199...) -->
+                  <span class="method-name">Employee_staff_Add</span>
+                  <span class="parameters">({accNumber=40817810099911678901, accOwner=Aditya Pandey, bankName=Union Bank of India, dob=18-02-1992, doj=01-12-2015, email=aditya.pandey@vaultify.com, experience=8, fathername=Raghunath Pandey, fullname=Aditya Pandey, ifsc=UBIN0001321, mothername=Kiran Pandey, password=Aditya@007, phone=917712345678, qualification=Full Stack Developer, upi=adityapandey@ybl, username=aditya_pandey})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//*[text()=&apos;OTP.&apos;])&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElement_wait(Repeatative_Codes.java:29)
+	at Locators.pom.Login_locaters.OTP_page_Title(Login_locaters.java:75)
+	at com.vaultify.vaultify_platform.Admin_Login.otp_filler(Admin_Login.java:72)
+	at com.vaultify.vaultify_platform.Admin_Login.login(Admin_Login.java:47)
+	at com.vaultify.vaultify_platform.Admin_Modules_Access_and_check.TeamManagement(Admin_Modules_Access_and_check.java:88)
+	at com.vaultify.vaultify_platform.Staff_and_Team.Employee_staff_Add(Staff_and_Team.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[text()=&apos;OTP.&apos;])&quot;}
+  (Session info: chrome=138.0.7204.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c691ea11a05e464f314c6e5de5743867, findElement {value=(//*[text()=&apos;OTP.&apos;]), using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58214}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58214/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c691ea11a05e464f314c6e5de5743867
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 32 more
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.vaultify.vaultify_platform.Staff_and_Team</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Employee_staff_Add({accNumber=40817810099911234567, accOwner=Omid Nasiri, bankName=Afghanistan International Bank, dob=...)">
+                  </a> <!-- Employee_staff_Add({accNumber=40817810099911234567, accOwner=Omid Nasiri, bankName=Afghanistan International Bank, dob=...) -->
+                  <span class="method-name">Employee_staff_Add</span>
+                  <span class="parameters">({accNumber=40817810099911234567, accOwner=Omid Nasiri, bankName=Afghanistan International Bank, dob=02-01-1987, doj=25-04-2014, email=omid.nasiri@vaultify.com, experience=10, fathername=Rahmat Nasiri, fullname=Omid Nasiri, ifsc=AIBK0002001, mothername=Zarina Nasiri, password=Omid@786, phone=937811223344, qualification=Backend Development, upi=omidnasiri@ybl, username=omid_nasiri})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Employee_staff_Add({accNumber=40817810099911456789, accOwner=Bilal Sultan, bankName=Habib Bank Ltd, dob=29-05-1990, doj...)">
+                  </a> <!-- Employee_staff_Add({accNumber=40817810099911456789, accOwner=Bilal Sultan, bankName=Habib Bank Ltd, dob=29-05-1990, doj...) -->
+                  <span class="method-name">Employee_staff_Add</span>
+                  <span class="parameters">({accNumber=40817810099911456789, accOwner=Bilal Sultan, bankName=Habib Bank Ltd, dob=29-05-1990, doj=08-11-2016, email=bilal.sultan@vaultify.com, experience=9, fathername=Aftab Sultan, fullname=Bilal Sultan, ifsc=HBLP0000567, mothername=Shabana Sultan, password=Bilal@123, phone=923001112233, qualification=IT Infrastructure, upi=bilalsultan@ybl, username=bilal_sultan})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Employee_staff_Add({accNumber=40817810099911345678, accOwner=Sofia Lindgren, bankName=SEB Bank Sweden, dob=17-09-1994, ...)">
+                  </a> <!-- Employee_staff_Add({accNumber=40817810099911345678, accOwner=Sofia Lindgren, bankName=SEB Bank Sweden, dob=17-09-1994, ...) -->
+                  <span class="method-name">Employee_staff_Add</span>
+                  <span class="parameters">({accNumber=40817810099911345678, accOwner=Sofia Lindgren, bankName=SEB Bank Sweden, dob=17-09-1994, doj=01-10-2018, email=sofia.lindgren@vaultify.com, experience=6, fathername=Martin Lindgren, fullname=Sofia Lindgren, ifsc=SEBK0000342, mothername=Eva Lindgren, password=Sofia@999, phone=467012345678, qualification=Business Intelligence, upi=sofialindgren@ybl, username=sofia_lindgren})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +394,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\user1\AppData\Local\Temp\testng-eclipse-1616583083\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\PC-129\AppData\Local\Temp\testng-eclipse-432123932\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +403,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.vaultify.vaultify_platform.cms_and_versity&quot;&gt;
+      &lt;class name=&quot;com.vaultify.vaultify_platform.Staff_and_Team&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;Cms_Page_list_checker&quot;/&gt;
+          &lt;include name=&quot;Employee_staff_Add&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.vaultify.vaultify_platform.cms_and_versity --&gt;
+      &lt;/class&gt; &lt;!-- com.vaultify.vaultify_platform.Staff_and_Team --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -190,16 +447,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Cms_Page_list_checker')
-data.setCell(0, 2, 'com.vaultify.vaultify_platform.cms_and_versity')
-data.setCell(0, 3, 11308);
+data.setCell(0, 1, 'Employee_staff_Add')
+data.setCell(0, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(0, 3, 31924);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Employee_staff_Add')
+data.setCell(1, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(1, 3, 24929);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Employee_staff_Add')
+data.setCell(2, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(2, 3, 21751);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Employee_staff_Add')
+data.setCell(3, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(3, 3, 21254);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Employee_staff_Add')
+data.setCell(4, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(4, 3, 14063);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Employee_staff_Add')
+data.setCell(5, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(5, 3, 13563);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -218,11 +495,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.vaultify.vaultify_platform.cms_and_versity</span>
+              <span class="ignored-class-name">com.vaultify.vaultify_platform.Staff_and_Team</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">cms_search</span>
-                <br/>
                 <span class="ignored-method-name">login</span>
+                <br/>
+                <span class="ignored-method-name">employeesearch</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -234,18 +511,84 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.vaultify.vaultify_platform.cms_and_versity</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.vaultify.vaultify_platform.Staff_and_Team</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUP</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Cms_Page_list_checker</span>
-                <span class="method-start">2410 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Employee_staff_Add({accNumber=40817810099911123456, accOwner=Emilia Grace, bankName=Barclays Bank, dob=23-03-1991, doj=...)</span>
+                <span class="method-start">1751 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverkill</span>
-                <span class="method-start">13721 ms</span>
+                <span class="method-start">33680 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">33871 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Employee_staff_Add({accNumber=40817810099911234567, accOwner=Omid Nasiri, bankName=Afghanistan International Bank, dob=...)</span>
+                <span class="method-start">34825 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">56578 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">56748 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Employee_staff_Add({accNumber=40817810099911345678, accOwner=Sofia Lindgren, bankName=SEB Bank Sweden, dob=17-09-1994, ...)</span>
+                <span class="method-start">57631 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">78888 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">79086 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Employee_staff_Add({accNumber=40817810099911456789, accOwner=Bilal Sultan, bankName=Habib Bank Ltd, dob=29-05-1990, doj...)</span>
+                <span class="method-start">79960 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">104891 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">105050 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Employee_staff_Add({accNumber=40817810099911567890, accOwner=Rachel Nguyen, bankName=Vietcombank, dob=06-12-1993, doj=1...)</span>
+                <span class="method-start">105879 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">119947 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">120103 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Employee_staff_Add({accNumber=40817810099911678901, accOwner=Aditya Pandey, bankName=Union Bank of India, dob=18-02-199...)</span>
+                <span class="method-start">120912 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">134477 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
