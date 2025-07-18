@@ -231,28 +231,55 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 
 	
 	
-	       @Test
-	       public void employeesearch() throws InterruptedException, IOException, AWTException{
+	       @Test(dataProvider="employeedata")
+	       public void employeesearch(TreeMap<String, String> Empdata) throws InterruptedException, IOException, AWTException{
 		
 		   Admin_modules_locators p = new Admin_modules_locators(d);
 		   JavascriptExecutor js = (JavascriptExecutor)d;
 		   Property_locaters pp = new Property_locaters(d);
 		   
-		   
-		   
-		    List <String> names= TeamManagement();
+		    TeamManagement();
 	        js.executeScript("arguments[0].scrollIntoView(true);",p.employee_search_button());
 	        Thread.sleep(800);
 	        js.executeScript("window.scrollBy(0,-150)");
 	        Thread.sleep(800);
 	        p.employee_search_button();
-		    p.employee_search_button().sendKeys(names.get(5));
+		    p.employee_search_button().sendKeys(Empdata.get("username"));
 		    pp.Search_button().click();
 		    Thread.sleep(1200);
 		    search_result= pp.property_listNames().get(0).getText();
-		    System.out.println(names.get(5).equalsIgnoreCase(search_result) ? "Testcase passed "+search_result+" name shown in search result ": "Testcase passed"+search_result+" name not shown in search result " );
-		
-		
-	}
+		    System.out.println(Empdata.get("username").equalsIgnoreCase(search_result) ? "Testcase passed "+search_result+" name shown in search result ": "Testcase passed"+search_result+" name not shown in search result " );}
 
+	       
+	       
+	       @Test
+	       public void employee_delete() throws InterruptedException, IOException, AWTException{
+	    	   
+	    	Admin_modules_locators p = new Admin_modules_locators(d);  
+	    	JavascriptExecutor js = (JavascriptExecutor)d;   
+	    	Property_locaters pp = new Property_locaters(d);
+	    	   
+	        TeamManagement();   
+	        js.executeScript("arguments[0].scrollIntoView(true);",p.employee_search_button());
+	        Thread.sleep(800);
+	        js.executeScript("window.scrollBy(0,250)");   
+	        Thread.sleep(800);   
+	        pp.list_Delete_buttons();	
+	        js.executeScript("arguments[0].scrollIntoView(true);",pp.list_Delete_buttons().get(1));
+	        pp.list_Delete_buttons().get(2).click();	
+	        pp.popup_Tooltip();
+	        Thread.sleep(400);	
+	        pp.Tooltip_buttons().get(0).click();	
+	        Thread.sleep(1400);  
+	    	   
+	    	   
+	    	   
+	       }
+	       
+	       
+	       
+	       
+	       
+	       
+	       
 }

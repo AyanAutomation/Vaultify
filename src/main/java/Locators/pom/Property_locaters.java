@@ -24,7 +24,7 @@ public class Property_locaters extends Repeatative_Codes{
 	private WebElement  Search_button; 
 	@FindBy(xpath="//*[@class='rc-table-content']")
 	private WebElement slider;
-	@FindBy(xpath="//*[@aria-label='Delete Item")
+	@FindBy(xpath="//*[@aria-label='Delete Item']")
 	private List <WebElement>  list_Delete_buttons;
 	@FindBy(xpath="//div[@role='tooltip']")
 	private WebElement  popup_Tooltip;
