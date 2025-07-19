@@ -2,8 +2,9 @@ package Reports_and_Listeners;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.vaultify.Repeat_codes.Screenshots;
 
-public class Extented_Reports {
+public class Extented_Reports extends Screenshots {
 	
 	public static ExtentReports getReport(){
 		
