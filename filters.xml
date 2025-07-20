@@ -21,16 +21,11 @@
       <include name="Refund_filter_check"/>
       </methods>
       </class>
-      <class name="com.vaultify.vaultify_platform.Society_management">
+      <class name="com.vaultify.vaultify_platform.Staff_Attendance">
       <methods>
-      <include name="Society_search"/>
+      <include name="Attendence_filter_check"/>
       </methods>
       </class>
-       <class name="com.vaultify.vaultify_platform.Bidding_management">
-      <methods>
-      <include name="privateBid_console_search"/>
-      </methods>
-      </class>
-    </classes>
+       </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

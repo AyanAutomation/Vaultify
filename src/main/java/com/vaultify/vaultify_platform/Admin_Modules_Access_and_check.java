@@ -248,25 +248,47 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
 		System.out.println();}
 	
 
-	public void TalkToExpert() throws InterruptedException, IOException, AWTException{
+	public List<String> TalkToExpert() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
+        List<String> Status = new ArrayList<String>();
+        Robot r = new Robot();
+        
         
         login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
     	a.moveToElement((p.Menu_modules.get(1))).build().perform();
-    	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+11));
+    	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+9));
     	Thread.sleep(800);
-		p.Menu_modules.get(v+11).click();
+		p.Menu_modules.get(v+9).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
         b.append(p.page_headeings().getText());
 		System.out.println(b);
-		System.out.println();}
+		System.out.println();
+		w.until(ExpectedConditions.visibilityOfAllElements(p.PropertyBid_statuses()));
+		js.executeScript("arguments[0].scrollIntoView(true);",p.PropertyBid_statuses().get(1));
+		Thread.sleep(800);
+		r.mouseWheel(6);
+		Thread.sleep(800);
+		List <WebElement> request_status = p.PropertyBid_statuses();
+		int requestcount = p.PropertyBid_statuses().size();
+		
+		for(int n=0;n<requestcount;n++){
+            
+            	Status.add(request_status.get(n).getText());
+			}
+		
+		
+	    return Status;
+	
+	
+	
+	}
 	
 
 	public void Staff_Attendance_Management() throws InterruptedException, IOException, AWTException{
@@ -279,9 +301,9 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
         login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));Thread.sleep(800);
     	a.moveToElement((p.Menu_modules.get(1))).build().perform();
-    	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+12));
+    	js.executeScript("arguments[0].scrollIntoView(true);",p.Menu_modules.get(v+10));
     	Thread.sleep(800);
-		p.Menu_modules.get(v+12).click();
+		p.Menu_modules.get(v+10).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");

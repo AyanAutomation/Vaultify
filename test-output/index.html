@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,11 +21,12 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 7 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +39,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\PC-129\AppData\Local\Temp\testng-eclipse--1991462685\testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
+                    <span>H:\Selenium Projects\Vaultify\Searches.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,21 +93,80 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">11 methods, 7 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="employeesearch({accNumber=40817810099912222345, accOwner=Rashid Salim, bankName=Dubai Islamic Bank, dob=03-03-1990,...)">employeesearch({accNumber=40817810099912222345, accOwner=Rashid Salim, bankName=Dubai Islamic Bank, dob=03-03-1990,...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="employeesearch({accNumber=40817810099912000123, accOwner=Omar ElKhatib, bankName=Banque Misr, dob=12-12-1988, doj=0...)">employeesearch({accNumber=40817810099912000123, accOwner=Omar ElKhatib, bankName=Banque Misr, dob=12-12-1988, doj=0...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="employeesearch({accNumber=40817810099911888002, accOwner=Kenji Suzuki, bankName=Mizuho Bank, dob=18-11-1986, doj=12...)">employeesearch({accNumber=40817810099911888002, accOwner=Kenji Suzuki, bankName=Mizuho Bank, dob=18-11-1986, doj=12...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="employeesearch({accNumber=40817810099911777001, accOwner=Leila Hassan, bankName=Bank AlJazira, dob=07-05-1990, doj=...)">employeesearch({accNumber=40817810099911777001, accOwner=Leila Hassan, bankName=Bank AlJazira, dob=07-05-1990, doj=...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="employeesearch({accNumber=40817810099911999003, accOwner=Luisa Gutierrez, bankName=Bancolombia, dob=25-08-1993, doj...)">employeesearch({accNumber=40817810099911999003, accOwner=Luisa Gutierrez, bankName=Bancolombia, dob=25-08-1993, doj...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="employeesearch({accNumber=40817810099912111234, accOwner=Maria Vasquez, bankName=BBVA Bancomer, dob=10-04-1991, doj...)">employeesearch({accNumber=40817810099912111234, accOwner=Maria Vasquez, bankName=BBVA Bancomer, dob=10-04-1991, doj...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.Bidding_management" class="method navigator-link" hash-for-method="privateBid_console_search">privateBid_console_search</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.vaultify.vaultify_platform.Staff_and_Team" class="method navigator-link" hash-for-method="employee_delete">employee_delete</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.Property_management" class="method navigator-link" hash-for-method="Property_Search">Property_Search</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.Refund_Management" class="method navigator-link" hash-for-method="Refund_list_search">Refund_list_search</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.Society_management" class="method navigator-link" hash-for-method="Society_search">Society_search</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.vaultify.vaultify_platform.user_module" class="method navigator-link" hash-for-method="user_Search">user_Search</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,136 +177,674 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.vaultify.vaultify_platform.Staff_and_Team</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="employee_delete">
-                  </a> <!-- employee_delete -->
-                  <span class="method-name">employee_delete</span>
+                  <a name="employeesearch({accNumber=40817810099912222345, accOwner=Rashid Salim, bankName=Dubai Islamic Bank, dob=03-03-1990,...)">
+                  </a> <!-- employeesearch({accNumber=40817810099912222345, accOwner=Rashid Salim, bankName=Dubai Islamic Bank, dob=03-03-1990,...) -->
+                  <span class="method-name">employeesearch</span>
+                  <span class="parameters">({accNumber=40817810099912222345, accOwner=Rashid Salim, bankName=Dubai Islamic Bank, dob=03-03-1990, doj=22-08-2015, email=rashid.salim@vaultify.com, experience=8, fathername=Younus Salim, fullname=Rashid Salim, ifsc=DUBA0000123, mothername=Samira Salim, password=Rashid@001, phone=971556612233, qualification=QA Automation Engineer, upi=rashidsalim@ybl, username=rashid_salim})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60350}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60350/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 884387db28c053dc4426dd8e98eda98b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="employeesearch({accNumber=40817810099912000123, accOwner=Omar ElKhatib, bankName=Banque Misr, dob=12-12-1988, doj=0...)">
+                  </a> <!-- employeesearch({accNumber=40817810099912000123, accOwner=Omar ElKhatib, bankName=Banque Misr, dob=12-12-1988, doj=0...) -->
+                  <span class="method-name">employeesearch</span>
+                  <span class="parameters">({accNumber=40817810099912000123, accOwner=Omar ElKhatib, bankName=Banque Misr, dob=12-12-1988, doj=09-07-2016, email=omar.elkhatib@vaultify.com, experience=9, fathername=Nabil ElKhatib, fullname=Omar ElKhatib, ifsc=BMIS0000451, mothername=Salma ElKhatib, password=Omar@2024, phone=201113334455, qualification=Data Engineer, upi=omarelkhatib@ybl, username=omar_elkhatib})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60232}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60232/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 221b9fca1d98161a9e080cb548688bc6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="employeesearch({accNumber=40817810099911888002, accOwner=Kenji Suzuki, bankName=Mizuho Bank, dob=18-11-1986, doj=12...)">
+                  </a> <!-- employeesearch({accNumber=40817810099911888002, accOwner=Kenji Suzuki, bankName=Mizuho Bank, dob=18-11-1986, doj=12...) -->
+                  <span class="method-name">employeesearch</span>
+                  <span class="parameters">({accNumber=40817810099911888002, accOwner=Kenji Suzuki, bankName=Mizuho Bank, dob=18-11-1986, doj=12-06-2014, email=kenji.suzuki@vaultify.com, experience=10, fathername=Takeshi Suzuki, fullname=Kenji Suzuki, ifsc=MIZU0000890, mothername=Yoko Suzuki, password=Kenji@888, phone=819012345678, qualification=Systems Analyst, upi=kenjisuzuki@ybl, username=kenji_suzuki})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60116}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60116/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e3bf92028fb144b6e83bd27868cf7c59
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="employeesearch({accNumber=40817810099911777001, accOwner=Leila Hassan, bankName=Bank AlJazira, dob=07-05-1990, doj=...)">
+                  </a> <!-- employeesearch({accNumber=40817810099911777001, accOwner=Leila Hassan, bankName=Bank AlJazira, dob=07-05-1990, doj=...) -->
+                  <span class="method-name">employeesearch</span>
+                  <span class="parameters">({accNumber=40817810099911777001, accOwner=Leila Hassan, bankName=Bank AlJazira, dob=07-05-1990, doj=14-09-2017, email=leila.hassan@vaultify.com, experience=6, fathername=Faisal Hassan, fullname=Leila Hassan, ifsc=BAJA0000117, mothername=Amina Hassan, password=Leila@2024, phone=966530987654, qualification=Procurement Specialist, upi=leilahassan@ybl, username=leila_hassan})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60052}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60052/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7e2bc145d2715510f9bd123688ae8b78
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="employeesearch({accNumber=40817810099911999003, accOwner=Luisa Gutierrez, bankName=Bancolombia, dob=25-08-1993, doj...)">
+                  </a> <!-- employeesearch({accNumber=40817810099911999003, accOwner=Luisa Gutierrez, bankName=Bancolombia, dob=25-08-1993, doj...) -->
+                  <span class="method-name">employeesearch</span>
+                  <span class="parameters">({accNumber=40817810099911999003, accOwner=Luisa Gutierrez, bankName=Bancolombia, dob=25-08-1993, doj=01-01-2020, email=luisa.gutierrez@vaultify.com, experience=5, fathername=Carlos Gutierrez, fullname=Luisa Gutierrez, ifsc=BANC0000765, mothername=Rosa Gutierrez, password=Luisa@2023, phone=573012345678, qualification=Customer Success Manager, upi=luisagutierrez@ybl, username=luisa_gutierrez})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60174}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60174/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 99ed8f38c6c7935d61e98f86af548af4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="employeesearch({accNumber=40817810099912111234, accOwner=Maria Vasquez, bankName=BBVA Bancomer, dob=10-04-1991, doj...)">
+                  </a> <!-- employeesearch({accNumber=40817810099912111234, accOwner=Maria Vasquez, bankName=BBVA Bancomer, dob=10-04-1991, doj...) -->
+                  <span class="method-name">employeesearch</span>
+                  <span class="parameters">({accNumber=40817810099912111234, accOwner=Maria Vasquez, bankName=BBVA Bancomer, dob=10-04-1991, doj=16-10-2017, email=maria.vasquez@vaultify.com, experience=7, fathername=Juan Vasquez, fullname=Maria Vasquez, ifsc=BBVB0000771, mothername=Claudia Vasquez, password=Maria@123, phone=5215512345678, qualification=Legal Associate, upi=mariavasquez@ybl, username=maria_vasquez})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60291}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60291/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 788fb41cd4bd9fd63e4f4ea84859250c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.vaultify.vaultify_platform.Bidding_management</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="privateBid_console_search">
+                  </a> <!-- privateBid_console_search -->
+                  <span class="method-name">privateBid_console_search</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at com.vaultify.vaultify_platform.Bidding_management.privateBid_console_search(Bidding_management.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.vaultify.vaultify_platform.user_module</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="user_Search">
+                  </a> <!-- user_Search -->
+                  <span class="method-name">user_Search</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.vaultify.vaultify_platform.Society_management</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Society_search">
+                  </a> <!-- Society_search -->
+                  <span class="method-name">Society_search</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.vaultify.vaultify_platform.Refund_Management</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Refund_list_search">
+                  </a> <!-- Refund_list_search -->
+                  <span class="method-name">Refund_list_search</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.vaultify.vaultify_platform.Property_management</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Property_Search">
+                  </a> <!-- Property_Search -->
+                  <span class="method-name">Property_Search</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\PC-129\AppData\Local\Temp\testng-eclipse--1991462685\testng-customsuite.xml</span>
+            <span class="header-content">H:\Selenium Projects\Vaultify\Searches.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Reports_and_Listeners.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.vaultify.vaultify_platform.Property_management&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Property_Search&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.vaultify.vaultify_platform.Property_management --&gt;
+      &lt;class name=&quot;com.vaultify.vaultify_platform.user_module&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;user_Search&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.vaultify.vaultify_platform.user_module --&gt;
       &lt;class name=&quot;com.vaultify.vaultify_platform.Staff_and_Team&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;employee_delete&quot;/&gt;
+          &lt;include name=&quot;employeesearch&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.vaultify.vaultify_platform.Staff_and_Team --&gt;
+      &lt;class name=&quot;com.vaultify.vaultify_platform.Society_management&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Society_search&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.vaultify.vaultify_platform.Society_management --&gt;
+      &lt;class name=&quot;com.vaultify.vaultify_platform.Bidding_management&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;privateBid_console_search&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.vaultify.vaultify_platform.Bidding_management --&gt;
+      &lt;class name=&quot;com.vaultify.vaultify_platform.Refund_Management&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Refund_list_search&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.vaultify.vaultify_platform.Refund_Management --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Test (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'employee_delete')
-data.setCell(0, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
-data.setCell(0, 3, 15335);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 1, 'Society_search')
+data.setCell(0, 2, 'com.vaultify.vaultify_platform.Society_management')
+data.setCell(0, 3, 39728);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'employeesearch')
+data.setCell(1, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(1, 3, 32044);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'user_Search')
+data.setCell(2, 2, 'com.vaultify.vaultify_platform.user_module')
+data.setCell(2, 3, 26983);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'employeesearch')
+data.setCell(3, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(3, 3, 26643);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'employeesearch')
+data.setCell(4, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(4, 3, 26464);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'employeesearch')
+data.setCell(5, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(5, 3, 26393);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'employeesearch')
+data.setCell(6, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(6, 3, 26218);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'employeesearch')
+data.setCell(7, 2, 'com.vaultify.vaultify_platform.Staff_and_Team')
+data.setCell(7, 3, 26201);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'Property_Search')
+data.setCell(8, 2, 'com.vaultify.vaultify_platform.Property_management')
+data.setCell(8, 3, 26017);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'privateBid_console_search')
+data.setCell(9, 2, 'com.vaultify.vaultify_platform.Bidding_management')
+data.setCell(9, 3, 18888);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'Refund_list_search')
+data.setCell(10, 2, 'com.vaultify.vaultify_platform.Refund_Management')
+data.setCell(10, 3, 15894);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">47 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.vaultify.vaultify_platform.Staff_and_Team</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">Employee_staff_Add</span>
+                <br/>
                 <span class="ignored-method-name">login</span>
                 <br/>
-                <span class="ignored-method-name">employeesearch</span>
+                <span class="ignored-method-name">employee_delete</span>
                 <br/>
-                <span class="ignored-method-name">Employee_staff_Add</span>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.vaultify.vaultify_platform.Bidding_management</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">propertyList_filtercheck</span>
+                <br/>
+                <span class="ignored-method-name">Home_visit_pending_property_Search</span>
+                <br/>
+                <span class="ignored-method-name">Property_Search</span>
+                <br/>
+                <span class="ignored-method-name">login</span>
+                <br/>
+                <span class="ignored-method-name">Property_Staff_assign</span>
+                <br/>
+                <span class="ignored-method-name">bidstatus_checker</span>
+                <br/>
+                <span class="ignored-method-name">property_details_Data_fetch</span>
+                <br/>
+                <span class="ignored-method-name">bid_filter_checker</span>
+                <br/>
+                <span class="ignored-method-name">Property_Update_Approval_Propertynames</span>
+                <br/>
+                <span class="ignored-method-name">propertydelete</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.vaultify.vaultify_platform.user_module</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">propertyList_filtercheck</span>
+                <br/>
+                <span class="ignored-method-name">Home_visit_pending_property_Search</span>
+                <br/>
+                <span class="ignored-method-name">Property_Search</span>
+                <br/>
+                <span class="ignored-method-name">login</span>
+                <br/>
+                <span class="ignored-method-name">Property_Staff_assign</span>
+                <br/>
+                <span class="ignored-method-name">property_details_Data_fetch</span>
+                <br/>
+                <span class="ignored-method-name">Property_Update_Approval_Propertynames</span>
+                <br/>
+                <span class="ignored-method-name">propertydelete</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.vaultify.vaultify_platform.Society_management</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">propertyList_filtercheck</span>
+                <br/>
+                <span class="ignored-method-name">Home_visit_pending_property_Search</span>
+                <br/>
+                <span class="ignored-method-name">checking_added_society_in_propertyDetails</span>
+                <br/>
+                <span class="ignored-method-name">Property_Search</span>
+                <br/>
+                <span class="ignored-method-name">login</span>
+                <br/>
+                <span class="ignored-method-name">Property_Staff_assign</span>
+                <br/>
+                <span class="ignored-method-name">property_details_Data_fetch</span>
+                <br/>
+                <span class="ignored-method-name">Property_Update_Approval_Propertynames</span>
+                <br/>
+                <span class="ignored-method-name">Society_add</span>
+                <br/>
+                <span class="ignored-method-name">propertydelete</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.vaultify.vaultify_platform.Refund_Management</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">propertyList_filtercheck</span>
+                <br/>
+                <span class="ignored-method-name">Home_visit_pending_property_Search</span>
+                <br/>
+                <span class="ignored-method-name">Property_Search</span>
+                <br/>
+                <span class="ignored-method-name">login</span>
+                <br/>
+                <span class="ignored-method-name">Refund_filter_check</span>
+                <br/>
+                <span class="ignored-method-name">Property_Staff_assign</span>
+                <br/>
+                <span class="ignored-method-name">property_details_Data_fetch</span>
+                <br/>
+                <span class="ignored-method-name">Property_Update_Approval_Propertynames</span>
+                <br/>
+                <span class="ignored-method-name">propertydelete</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.vaultify.vaultify_platform.Property_management</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">propertyList_filtercheck</span>
+                <br/>
+                <span class="ignored-method-name">Home_visit_pending_property_Search</span>
+                <br/>
+                <span class="ignored-method-name">login</span>
+                <br/>
+                <span class="ignored-method-name">Property_Staff_assign</span>
+                <br/>
+                <span class="ignored-method-name">property_details_Data_fetch</span>
+                <br/>
+                <span class="ignored-method-name">Property_Update_Approval_Propertynames</span>
+                <br/>
+                <span class="ignored-method-name">propertydelete</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.vaultify.vaultify_platform.Staff_and_Team</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.vaultify.vaultify_platform.Property_management</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUP</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">employee_delete</span>
-                <span class="method-start">4082 ms</span>
+                <span class="method-name">Property_Search</span>
+                <span class="method-start">3020 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverkill</span>
-                <span class="method-start">19420 ms</span>
+                <span class="method-start">29041 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.vaultify.vaultify_platform.user_module</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">32639 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">user_Search</span>
+                <span class="method-start">35169 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">62156 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.vaultify.vaultify_platform.Staff_and_Team</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">65661 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">employeesearch({accNumber=40817810099911777001, accOwner=Leila Hassan, bankName=Bank AlJazira, dob=07-05-1990, doj=...)</span>
+                <span class="method-start">68537 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">101163 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">102184 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">employeesearch({accNumber=40817810099911888002, accOwner=Kenji Suzuki, bankName=Mizuho Bank, dob=18-11-1986, doj=12...)</span>
+                <span class="method-start">103641 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">130321 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">130965 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">employeesearch({accNumber=40817810099911999003, accOwner=Luisa Gutierrez, bankName=Bancolombia, dob=25-08-1993, doj...)</span>
+                <span class="method-start">132465 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">159064 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">159716 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">employeesearch({accNumber=40817810099912000123, accOwner=Omar ElKhatib, bankName=Banque Misr, dob=12-12-1988, doj=0...)</span>
+                <span class="method-start">161262 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">187681 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">188360 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">employeesearch({accNumber=40817810099912111234, accOwner=Maria Vasquez, bankName=BBVA Bancomer, dob=10-04-1991, doj...)</span>
+                <span class="method-start">189986 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">218293 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">218927 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">employeesearch({accNumber=40817810099912222345, accOwner=Rashid Salim, bankName=Dubai Islamic Bank, dob=03-03-1990,...)</span>
+                <span class="method-start">220533 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">247370 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.vaultify.vaultify_platform.Society_management</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">248025 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Society_search</span>
+                <span class="method-start">249442 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">289182 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.vaultify.vaultify_platform.Bidding_management</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">289841 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">privateBid_console_search</span>
+                <span class="method-start">291293 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">310893 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.vaultify.vaultify_platform.Refund_Management</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUP</span>
+                <span class="method-start">311897 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Refund_list_search</span>
+                <span class="method-start">313424 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverkill</span>
+                <span class="method-start">329319 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -59,7 +59,7 @@ public class Refund_Management extends Property_management {
 	  
 		  refund_list_status_checker();
 	      pp.filter_button().click();
-	      p.filter_dropdowns().get(0).click();;
+	      p.filter_dropdowns().get(0).click();
 	      p.date_in_dropdown_calender().click();
 	      try{
 	    	  p.filter_dropdowns().get(1).click();;

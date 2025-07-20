@@ -1,0 +1,37 @@
+package com.vaultify.vaultify_platform;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import Locators.pom.Bidding_Management_Locaters;
+import Locators.pom.Refund_Module_Locators;
+import Locators.pom.staff_attendance_locaters;
+
+public class Staff_Attendance extends Admin_Modules_Access_and_check{
+
+	
+	@Test
+	public void Attendence_filter_check()throws InterruptedException, IOException, AWTException{
+		
+		Bidding_Management_Locaters pp = new Bidding_Management_Locaters(d);
+		Refund_Module_Locators p = new Refund_Module_Locators(d);
+		staff_attendance_locaters s = new staff_attendance_locaters(d);
+		
+		Staff_Attendance_Management();
+		pp.filter_button().click();
+		p.filter_dropdowns().get(0).clear();
+		p.filter_dropdowns().get(0).sendKeys("18-07-2025");
+		s.filter_popupbuttons().get(2).click();
+		try{
+			s.no_content();
+			System.out.println("Table has  "+s.no_content().getText());
+			System.out.println();}catch(Exception kkl){
+			
+			System.out.println("data present in list");
+			System.out.println();
+		}}
+	
+	
+}

@@ -8,11 +8,99 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,665</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">7</td><td class="num">330,064</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.vaultify.vaultify_platform.Staff_and_Team</td><td><a href="#m0">employee_delete</a></td><td rowspan="1">1752850299582</td><td rowspan="1">15335</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.vaultify.vaultify_platform.Bidding_management</td><td><a href="#m0">privateBid_console_search</a></td><td rowspan="1">1753031285340</td><td rowspan="1">18888</td></tr><tr class="failedodd"><td rowspan="6">com.vaultify.vaultify_platform.Staff_and_Team</td><td><a href="#m1">employeesearch</a></td><td rowspan="6">1753031214580</td><td rowspan="6">26643</td></tr><tr class="failedodd"><td><a href="#m2">employeesearch</a></td></tr><tr class="failedodd"><td><a href="#m3">employeesearch</a></td></tr><tr class="failedodd"><td><a href="#m4">employeesearch</a></td></tr><tr class="failedodd"><td><a href="#m5">employeesearch</a></td></tr><tr class="failedodd"><td><a href="#m6">employeesearch</a></td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.vaultify.vaultify_platform.Property_management</td><td><a href="#m7">Property_Search</a></td><td rowspan="1">1753030997067</td><td rowspan="1">26017</td></tr><tr class="passedodd"><td rowspan="1">com.vaultify.vaultify_platform.Refund_Management</td><td><a href="#m8">Refund_list_search</a></td><td rowspan="1">1753031307471</td><td rowspan="1">15894</td></tr><tr class="passedeven"><td rowspan="1">com.vaultify.vaultify_platform.Society_management</td><td><a href="#m9">Society_search</a></td><td rowspan="1">1753031243489</td><td rowspan="1">39728</td></tr><tr class="passedodd"><td rowspan="1">com.vaultify.vaultify_platform.user_module</td><td><a href="#m10">user_Search</a></td><td rowspan="1">1753031029216</td><td rowspan="1">26983</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.vaultify.vaultify_platform.Staff_and_Team#employee_delete</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.vaultify.vaultify_platform.Bidding_management#privateBid_console_search</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at com.vaultify.vaultify_platform.Bidding_management.privateBid_console_search(Bidding_management.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.vaultify.vaultify_platform.Staff_and_Team#employeesearch</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{accNumber=40817810099912222345, accOwner=Rashid Salim, bankName=Dubai Islamic Bank, dob=03-03-1990, doj=22-08-2015, email=rashid.salim@vaultify.com, experience=8, fathername=Younus Salim, fullname=Rashid Salim, ifsc=DUBA0000123, mothername=Samira Salim, password=Rashid@001, phone=971556612233, qualification=QA Automation Engineer, upi=rashidsalim@ybl, username=rashid_salim}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60350}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60350/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 884387db28c053dc4426dd8e98eda98b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.vaultify.vaultify_platform.Staff_and_Team#employeesearch</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{accNumber=40817810099912000123, accOwner=Omar ElKhatib, bankName=Banque Misr, dob=12-12-1988, doj=09-07-2016, email=omar.elkhatib@vaultify.com, experience=9, fathername=Nabil ElKhatib, fullname=Omar ElKhatib, ifsc=BMIS0000451, mothername=Salma ElKhatib, password=Omar@2024, phone=201113334455, qualification=Data Engineer, upi=omarelkhatib@ybl, username=omar_elkhatib}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60232}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60232/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 221b9fca1d98161a9e080cb548688bc6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.vaultify.vaultify_platform.Staff_and_Team#employeesearch</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{accNumber=40817810099911888002, accOwner=Kenji Suzuki, bankName=Mizuho Bank, dob=18-11-1986, doj=12-06-2014, email=kenji.suzuki@vaultify.com, experience=10, fathername=Takeshi Suzuki, fullname=Kenji Suzuki, ifsc=MIZU0000890, mothername=Yoko Suzuki, password=Kenji@888, phone=819012345678, qualification=Systems Analyst, upi=kenjisuzuki@ybl, username=kenji_suzuki}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60116}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60116/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e3bf92028fb144b6e83bd27868cf7c59
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.vaultify.vaultify_platform.Staff_and_Team#employeesearch</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{accNumber=40817810099911777001, accOwner=Leila Hassan, bankName=Bank AlJazira, dob=07-05-1990, doj=14-09-2017, email=leila.hassan@vaultify.com, experience=6, fathername=Faisal Hassan, fullname=Leila Hassan, ifsc=BAJA0000117, mothername=Amina Hassan, password=Leila@2024, phone=966530987654, qualification=Procurement Specialist, upi=leilahassan@ybl, username=leila_hassan}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60052}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60052/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7e2bc145d2715510f9bd123688ae8b78
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.vaultify.vaultify_platform.Staff_and_Team#employeesearch</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{accNumber=40817810099911999003, accOwner=Luisa Gutierrez, bankName=Bancolombia, dob=25-08-1993, doj=01-01-2020, email=luisa.gutierrez@vaultify.com, experience=5, fathername=Carlos Gutierrez, fullname=Luisa Gutierrez, ifsc=BANC0000765, mothername=Rosa Gutierrez, password=Luisa@2023, phone=573012345678, qualification=Customer Success Manager, upi=luisagutierrez@ybl, username=luisa_gutierrez}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60174}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60174/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 99ed8f38c6c7935d61e98f86af548af4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.vaultify.vaultify_platform.Staff_and_Team#employeesearch</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{accNumber=40817810099912111234, accOwner=Maria Vasquez, bankName=BBVA Bancomer, dob=10-04-1991, doj=16-10-2017, email=maria.vasquez@vaultify.com, experience=7, fathername=Juan Vasquez, fullname=Maria Vasquez, ifsc=BBVB0000771, mothername=Claudia Vasquez, password=Maria@123, phone=5215512345678, qualification=Legal Associate, upi=mariavasquez@ybl, username=maria_vasquez}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\user1\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60291}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60291/devtoo..., se:cdpVersion: 109.0.5414.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 788fb41cd4bd9fd63e4f4ea84859250c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElements_waits(Repeatative_Codes.java:35)
+	at Locators.pom.Property_locaters.property_listNames(Property_locaters.java:93)
+	at com.vaultify.vaultify_platform.Staff_and_Team.employeesearch(Staff_and_Team.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.vaultify.vaultify_platform.Property_management#Property_Search</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.vaultify.vaultify_platform.Refund_Management#Refund_list_search</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.vaultify.vaultify_platform.Society_management#Society_search</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.vaultify.vaultify_platform.user_module#user_Search</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
