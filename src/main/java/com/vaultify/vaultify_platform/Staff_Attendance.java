@@ -2,6 +2,10 @@ package com.vaultify.vaultify_platform;
 
 import java.awt.AWTException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeMap;
+import java.util.stream.IntStream;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -13,7 +17,10 @@ import Locators.pom.staff_attendance_locaters;
 @Listeners(Reports_and_Listeners.Listeners.class)
 public class Staff_Attendance extends Admin_Modules_Access_and_check{
 
-	
+	List<String> names = new ArrayList<String>();
+	List<String> time_and_date = new ArrayList<String>();
+	List<String> attendance_status = new ArrayList<String>();
+	TreeMap<String,String> name_and_time = new TreeMap<String,String>();
 	
 	
 	@Test
@@ -45,8 +52,17 @@ public class Staff_Attendance extends Admin_Modules_Access_and_check{
 	staff_attendance_locaters s = new staff_attendance_locaters(d);	
 		
 	Staff_Attendance_Management();	
-		
-		
+	s.staff_names();
+	IntStream.range(0, s.staff_names().size()).forEach(m->{
+		names.add(s.staff_names().get(m).getText());
+		time_and_date.add(s.login_times().get(m).getText());
+		attendance_status.add(s.statuses().get(m).getText());});
+	
+	IntStream.range(0, s.staff_names().size()).forEach(p->{
+		name_and_time.put(names.get(p), time_and_date.get(p));
+		System.out.println(names.get(p)+"    "+ time_and_date.get(p));
+		System.out.println();
+		});	
 		
 	}
 	
