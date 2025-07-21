@@ -3,12 +3,14 @@ package com.vaultify.vaultify_platform;
 import java.awt.AWTException;
 import java.io.IOException;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Locators.pom.Bidding_Management_Locaters;
 import Locators.pom.Refund_Module_Locators;
 import Locators.pom.staff_attendance_locaters;
 
+@Listeners(Reports_and_Listeners.Listeners.class)
 public class Staff_Attendance extends Admin_Modules_Access_and_check{
 
 	
@@ -37,12 +39,12 @@ public class Staff_Attendance extends Admin_Modules_Access_and_check{
 	
 	
 	@Test
-	public void Staff_attendance_List_data_fetcher(){
+	public void Staff_attendance_List_data_fetcher() throws InterruptedException, IOException, AWTException{
 		
 		
+	staff_attendance_locaters s = new staff_attendance_locaters(d);	
 		
-		
-		
+	Staff_Attendance_Management();	
 		
 		
 		

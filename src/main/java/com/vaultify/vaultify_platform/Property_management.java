@@ -16,6 +16,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.vaultify.Repeat_codes.List_slide;
@@ -25,6 +26,7 @@ import Locators.pom.Bidding_Management_Locaters;
 import Locators.pom.Property_locaters;
 import Locators.pom.Society_locaters;
 
+@Listeners(Reports_and_Listeners.Listeners.class)
 public class Property_management extends Admin_Modules_Access_and_check{
 	
 	
@@ -33,6 +35,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
 	public List<WebElement> employeepresent_in_eachroles;
 	public List<String> societies_in_list = new ArrayList<>();;
 	List<String> hiddengems_status = new ArrayList<>();
+	
 	
 	@Test
 	public void Property_Search() throws InterruptedException, IOException, AWTException{
@@ -422,7 +425,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
 
 
 
-        
+        @Listeners(Reports_and_Listeners.Listeners.class)
         class Society_management extends Property_management{
         	
             @Test(dataProvider="getSocietyData")	

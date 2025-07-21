@@ -8,12 +8,13 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentReporter;
-import com.relevantcodes.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentReports;
+;
 
 public class Listeners extends Extented_Reports implements ITestListener{
   
 	ExtentTest test;
-	com.aventstack.extentreports.ExtentReports ext =  getReport();
+	ExtentReports ext =  getReport();
 	
 	
 	@Override

@@ -13,11 +13,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Locators.pom.Admin_modules_locators;
 import Locators.pom.Property_locaters;
 
+@Listeners(Reports_and_Listeners.Listeners.class)
 public class Staff_and_Team extends Admin_Modules_Access_and_check{
 	
 	String search_result;

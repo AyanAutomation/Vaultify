@@ -11,7 +11,11 @@ public class Extented_Reports extends Screenshots {
 		
 		ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir")+"//reports//Extent_Reports.html");
 		
+		
 		spark.config().setReportName("Vaultify_Automation_Report");
+		
+		// This name will be shown in the browser tab
+		
 		spark.config().setDocumentTitle("Automation_Extent Report");
 		
 		ExtentReports reports = new ExtentReports();

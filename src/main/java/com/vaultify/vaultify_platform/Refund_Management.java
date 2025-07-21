@@ -5,12 +5,14 @@ import java.io.IOException;
 import java.util.List;
 import java.util.TreeMap;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Locators.pom.Bidding_Management_Locaters;
 import Locators.pom.Property_locaters;
 import Locators.pom.Refund_Module_Locators;
 
+@Listeners(Reports_and_Listeners.Listeners.class)
 public class Refund_Management extends Property_management {
 
 	TreeMap<String, String> maptree = new TreeMap<String,String>();

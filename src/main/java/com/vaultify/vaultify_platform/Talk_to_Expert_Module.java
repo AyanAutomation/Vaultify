@@ -8,11 +8,13 @@ import java.util.TreeMap;
 import java.util.stream.IntStream;
 
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Locators.pom.Property_locaters;
 import Locators.pom.Talk_to_Expert_locaters;
 
+@Listeners(Reports_and_Listeners.Listeners.class)
 public class Talk_to_Expert_Module extends Admin_Modules_Access_and_check {
 	
 	

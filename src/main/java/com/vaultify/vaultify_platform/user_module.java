@@ -5,10 +5,12 @@ import java.util.List;
 import java.io.IOException;
 import java.util.TreeSet;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import Locators.pom.Property_locaters;
 import Locators.pom.user_module_locaters;
 
+@Listeners(Reports_and_Listeners.Listeners.class)
 public class user_module extends Property_management{
 	
    public String firstpage_search_resultname;
