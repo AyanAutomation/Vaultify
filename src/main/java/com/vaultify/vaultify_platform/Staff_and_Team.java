@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 
 import Locators.pom.Admin_modules_locators;
 import Locators.pom.Property_locaters;
+import Locators.pom.Staff_employee_locators;
 
 @Listeners(Reports_and_Listeners.Listeners.class)
 public class Staff_and_Team extends Admin_Modules_Access_and_check{
@@ -276,12 +277,39 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 	    	   
 	    	   
 	    	   
-	       }
-	       
-	       
-	       
-	       
-	       
-	       
-	       
-}
+	       }}
+
+
+
+      class Roles extends Staff_and_Team{
+    	  
+    	  
+    	  
+       public void role_add()throws InterruptedException, IOException, AWTException{
+    	
+    	   JavascriptExecutor js = (JavascriptExecutor)d;   
+    	   Staff_employee_locators st = new Staff_employee_locators(d);
+    	   Admin_modules_locators p = new Admin_modules_locators(d);
+    	   Actions a = new Actions(d);
+    	   Robot r = new Robot();
+    	   
+    	   TeamManagement(); 
+    	   st.add_role_button();
+    	   st.add_role_button().click();
+    	   Thread.sleep(800);
+    	   p.pop_up_employeeAdd_Form();
+   		   a.moveToElement(p.pop_up_employeeAdd_Form()).build().perform();
+    	
+    	
+    	
+    	
+    	
+    	
+    }	  
+    	  
+    	  
+    	  
+    	  
+      }
+
+
