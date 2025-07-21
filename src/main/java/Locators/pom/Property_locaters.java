@@ -57,9 +57,9 @@ public class Property_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//td[4]//p")
 	private List <WebElement>  property_list_hiddenGems_data; 
 	@FindBy(xpath="//td//p[2]")
-	private List <WebElement>  property_datas_inList;       /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement>  property_datas_inList;       
+	@FindBy(xpath="//td[4]//p")
+	private List <WebElement>  Employee_staff_list_phnumbers;   /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -152,10 +152,10 @@ public class Property_locaters extends Repeatative_Codes{
 	return property_list_hiddenGems_data;}
 	public List <WebElement> property_datas_inList(){
 	WebElements_waits(property_datas_inList);	
-	return property_datas_inList;}   /*
-	public WebElement (){
-	WebElement_wait();	
-	return ;}
+	return property_datas_inList;}  
+	public List <WebElement> Employee_staff_list_phnumbers(){
+	WebElements_waits(Employee_staff_list_phnumbers);	
+	return Employee_staff_list_phnumbers;}  /*
 	public WebElement (){
 	WebElement_wait();	
 	return ;}

@@ -12,6 +12,8 @@ import Locators.pom.staff_attendance_locaters;
 public class Staff_Attendance extends Admin_Modules_Access_and_check{
 
 	
+	
+	
 	@Test
 	public void Attendence_filter_check()throws InterruptedException, IOException, AWTException{
 		
@@ -32,6 +34,22 @@ public class Staff_Attendance extends Admin_Modules_Access_and_check{
 			System.out.println("data present in list");
 			System.out.println();
 		}}
+	
+	
+	@Test
+	public void Staff_attendance_List_data_fetcher(){
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
 	
 	
 }

@@ -244,11 +244,11 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 	        js.executeScript("window.scrollBy(0,-150)");
 	        Thread.sleep(800);
 	        p.employee_search_button();
-		    p.employee_search_button().sendKeys(Empdata.get("username"));
+		    p.employee_search_button().sendKeys(Empdata.get("phone"));
 		    pp.Search_button().click();
 		    Thread.sleep(1200);
-		    search_result= pp.property_listNames().get(0).getText();
-		    System.out.println(Empdata.get("username").equalsIgnoreCase(search_result) ? "Testcase passed "+search_result+" name shown in search result ": "Testcase passed"+search_result+" name not shown in search result " );}
+		    search_result= pp.Employee_staff_list_phnumbers().get(0).getText();
+		    System.out.println(Empdata.get("phone").equalsIgnoreCase(search_result) ? "Testcase passed "+search_result+" name shown in search result ": "Testcase passed"+search_result+" name not shown in search result " );}
 
 	       
 	       
