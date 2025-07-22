@@ -364,7 +364,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
         
         
         @Test
-        public void property_details_Data_fetch()throws InterruptedException, IOException, AWTException{
+        public TreeMap<String,String> property_details_Data_fetch()throws InterruptedException, IOException, AWTException{
         	
         	 Property_locaters p = new Property_locaters(d);
              TreeMap <String,String> Tmap = new TreeMap<String, String>();
@@ -372,6 +372,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
              JavascriptExecutor js = (JavascriptExecutor)d;
              List<String> property_card_details = new ArrayList<>();
              List<String> property_details_below_Datas = new ArrayList<>();
+             TreeMap<String,String> user_property_names = new TreeMap<String,String>();
         	
              property_view_details_accessor(0);
         	 p.property_card_details();
@@ -392,16 +393,32 @@ public class Property_management extends Admin_Modules_Access_and_check{
              for(int n=0; n<property_details_below_Datas.size();n++){
             	 
             	 System.out.println(property_details_below_Datas.get(n));
-        		 System.out.println();
-             }       	 
+        		 System.out.println(); }       	 
         	 
          p.security_deposit_details();
-         String user =  p.security_deposit_details().get(v).getText();
+         String usernameline_text =  p.security_deposit_details().get(v).getText();
+         String[] userlinesplit = usernameline_text.split("-");
+         String user = userlinesplit[1].trim();
          System.out.println("user who added this property and paid security deposit is   "+user);
          System.out.println();
-         //return user;
+         user_property_names.put("username", user);
+         js.executeScript("arguments[0].scrollIntoView(true);",p.property_name_text());
+         Thread.sleep(800);
+         p.property_name_text();
+         user_property_names.put("property name", p.property_name_text().getText());
+         return user_property_names;
         	
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         @Test 
         public void propertyList_filtercheck()throws InterruptedException, IOException, AWTException{
     	  

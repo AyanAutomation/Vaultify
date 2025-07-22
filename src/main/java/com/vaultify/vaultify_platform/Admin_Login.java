@@ -31,6 +31,8 @@ public class Admin_Login extends Base{
 	    JavascriptExecutor js = (JavascriptExecutor)d;
 		Robot r = new Robot();
 		
+		try {p.Login_confirmed();}
+		catch(Exception llk) {
 		d.navigate().to(dd.DataKeys("Admin_url"));
 		Thread.sleep(800);
 		p.emailid();
@@ -59,7 +61,7 @@ public class Admin_Login extends Base{
 		catch(Exception eee){
 		System.out.println("post login success toast not found");
 		System.out.println();}
-		p.Login_confirmed();
+		p.Login_confirmed();}
 	}
 	
     public void otp_filler() throws InterruptedException{

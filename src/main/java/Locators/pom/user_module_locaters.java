@@ -18,11 +18,11 @@ public class user_module_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//a[@rel='nofollow']")
 	private List <WebElement> Pagination_change_button;
 	@FindBy(xpath="//label//button")
-	private WebElement search_clear_crossButton; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement search_clear_crossButton; 
+	@FindBy(xpath="//div[@class='mt-2 text-center']//p[1]")
+	private WebElement  property_in_user_details; 
+	@FindBy(xpath="//*[@aria-label='View User']")
+	private List <WebElement>  user_view_button; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -69,27 +69,27 @@ public class user_module_locaters extends Repeatative_Codes{
 		return Pagination_change_button;}
 		public WebElement search_clear_crossButton(){
 		WebElement_wait(search_clear_crossButton);
-		return search_clear_crossButton;}/*
+		return search_clear_crossButton;}
+		public WebElement property_in_user_details(){
+		WebElement_wait(property_in_user_details);
+		return property_in_user_details;} 
+		public List <WebElement> user_view_button(){
+		WebElements_waits(user_view_button);
+		return user_view_button;} /*
 		public WebElement (){
-			WebElement_wait();
+		WebElement_wait();	
 		return ;}
 		public WebElement (){
-			WebElement_wait();
+		WebElement_wait();
 		return ;}
 		public WebElement (){
-			WebElement_wait();	
+		WebElement_wait();
 		return ;}
 		public WebElement (){
-			WebElement_wait();
+		WebElement_wait();
 		return ;}
 		public WebElement (){
-			WebElement_wait();
-		return ;}
-		public WebElement (){
-			WebElement_wait();
-		return ;}
-		public WebElement (){
-			WebElement_wait();
+		WebElement_wait();
 		return ;}
 		public WebElement (){
 		wait_for_theElement();

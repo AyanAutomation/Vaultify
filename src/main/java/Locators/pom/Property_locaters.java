@@ -160,10 +160,12 @@ public class Property_locaters extends Repeatative_Codes{
 	property_details_below_Datas();
 	List <WebElement> securitydetails = property_details_below_Datas().get(5).findElements(By.xpath(".//li"));
 	WebElements_waits(securitydetails);	
-	return securitydetails;} /*
-	public WebElement (){
-	WebElement_wait();	
-	return ;}
+	return securitydetails;} 
+	public WebElement property_name_text(){
+	property_card_details();
+	WebElement property_name_text = property_card_details().get(0).findElement(By.xpath(".//span"));
+	WebElement_wait(property_name_text);	
+	return property_name_text;}  /*
 	public WebElement (){
 	WebElement_wait();	
 	return ;}
