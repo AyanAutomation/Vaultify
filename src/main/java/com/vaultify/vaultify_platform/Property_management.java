@@ -370,22 +370,38 @@ public class Property_management extends Admin_Modules_Access_and_check{
              TreeMap <String,String> Tmap = new TreeMap<String, String>();
              List_slide lsd = new List_slide(d);	
              JavascriptExecutor js = (JavascriptExecutor)d;
+             List<String> property_card_details = new ArrayList<>();
+             List<String> property_details_below_Datas = new ArrayList<>();
         	
-             property_view_details_accessor(2);
+             property_view_details_accessor(0);
         	 p.property_card_details();
         	 p.property_details_below_Datas();
         	 System.out.println("property_card_details list size "+p.property_card_details().size());
         	 System.out.println();
         	 System.out.println("property_details_below_Datas list size "+p.property_details_below_Datas().size());
         	 System.out.println();
-             IntStream.range(0, Math.min(p.property_card_details().size(), p.property_details_below_Datas().size())).forEach(vb->{
-             Tmap.put(p.property_card_details().get(vb).getText(),  p.property_details_below_Datas().get(vb).getText());});
-
-        	 for(Map.Entry<String,String>topcarddetail :Tmap.entrySet() ){
+        	 for(WebElement card:p.property_card_details()){
+        		  property_card_details.add(card.getText());}
+        	 for(WebElement below_details:p.property_details_below_Datas()){
+        		 property_card_details.add(below_details.getText());}
+        	 for(int o=0; o<property_card_details.size();o++){
         		 
-        		 System.out.println(topcarddetail);
-        		 System.out.println();}}
-        
+        		 System.out.println(property_card_details.get(o));
+        		 System.out.println();
+        	 }
+             for(int n=0; n<property_details_below_Datas.size();n++){
+            	 
+            	 System.out.println(property_details_below_Datas.get(n));
+        		 System.out.println();
+             }       	 
+        	 
+         p.security_deposit_details();
+         String user =  p.security_deposit_details().get(v).getText();
+         System.out.println("user who added this property and paid security deposit is   "+user);
+         System.out.println();
+         //return user;
+        	
+        }
         @Test 
         public void propertyList_filtercheck()throws InterruptedException, IOException, AWTException{
     	  

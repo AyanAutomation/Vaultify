@@ -155,10 +155,12 @@ public class Property_locaters extends Repeatative_Codes{
 	return property_datas_inList;}  
 	public List <WebElement> Employee_staff_list_phnumbers(){
 	WebElements_waits(Employee_staff_list_phnumbers);	
-	return Employee_staff_list_phnumbers;}  /*
-	public WebElement (){
-	WebElement_wait();	
-	return ;}
+	return Employee_staff_list_phnumbers;}  
+	public List <WebElement> security_deposit_details(){
+	property_details_below_Datas();
+	List <WebElement> securitydetails = property_details_below_Datas().get(5).findElements(By.xpath(".//li"));
+	WebElements_waits(securitydetails);	
+	return securitydetails;} /*
 	public WebElement (){
 	WebElement_wait();	
 	return ;}
