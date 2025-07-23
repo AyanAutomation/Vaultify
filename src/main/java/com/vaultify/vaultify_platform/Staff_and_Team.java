@@ -299,6 +299,30 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
     	   Thread.sleep(800);
     	   p.pop_up_employeeAdd_Form();
    		   a.moveToElement(p.pop_up_employeeAdd_Form()).build().perform();
+   		   st.Role_Name_field().sendKeys();
+   		   st.Role_Description_Feild().sendKeys();
+   		   Thread.sleep(800);
+   		   js.executeScript("window.scrollBy(0,200)");
+   		   Thread.sleep(800);
+   		   st.Dropdowns();
+   		   st.Dropdowns().get(0).click();
+   		   st.Dropdown_list();
+   		   st.dropdown_OPTIONS();
+   		   st.dropdown_OPTIONS().get(1).click();
+   		   st.Dropdowns();
+ 		   st.Dropdowns().get(1).click();
+ 		   st.Dropdown_list();
+ 		   st.dropdown_OPTIONS();
+ 		   st.dropdown_OPTIONS().get(1).click();
+ 		   Thread.sleep(800);
+ 		   st.Permission_Section_rows();
+ 		   Thread.sleep(800);
+ 		   js.executeScript("arguments[0].scrollIntoView(true);",st.Permission_Section_rows().get(0));
+ 		   Thread.sleep(800);
+ 		   js.executeScript("window.scrollBy(0,-150)");
+ 		   Thread.sleep(800);
+   		   
+		  
     	
     	
     	
