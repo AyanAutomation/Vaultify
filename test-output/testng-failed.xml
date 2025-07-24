@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.vaultify.vaultify_platform.user_module">
+      <class name="com.vaultify.vaultify_platform.Roles">
         <methods>
-          <include name="user_details_listed_propertyname_matcher"/>
+          <include name="role_add"/>
           <include name="setUP"/>
           <include name="driverkill"/>
         </methods>
-      </class> <!-- com.vaultify.vaultify_platform.user_module -->
+      </class> <!-- com.vaultify.vaultify_platform.Roles -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

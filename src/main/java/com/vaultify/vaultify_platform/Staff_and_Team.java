@@ -4,11 +4,13 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 import java.util.stream.IntStream;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -285,6 +287,15 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
     	  
     	  
     	  
+    	  TreeMap<String,List<WebElement>> Permission_modules_name_Buttons = new TreeMap<String,List<WebElement>>();
+    	  List<String> Module_names =new ArrayList<String>();
+    	  List<WebElement> one_five_buttons = new ArrayList<WebElement>();
+    	  List<WebElement> five_ten_buttons = new ArrayList<WebElement>();
+    	  List<WebElement> ten_to_fifteen_buttons = new ArrayList<WebElement>();
+    	  
+    	  
+    	  
+       @Test	  
        public void role_add()throws InterruptedException, IOException, AWTException{
     	
     	   JavascriptExecutor js = (JavascriptExecutor)d;   
@@ -293,17 +304,26 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
     	   Actions a = new Actions(d);
     	   Robot r = new Robot();
     	   
+    	   
+    	   
     	   TeamManagement(); 
+    	   st.add_role_button();
+    	   Thread.sleep(800);
+    	   js.executeScript("arguments[0].scrollIntoView(true);",st.add_role_button());
+    	   Thread.sleep(800);
+    	   Thread.sleep(800);
+ 		   js.executeScript("window.scrollBy(0,-150)");
+ 		   Thread.sleep(800);
     	   st.add_role_button();
     	   st.add_role_button().click();
     	   Thread.sleep(800);
     	   p.pop_up_employeeAdd_Form();
-   		   a.moveToElement(p.pop_up_employeeAdd_Form()).build().perform();
+   		   a.moveToElement(p.pop_up_employeeAdd_Form()).build().perform();/*
    		   st.Role_Name_field().sendKeys();
    		   st.Role_Description_Feild().sendKeys();
    		   Thread.sleep(800);
    		   js.executeScript("window.scrollBy(0,200)");
-   		   Thread.sleep(800);
+   		   Thread.sleep(800); */
    		   st.Dropdowns();
    		   st.Dropdowns().get(0).click();
    		   st.Dropdown_list();
@@ -321,19 +341,47 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
  		   Thread.sleep(800);
  		   js.executeScript("window.scrollBy(0,-150)");
  		   Thread.sleep(800);
-   		   
-		  
-    	
-    	
-    	
-    	
-    	
-    	
-    }	  
+ 		   st.permission_module_Buttons();
+   		   IntStream.range(0, 20).forEach(b->{
+   				   if(b==1) {
+   					Module_names.add(st.permission_module_names().get(b).getText());
+   					
+   				   }
+   				   if(b<5){
+   					one_five_buttons.add(st.permission_module_Buttons().get(b));
+    			}
+   				  if(b==2) {
+     					Module_names.add(st.permission_module_names().get(b).getText());
+     					;}
+   				if(b>4&&b<10){
+   					five_ten_buttons.add(st.permission_module_Buttons().get(b));
+    				}
+   				if(b==3) {
+ 					Module_names.add(st.permission_module_names().get(b).getText());
+ 					;}
+   				if(b>9&&b<15){
+   					ten_to_fifteen_buttons.add(st.permission_module_Buttons().get(b));
+    				}
+   		   });
+		   Permission_modules_name_Buttons.put(Module_names.get(0), one_five_buttons);
+		   Permission_modules_name_Buttons.put(Module_names.get(1), five_ten_buttons);
+		   Permission_modules_name_Buttons.put(Module_names.get(2), ten_to_fifteen_buttons);
     	  
-    	  
-    	  
-    	  
-      }
+    	List<WebElement> cms_buttons = Permission_modules_name_Buttons.get("CMS");
+    	List<WebElement> versity_buttons = Permission_modules_name_Buttons.get("Vaultify Versity");
+    	
+    	for(WebElement eachcmsbutton:cms_buttons){
+    		eachcmsbutton.click();
+    		Thread.sleep(400);}
+    	for(WebElement eachversity_button:versity_buttons){
+    		eachversity_button.click();
+    		Thread.sleep(400);}
+    	    Thread.sleep(800);
+		   js.executeScript("arguments[0].scrollIntoView(true);",st.form_submit_button());
+		   Thread.sleep(800);
+		   js.executeScript("window.scrollBy(0,-150)");  
+		   Thread.sleep(800);
+		   st.form_submit_button().click();
+      }}
 
 

@@ -81,6 +81,12 @@ public class Staff_employee_locators extends Repeatative_Codes{
 	return permission_Buttons;} 
 	public WebElement Permission_Section(){
 	WebElement_wait(Permission_Section);	
-	return Permission_Section;}      
+	return Permission_Section;}
+	
+	public WebElement form_submit_button(){
+	role_add_form();
+	WebElement form_submit_button = role_add_form().findElement(By.xpath(".//button[@type='submit']"));
+	WebElement_wait(form_submit_button);	
+	return form_submit_button;} 
 
 }
