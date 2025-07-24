@@ -292,11 +292,12 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
     	  List<WebElement> one_five_buttons = new ArrayList<WebElement>();
     	  List<WebElement> five_ten_buttons = new ArrayList<WebElement>();
     	  List<WebElement> ten_to_fifteen_buttons = new ArrayList<WebElement>();
+    	  List<WebElement> cms_buttons = new ArrayList<WebElement>();
+    	  List<WebElement> versity_buttons = new ArrayList<WebElement>();
     	  
     	  
-    	  
-       @Test	  
-       public void role_add()throws InterruptedException, IOException, AWTException{
+       @Test(dataProvider ="role_data")	  
+       public void role_add(TreeMap<String,String> role_Datas)throws InterruptedException, IOException, AWTException{
     	
     	   JavascriptExecutor js = (JavascriptExecutor)d;   
     	   Staff_employee_locators st = new Staff_employee_locators(d);
@@ -318,12 +319,12 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
     	   st.add_role_button().click();
     	   Thread.sleep(800);
     	   p.pop_up_employeeAdd_Form();
-   		   a.moveToElement(p.pop_up_employeeAdd_Form()).build().perform();/*
-   		   st.Role_Name_field().sendKeys();
-   		   st.Role_Description_Feild().sendKeys();
+   		   a.moveToElement(p.pop_up_employeeAdd_Form()).build().perform();
+   		   st.Role_Name_field().sendKeys(role_Datas.get("rolename"));
+   		   st.Role_Description_Feild().sendKeys(role_Datas.get("description"));
    		   Thread.sleep(800);
    		   js.executeScript("window.scrollBy(0,200)");
-   		   Thread.sleep(800); */
+   		   Thread.sleep(800); 
    		   st.Dropdowns();
    		   st.Dropdowns().get(0).click();
    		   st.Dropdown_list();
@@ -367,8 +368,8 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 		   Permission_modules_name_Buttons.put(Module_names.get(1), five_ten_buttons);
 		   Permission_modules_name_Buttons.put(Module_names.get(2), ten_to_fifteen_buttons);
     	  
-    	List<WebElement> cms_buttons = Permission_modules_name_Buttons.get("CMS");
-    	List<WebElement> versity_buttons = Permission_modules_name_Buttons.get("Vaultify Versity");
+    	cms_buttons = Permission_modules_name_Buttons.get("CMS");
+    	versity_buttons = Permission_modules_name_Buttons.get("Vaultify Versity");
     	
     	for(WebElement eachcmsbutton:cms_buttons){
     		eachcmsbutton.click();
@@ -382,6 +383,142 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 		   js.executeScript("window.scrollBy(0,-150)");  
 		   Thread.sleep(800);
 		   st.form_submit_button().click();
-      }}
+		   Thread.sleep(1000);
+		   clear_all_collections();
+      }
+       
+      
+       @DataProvider
+       public Object[][] role_data() {
+
+           TreeMap<String, String> role1 = new TreeMap<>();
+           role1.put("rolename", "Support Ticket Analyst");
+           role1.put("description", "Monitors, categorizes, and resolves user support tickets efficiently.");
+
+           TreeMap<String, String> role2 = new TreeMap<>();
+           role2.put("rolename", "Lead Generation Coordinator");
+           role2.put("description", "Responsible for sourcing, filtering, and tagging potential leads across campaigns.");
+
+           TreeMap<String, String> role3 = new TreeMap<>();
+           role3.put("rolename", "Referral Program Analyst");
+           role3.put("description", "Oversees referral logic, linking, and tracking reward validations.");
+
+           TreeMap<String, String> role4 = new TreeMap<>();
+           role4.put("rolename", "Document Verification Officer");
+           role4.put("description", "Validates uploaded KYC/property/legal documents for system approval.");
+
+           TreeMap<String, String> role5 = new TreeMap<>();
+           role5.put("rolename", "Training Content Admin");
+           role5.put("description", "Manages onboarding and training module uploads for facilitators and staff.");
+
+           TreeMap<String, String> role6 = new TreeMap<>();
+           role6.put("rolename", "ATS Compliance Checker");
+           role6.put("description", "Ensures property uploads and staff actions align with ATS approval guidelines.");
+
+           TreeMap<String, String> role7 = new TreeMap<>();
+           role7.put("rolename", "Geo Mapping Assistant");
+           role7.put("description", "Coordinates property geolocation inputs with satellite/map integration.");
+
+           TreeMap<String, String> role8 = new TreeMap<>();
+           role8.put("rolename", "Digital Signature Manager");
+           role8.put("description", "Assigns and maintains staff-level digital document signing rights.");
+
+           TreeMap<String, String> role9 = new TreeMap<>();
+           role9.put("rolename", "Seller Relations Associate");
+           role9.put("description", "Communicates with sellers, ensuring required uploads and payments are complete.");
+
+           TreeMap<String, String> role10 = new TreeMap<>();
+           role10.put("rolename", "Property Audit Reviewer");
+           role10.put("description", "Checks uploaded property photos/videos for compliance before approval.");
+
+           return new Object[][] {
+               { role1 },
+               { role2 },
+               { role3 },
+               { role4 },
+               { role5 },
+               { role6 },
+               { role7 },
+               { role8 },
+               { role9 },
+               { role10 }
+           };}
+
+      
+      @Test(dataProvider="employeedata")
+      public void delete_role(TreeMap<String, String> role)throws InterruptedException, IOException, AWTException{
+    	  
+       JavascriptExecutor js = (JavascriptExecutor)d;   
+   	   Staff_employee_locators st = new Staff_employee_locators(d);
+    	  
+   	    TeamManagement();
+        Thread.sleep(800);
+        js.executeScript("arguments[0].scrollIntoView(true);",st.roles(role.get("rolename")));
+		Thread.sleep(800);
+		js.executeScript("window.scrollBy(0,-150)"); 
+		Thread.sleep(800);
+    	st.three_dot_dash_button(role.get("rolename")).click();
+    	Thread.sleep(800);
+    	st.role_remove_option();
+    	Thread.sleep(800); 
+    	  
+      }
+      
+      @Test
+      public void clear_all_collections(){
+    	  
+       
+       Permission_modules_name_Buttons.clear();
+       if(Permission_modules_name_Buttons.size()==0){
+       System.out.println("Permission_modules_name_Buttons cleared");
+       System.out.println();}
+   	   Module_names.clear();
+   	   if(Module_names.size()==0){
+        System.out.println("Module_names cleared");
+        System.out.println();}
+   	   one_five_buttons.clear();
+   	   if(one_five_buttons.size()==0){
+        System.out.println("one_five_buttons cleared");
+        System.out.println();}
+   	   five_ten_buttons.clear();
+   	   if(five_ten_buttons.size()==0){
+        System.out.println("five_ten_buttons cleared");
+        System.out.println();}
+   	   ten_to_fifteen_buttons.clear();
+   	   if(ten_to_fifteen_buttons.size()==0){
+        System.out.println("ten_to_fifteen_buttons cleared");
+        System.out.println();}
+   	   cms_buttons.clear();
+   	   if(cms_buttons.size()==0){
+        System.out.println("Permission_modules_name_Buttons cleared");
+        System.out.println();}
+   	    versity_buttons.clear();
+   	   if(versity_buttons.size()==0){
+        System.out.println("versity_buttons cleared");
+        System.out.println();}}
+      
+      
+       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      }
 
 

@@ -26,13 +26,11 @@ public class Staff_employee_locators extends Repeatative_Codes{
 	@FindBy(xpath="//form")
 	private WebElement role_add_form; 
 	@FindBy(xpath="//form//div[@class='scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 grid gap-2 divide-y divide-gray-200 overflow-x-auto']")
-	private WebElement Permission_Section; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;  */
+	private WebElement Permission_Section; 
+	@FindBy(xpath="//div[@class='@container']")
+	private WebElement role_section;  
+	@FindBy(xpath="//*[text()='Remove Role']")
+	private WebElement  role_remove_option;  
 	
 	
 	public Staff_employee_locators(WebDriver d){
@@ -82,11 +80,26 @@ public class Staff_employee_locators extends Repeatative_Codes{
 	public WebElement Permission_Section(){
 	WebElement_wait(Permission_Section);	
 	return Permission_Section;}
-	
 	public WebElement form_submit_button(){
 	role_add_form();
 	WebElement form_submit_button = role_add_form().findElement(By.xpath(".//button[@type='submit']"));
 	WebElement_wait(form_submit_button);	
 	return form_submit_button;} 
-
+	public WebElement roles(String name){
+	role_section();
+	WebElement roles = role_section().findElement(By.xpath(".//h4[text()='"+name+"']"));
+	WebElement_wait(roles);	
+	return roles;} 
+	public WebElement role_section(){
+	WebElement_wait(role_section);	
+	return role_section;}
+	public WebElement three_dot_dash_button(String nameis) {
+	WebElement role = roles(nameis);
+	WebElement threeDot = role.findElement(By.xpath("ancestor::div[contains(@class,'border-muted')]//div[@class='rizzui-dropdown-button']"));
+    WebElement_wait(threeDot);    
+	return threeDot;}
+    public WebElement role_remove_option(){
+	WebElement_wait(role_remove_option);	
+	return role_remove_option;}
+	
 }
