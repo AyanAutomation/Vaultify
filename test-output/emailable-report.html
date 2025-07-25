@@ -8,11 +8,170 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">2,856</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">17</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">759,323</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.vaultify.vaultify_platform.Roles</td><td><a href="#m0">clear_all_collections</a></td><td rowspan="1">1753367685500</td><td rowspan="1">12</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">com.vaultify.vaultify_platform.Roles</td><td><a href="#m0">delete_role</a></td><td rowspan="2">1753436998869</td><td rowspan="2">21987</td></tr><tr class="failedeven"><td><a href="#m1">delete_role</a></td></tr><tr class="failedeven"><td><a href="#m2">role_add</a></td><td rowspan="2">1753436716241</td><td rowspan="2">23646</td></tr><tr class="failedeven"><td><a href="#m3">role_add</a></td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="17">com.vaultify.vaultify_platform.Roles</td><td><a href="#m4">clear_all_collections</a></td><td rowspan="1">1753437047701</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m5">delete_role</a></td><td rowspan="8">1753436941546</td><td rowspan="8">27549</td></tr><tr class="passedeven"><td><a href="#m6">delete_role</a></td></tr><tr class="passedeven"><td><a href="#m7">delete_role</a></td></tr><tr class="passedeven"><td><a href="#m8">delete_role</a></td></tr><tr class="passedeven"><td><a href="#m9">delete_role</a></td></tr><tr class="passedeven"><td><a href="#m10">delete_role</a></td></tr><tr class="passedeven"><td><a href="#m11">delete_role</a></td></tr><tr class="passedeven"><td><a href="#m12">delete_role</a></td></tr><tr class="passedeven"><td><a href="#m13">role_add</a></td><td rowspan="8">1753436291165</td><td rowspan="8">53558</td></tr><tr class="passedeven"><td><a href="#m14">role_add</a></td></tr><tr class="passedeven"><td><a href="#m15">role_add</a></td></tr><tr class="passedeven"><td><a href="#m16">role_add</a></td></tr><tr class="passedeven"><td><a href="#m17">role_add</a></td></tr><tr class="passedeven"><td><a href="#m18">role_add</a></td></tr><tr class="passedeven"><td><a href="#m19">role_add</a></td></tr><tr class="passedeven"><td><a href="#m20">role_add</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.vaultify.vaultify_platform.Roles#clear_all_collections</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.vaultify.vaultify_platform.Roles#delete_role</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Communicates with sellers, ensuring required uploads and payments are complete., rolename=Seller Relations Associate}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//h4[text()=&apos;Seller Relations Associate&apos;]&quot;}
+  (Session info: chrome=138.0.7204.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [92bc419a9356bc9c33ae79cf044d2150, findChildElement {value=.//h4[text()=&apos;Seller Relations Associate&apos;], using=xpath, id=f.B9E9339B7939E2D6CB3E9E6941294A97.d.9819EA630308DF071442F5165CC19AAE.e.122}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51838}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51838/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 92bc419a9356bc9c33ae79cf044d2150
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:211)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.findElement(Unknown Source)
+	at Locators.pom.Staff_employee_locators.roles(Staff_employee_locators.java:90)
+	at com.vaultify.vaultify_platform.Roles.delete_role(Staff_and_Team.java:461)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.vaultify.vaultify_platform.Roles#delete_role</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Checks uploaded property photos/videos for compliance before approval., rolename=Property Audit Reviewer}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//*[text()=&apos;OTP.&apos;])&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElement_wait(Repeatative_Codes.java:29)
+	at Locators.pom.Login_locaters.OTP_page_Title(Login_locaters.java:75)
+	at com.vaultify.vaultify_platform.Admin_Login.otp_filler(Admin_Login.java:74)
+	at com.vaultify.vaultify_platform.Admin_Login.login(Admin_Login.java:49)
+	at com.vaultify.vaultify_platform.Admin_Modules_Access_and_check.TeamManagement(Admin_Modules_Access_and_check.java:88)
+	at com.vaultify.vaultify_platform.Roles.delete_role(Staff_and_Team.java:459)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[text()=&apos;OTP.&apos;])&quot;}
+  (Session info: chrome=138.0.7204.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [70af73129bd949834eb69c5960c4c31f, findElement {value=(//*[text()=&apos;OTP.&apos;]), using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51879}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51879/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 70af73129bd949834eb69c5960c4c31f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 32 more
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.vaultify.vaultify_platform.Roles#role_add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Communicates with sellers, ensuring required uploads and payments are complete., rolename=Seller Relations Associate}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//*[text()=&apos;OTP.&apos;])&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElement_wait(Repeatative_Codes.java:29)
+	at Locators.pom.Login_locaters.OTP_page_Title(Login_locaters.java:75)
+	at com.vaultify.vaultify_platform.Admin_Login.otp_filler(Admin_Login.java:74)
+	at com.vaultify.vaultify_platform.Admin_Login.login(Admin_Login.java:49)
+	at com.vaultify.vaultify_platform.Admin_Modules_Access_and_check.TeamManagement(Admin_Modules_Access_and_check.java:88)
+	at com.vaultify.vaultify_platform.Roles.role_add(Staff_and_Team.java:311)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[text()=&apos;OTP.&apos;])&quot;}
+  (Session info: chrome=138.0.7204.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b9530ed3f3e8936cbbf88c00e45c738e, findElement {value=(//*[text()=&apos;OTP.&apos;]), using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51443}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51443/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b9530ed3f3e8936cbbf88c00e45c738e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 32 more
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.vaultify.vaultify_platform.Roles#role_add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Checks uploaded property photos/videos for compliance before approval., rolename=Property Audit Reviewer}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//*[text()=&apos;OTP.&apos;])&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vaultify.Repeat_codes.Repeatative_Codes.WebElement_wait(Repeatative_Codes.java:29)
+	at Locators.pom.Login_locaters.OTP_page_Title(Login_locaters.java:75)
+	at com.vaultify.vaultify_platform.Admin_Login.otp_filler(Admin_Login.java:74)
+	at com.vaultify.vaultify_platform.Admin_Login.login(Admin_Login.java:49)
+	at com.vaultify.vaultify_platform.Admin_Modules_Access_and_check.TeamManagement(Admin_Modules_Access_and_check.java:88)
+	at com.vaultify.vaultify_platform.Roles.role_add(Staff_and_Team.java:311)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//*[text()=&apos;OTP.&apos;])&quot;}
+  (Session info: chrome=138.0.7204.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8bb8447d5704862b70acac02a4d1df6e, findElement {value=(//*[text()=&apos;OTP.&apos;]), using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\PC-129\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51473}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51473/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8bb8447d5704862b70acac02a4d1df6e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 32 more
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.vaultify.vaultify_platform.Roles#clear_all_collections</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.vaultify.vaultify_platform.Roles#delete_role</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Coordinates property geolocation inputs with satellite/map integration., rolename=Geo Mapping Assistant}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.vaultify.vaultify_platform.Roles#delete_role</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Manages onboarding and training module uploads for facilitators and staff., rolename=Training Content Admin}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.vaultify.vaultify_platform.Roles#delete_role</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Validates uploaded KYC/property/legal documents for system approval., rolename=Document Verification Officer}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.vaultify.vaultify_platform.Roles#delete_role</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Oversees referral logic, linking, and tracking reward validations., rolename=Referral Program Analyst}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.vaultify.vaultify_platform.Roles#delete_role</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Assigns and maintains staff-level digital document signing rights., rolename=Digital Signature Manager}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.vaultify.vaultify_platform.Roles#delete_role</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Monitors, categorizes, and resolves user support tickets efficiently., rolename=Support Ticket Analyst}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">com.vaultify.vaultify_platform.Roles#delete_role</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Ensures property uploads and staff actions align with ATS approval guidelines., rolename=ATS Compliance Checker}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">com.vaultify.vaultify_platform.Roles#delete_role</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Responsible for sourcing, filtering, and tagging potential leads across campaigns., rolename=Lead Generation Coordinator}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">com.vaultify.vaultify_platform.Roles#role_add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Monitors, categorizes, and resolves user support tickets efficiently., rolename=Support Ticket Analyst}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">com.vaultify.vaultify_platform.Roles#role_add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Assigns and maintains staff-level digital document signing rights., rolename=Digital Signature Manager}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">com.vaultify.vaultify_platform.Roles#role_add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Manages onboarding and training module uploads for facilitators and staff., rolename=Training Content Admin}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">com.vaultify.vaultify_platform.Roles#role_add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Responsible for sourcing, filtering, and tagging potential leads across campaigns., rolename=Lead Generation Coordinator}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">com.vaultify.vaultify_platform.Roles#role_add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Validates uploaded KYC/property/legal documents for system approval., rolename=Document Verification Officer}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">com.vaultify.vaultify_platform.Roles#role_add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Oversees referral logic, linking, and tracking reward validations., rolename=Referral Program Analyst}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">com.vaultify.vaultify_platform.Roles#role_add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Coordinates property geolocation inputs with satellite/map integration., rolename=Geo Mapping Assistant}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">com.vaultify.vaultify_platform.Roles#role_add</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{description=Ensures property uploads and staff actions align with ATS approval guidelines., rolename=ATS Compliance Checker}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

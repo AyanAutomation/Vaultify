@@ -19,6 +19,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Locators.pom.Admin_modules_locators;
+import Locators.pom.Login_locaters;
 import Locators.pom.Property_locaters;
 import Locators.pom.Staff_employee_locators;
 
@@ -304,7 +305,7 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
     	   Admin_modules_locators p = new Admin_modules_locators(d);
     	   Actions a = new Actions(d);
     	   Robot r = new Robot();
-    	   
+    	   Login_locaters po = new Login_locaters(d);
     	   
     	   
     	   TeamManagement(); 
@@ -334,7 +335,7 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
  		   st.Dropdowns().get(1).click();
  		   st.Dropdown_list();
  		   st.dropdown_OPTIONS();
- 		   st.dropdown_OPTIONS().get(1).click();
+ 		   st.dropdown_OPTIONS().get(0).click();
  		   Thread.sleep(800);
  		   st.Permission_Section_rows();
  		   Thread.sleep(800);
@@ -343,7 +344,7 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
  		   js.executeScript("window.scrollBy(0,-150)");
  		   Thread.sleep(800);
  		   st.permission_module_Buttons();
-   		   IntStream.range(0, 20).forEach(b->{
+   		   IntStream.range(0, 16).forEach(b->{
    				   if(b==1) {
    					Module_names.add(st.permission_module_names().get(b).getText());
    					
@@ -383,7 +384,10 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 		   js.executeScript("window.scrollBy(0,-150)");  
 		   Thread.sleep(800);
 		   st.form_submit_button().click();
-		   Thread.sleep(1000);
+		   
+		   po.success_Toast();
+	       System.out.println(po.success_Toast().getText());
+	       System.out.println();
 		   clear_all_collections();
       }
        
@@ -431,25 +435,26 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
            role10.put("rolename", "Property Audit Reviewer");
            role10.put("description", "Checks uploaded property photos/videos for compliance before approval.");
 
-           return new Object[][] {
+           return new Object[][] { 
                { role1 },
                { role2 },
                { role3 },
                { role4 },
-               { role5 },
+               { role5 }, 
                { role6 },
                { role7 },
                { role8 },
                { role9 },
-               { role10 }
+               { role10 } 
            };}
 
       
-      @Test(dataProvider="employeedata")
+      @Test(dataProvider="role_data")
       public void delete_role(TreeMap<String, String> role)throws InterruptedException, IOException, AWTException{
     	  
        JavascriptExecutor js = (JavascriptExecutor)d;   
    	   Staff_employee_locators st = new Staff_employee_locators(d);
+   	   Login_locaters p = new Login_locaters(d);
     	  
    	    TeamManagement();
         Thread.sleep(800);
@@ -461,7 +466,11 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
     	Thread.sleep(800);
     	st.role_remove_option();
     	Thread.sleep(800); 
-    	  
+    	st.role_remove_option().click();
+    	Thread.sleep(1800); 
+    /*	p.success_Toast();
+    	System.out.println(p.success_Toast().getText());
+    	System.out.println(); */
       }
       
       @Test

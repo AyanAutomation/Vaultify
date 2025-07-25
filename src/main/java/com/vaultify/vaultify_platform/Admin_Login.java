@@ -27,7 +27,7 @@ public class Admin_Login extends Base{
 	public void login() throws IOException, InterruptedException, AWTException{
 		
     	dd = new Data_File_Reader();
-		p = new Login_locaters(d);
+		p = new Login_locaters(d);p = new Login_locaters(d);
 	    JavascriptExecutor js = (JavascriptExecutor)d;
 		Robot r = new Robot();
 		
