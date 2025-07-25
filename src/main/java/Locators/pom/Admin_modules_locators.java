@@ -90,6 +90,9 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	private List <WebElement> PropertyBid_statuses;
     @FindBy(xpath="//li")
 	private List <WebElement> cms_cards;
+
+   
+   
 	
 	
 

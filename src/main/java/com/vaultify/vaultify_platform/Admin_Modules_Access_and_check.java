@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -19,6 +20,7 @@ import org.testng.annotations.Test;
 import Locators.pom.Admin_modules_locators;
 import Locators.pom.Property_locaters;
 import Locators.pom.Refund_Module_Locators;
+import Locators.pom.Talk_to_Expert_locaters;
 
 
 public class Admin_Modules_Access_and_check extends Admin_Login{
@@ -26,6 +28,7 @@ public class Admin_Modules_Access_and_check extends Admin_Login{
 	int v=0;
     List <String> allbid_stats = new ArrayList<String>();
     List <String> onlyStatuses = new ArrayList<String>();
+    TreeMap<String,WebElement> talk_to_expert_status_assign = new TreeMap<String,WebElement>();
     
 	public void dashboard_access() throws InterruptedException, IOException, AWTException{
 		
@@ -248,14 +251,14 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
 		System.out.println();}
 	
 
-	public List<String> TalkToExpert() throws InterruptedException, IOException, AWTException{
+	public  TreeMap<String,WebElement> TalkToExpert() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
     	Actions a = new Actions(d);
     	WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor)d;
-        List<String> Status = new ArrayList<String>();
         Robot r = new Robot();
+        Talk_to_Expert_locaters tte = new Talk_to_Expert_locaters(d);
         
         
         login();
@@ -275,16 +278,20 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
 		Thread.sleep(800);
 		r.mouseWheel(6);
 		Thread.sleep(800);
+		
 		List <WebElement> request_status = p.PropertyBid_statuses();
+		List <WebElement> assign_buttons = tte.talk_toExpert_assign_buttons();
 		int requestcount = p.PropertyBid_statuses().size();
 		
 		for(int n=0;n<requestcount;n++){
             
-            	Status.add(request_status.get(n).getText());
+            	talk_to_expert_status_assign.put(request_status.get(n).getText(), assign_buttons.get(n));
+            System.out.println("Key  "+request_status.get(n).getText()+"   "+assign_buttons.get(n).getText());
+            System.out.println();
 			}
 		
 		
-	    return Status;
+	    return talk_to_expert_status_assign;
 	
 	
 	

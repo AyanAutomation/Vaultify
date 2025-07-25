@@ -19,15 +19,15 @@ public class Talk_to_Expert_locaters extends Repeatative_Codes{
 	@FindBy(xpath="//td[5]//p")
 	private List <WebElement> Expert_details; 
 	@FindBy(xpath="//td[6]//p[1]")
-	private List <WebElement> Assigned_staff; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement> Assigned_staff; 
+	@FindBy(xpath="//td//button")
+	private List <WebElement>  talk_toExpert_assign_buttons; 
+	@FindBy(xpath="//h4")
+	private List <WebElement> staff_names; 
+	@FindBy(xpath="//div[@class='space-y-4']//button")
+	private List <WebElement> staff_assign_buttons; 
+	@FindBy(xpath="//div[@class='space-y-4']")
+	private WebElement  popup_staff_list; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -51,6 +51,19 @@ public class Talk_to_Expert_locaters extends Repeatative_Codes{
   	public List <WebElement> Assigned_staff(){
   	WebElements_waits(Assigned_staff);	
   	return Assigned_staff;}
+	public List <WebElement> talk_toExpert_assign_buttons(){
+  	WebElements_waits(talk_toExpert_assign_buttons);	
+  	return talk_toExpert_assign_buttons;}
+	public List <WebElement> staff_names(){
+	WebElements_waits(staff_names);	
+	return staff_names;}
+	public List <WebElement> staff_assign_buttons(){
+	WebElements_waits(staff_assign_buttons);	
+	return staff_assign_buttons;}
+	public WebElement popup_staff_list() throws InterruptedException{
+	WebElement_wait(popup_staff_list);	
+	movetoElements(popup_staff_list);
+	return popup_staff_list;}
       
       
       
