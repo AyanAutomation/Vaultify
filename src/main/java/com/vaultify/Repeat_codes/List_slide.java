@@ -17,13 +17,13 @@ public class List_slide {
 		this.d=d;}
 	
 	
-	public void List_slide() throws InterruptedException{
+	public void List_slides(int l) throws InterruptedException{
 		
         Property_locaters p = new Property_locaters(d);
         JavascriptExecutor js = (JavascriptExecutor)d;
         Actions a = new Actions(d);
 		
-        for(int m=0; m<2;m++){
+        for(int m=0; m<l;m++){
             a.moveToElement(p.slider()).clickAndHold().moveByOffset(110, 0).release().perform();
             Thread.sleep(800);}
         

@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -71,11 +72,12 @@ public class Admin_Login extends Base{
     	
     	
 		Thread.sleep(800);
-		w.until(ExpectedConditions.visibilityOf(p.OTP_page_Title()));
+		//w.until(ExpectedConditions.visibilityOf(p.OTP_page_Title()));
+		
+		fluentWait.until(d->{WebElement element = p.OTP_page_Title();
+	    return (element != null && element.isDisplayed()) ? element : null;});
 		w.until(ExpectedConditions.visibilityOfAllElements(p.inputs));
-		
 		List<String> otpValues = new ArrayList<>();
-		
 		otpValues.add("1");
 		otpValues.add("4");
 		otpValues.add("3");
@@ -90,7 +92,14 @@ public class Admin_Login extends Base{
 		}
 		
 		w.until(ExpectedConditions.visibilityOfAllElements(p.verify_otp_BUtton()));
+		try {
+		p.verify_otp_BUtton().click();}
+		catch(Exception n){
+		Thread.sleep(800);	
+		w.until(ExpectedConditions.visibilityOfAllElements(p.verify_otp_BUtton()));	
+		Thread.sleep(800);	
 		p.verify_otp_BUtton().click();
+		}
 		Thread.sleep(800);
 		w.until(ExpectedConditions.visibilityOfAllElements(p.success_Toast()));
 		System.out.println(p.success_Toast().getText());	

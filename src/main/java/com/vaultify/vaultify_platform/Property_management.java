@@ -96,7 +96,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
         
         Property_Soceity_Management(0);
 		p.property_searchbar();	
-        lsd.List_slide();
+        lsd.List_slides(2);
         p.list_Delete_buttons();	
         p.list_Delete_buttons().get(2).click();	
         p.popup_Tooltip();
@@ -204,7 +204,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
     	   
     	   Property_Soceity_Management(0);
     	   p.property_searchbar();	
-           lsd.List_slide();
+           lsd.List_slides(2);
            p.list_view_buttons();	
            p.list_view_buttons().get(l).click();
            p.Assign_Employee_button();

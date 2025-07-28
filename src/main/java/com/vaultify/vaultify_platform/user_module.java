@@ -84,7 +84,7 @@ public class user_module extends Property_management{
 	    	JavascriptExecutor js = (JavascriptExecutor)d;  
 	    	   
 	    	   p.user_searchbar();	
-	           lsd.List_slide();
+	           lsd.List_slides(2);
 	           p.user_view_button();	
 	           p.user_view_button().get(k).click();
 	           Thread.sleep(990);
