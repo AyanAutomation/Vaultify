@@ -1,25 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="16" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-28T20:01:49 IST" name="Default suite" finished-at="2025-07-28T20:02:41 IST" duration-ms="51995">
+  <suite started-at="2025-07-29T16:45:05 IST" name="Default suite" finished-at="2025-07-29T16:53:54 IST" duration-ms="528797">
     <groups>
     </groups>
-    <test started-at="2025-07-28T20:01:49 IST" name="Default test" finished-at="2025-07-28T20:02:41 IST" duration-ms="51995">
-      <class name="com.vaultify.vaultify_platform.Talk_to_Expert_Module">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Talk_to_Expert_Module@1329eff]" started-at="2025-07-28T20:01:49 IST" name="setUP" finished-at="2025-07-28T20:01:51 IST" duration-ms="1683" status="PASS">
+    <test started-at="2025-07-29T16:45:05 IST" name="Default test" finished-at="2025-07-29T16:53:54 IST" duration-ms="528797">
+      <class name="com.vaultify.vaultify_platform.Roles">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:45:06 IST" name="setUP" finished-at="2025-07-29T16:45:07 IST" duration-ms="1771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="expert_staff_assign()[pri:0, instance:com.vaultify.vaultify_platform.Talk_to_Expert_Module@1329eff]" started-at="2025-07-28T20:01:51 IST" name="expert_staff_assign" finished-at="2025-07-28T20:02:41 IST" duration-ms="50092" status="PASS">
+        <test-method signature="role_add(java.util.TreeMap)[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:45:07 IST" name="role_add" data-provider="role_data" finished-at="2025-07-29T16:46:01 IST" duration-ms="53624" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{description=Monitors, categorizes, and resolves user support tickets efficiently., rolename=Support Ticket Analyst}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- expert_staff_assign -->
-        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Talk_to_Expert_Module@1329eff]" started-at="2025-07-28T20:02:41 IST" name="driverkill" finished-at="2025-07-28T20:02:41 IST" duration-ms="178" status="PASS">
+        </test-method> <!-- role_add -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:46:01 IST" name="driverkill" finished-at="2025-07-29T16:46:01 IST" duration-ms="210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverkill -->
-      </class> <!-- com.vaultify.vaultify_platform.Talk_to_Expert_Module -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:46:01 IST" name="setUP" finished-at="2025-07-29T16:46:02 IST" duration-ms="939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="role_add(java.util.TreeMap)[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:46:02 IST" name="role_add" data-provider="role_data" finished-at="2025-07-29T16:46:55 IST" duration-ms="52715" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{description=Responsible for sourcing, filtering, and tagging potential leads across campaigns., rolename=Lead Generation Coordinator}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- role_add -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:46:55 IST" name="driverkill" finished-at="2025-07-29T16:46:55 IST" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:46:55 IST" name="setUP" finished-at="2025-07-29T16:46:56 IST" duration-ms="937" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="role_add(java.util.TreeMap)[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:46:56 IST" name="role_add" data-provider="role_data" finished-at="2025-07-29T16:47:48 IST" duration-ms="51554" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{description=Oversees referral logic, linking, and tracking reward validations., rolename=Referral Program Analyst}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- role_add -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:47:48 IST" name="driverkill" finished-at="2025-07-29T16:47:48 IST" duration-ms="198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:47:48 IST" name="setUP" finished-at="2025-07-29T16:47:49 IST" duration-ms="975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="role_add(java.util.TreeMap)[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:47:49 IST" name="role_add" data-provider="role_data" finished-at="2025-07-29T16:48:39 IST" duration-ms="50757" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{description=Validates uploaded KYC/property/legal documents for system approval., rolename=Document Verification Officer}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- role_add -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:48:39 IST" name="driverkill" finished-at="2025-07-29T16:48:40 IST" duration-ms="188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:48:40 IST" name="setUP" finished-at="2025-07-29T16:48:41 IST" duration-ms="918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="role_add(java.util.TreeMap)[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:48:41 IST" name="role_add" data-provider="role_data" finished-at="2025-07-29T16:49:31 IST" duration-ms="50915" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{description=Manages onboarding and training module uploads for facilitators and staff., rolename=Training Content Admin}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- role_add -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:49:31 IST" name="driverkill" finished-at="2025-07-29T16:49:32 IST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:49:32 IST" name="setUP" finished-at="2025-07-29T16:49:32 IST" duration-ms="770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="role_add(java.util.TreeMap)[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:49:32 IST" name="role_add" data-provider="role_data" finished-at="2025-07-29T16:50:24 IST" duration-ms="51307" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{description=Ensures property uploads and staff actions align with ATS approval guidelines., rolename=ATS Compliance Checker}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- role_add -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:50:24 IST" name="driverkill" finished-at="2025-07-29T16:50:24 IST" duration-ms="237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:50:24 IST" name="setUP" finished-at="2025-07-29T16:50:25 IST" duration-ms="926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="role_add(java.util.TreeMap)[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:50:25 IST" name="role_add" data-provider="role_data" finished-at="2025-07-29T16:51:17 IST" duration-ms="51619" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{description=Coordinates property geolocation inputs with satellite/map integration., rolename=Geo Mapping Assistant}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- role_add -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:51:17 IST" name="driverkill" finished-at="2025-07-29T16:51:17 IST" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:51:17 IST" name="setUP" finished-at="2025-07-29T16:51:18 IST" duration-ms="907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="role_add(java.util.TreeMap)[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:51:18 IST" name="role_add" data-provider="role_data" finished-at="2025-07-29T16:52:08 IST" duration-ms="50662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{description=Assigns and maintains staff-level digital document signing rights., rolename=Digital Signature Manager}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- role_add -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:52:08 IST" name="driverkill" finished-at="2025-07-29T16:52:08 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:52:08 IST" name="setUP" finished-at="2025-07-29T16:52:09 IST" duration-ms="967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="role_add(java.util.TreeMap)[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:52:09 IST" name="role_add" data-provider="role_data" finished-at="2025-07-29T16:53:01 IST" duration-ms="51416" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{description=Communicates with sellers, ensuring required uploads and payments are complete., rolename=Seller Relations Associate}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- role_add -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:53:01 IST" name="driverkill" finished-at="2025-07-29T16:53:01 IST" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:53:01 IST" name="setUP" finished-at="2025-07-29T16:53:02 IST" duration-ms="929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="role_add(java.util.TreeMap)[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:53:02 IST" name="role_add" data-provider="role_data" finished-at="2025-07-29T16:53:54 IST" duration-ms="52108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{description=Checks uploaded property photos/videos for compliance before approval., rolename=Property Audit Reviewer}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- role_add -->
+        <test-method is-config="true" signature="driverkill()[pri:0, instance:com.vaultify.vaultify_platform.Roles@3541cb24]" started-at="2025-07-29T16:53:54 IST" name="driverkill" finished-at="2025-07-29T16:53:54 IST" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverkill -->
+      </class> <!-- com.vaultify.vaultify_platform.Roles -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

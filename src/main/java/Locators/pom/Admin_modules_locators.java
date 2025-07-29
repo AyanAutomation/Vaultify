@@ -155,6 +155,11 @@ public class Admin_modules_locators extends Repeatative_Codes{
 	public WebElement role_dropdown_field(){
 	WebElement_wait(role_dropdown_field);
 	return role_dropdown_field;}
+	public WebElement role_dropdown_field_input_feild(){
+	role_dropdown_field();
+	WebElement role_dropdown_field_input_feild = role_dropdown_field().findElement(By.xpath(".//input"));
+	WebElement_wait(role_dropdown_field_input_feild);
+	return role_dropdown_field_input_feild;}
 	public WebElement accountOwnerName(){
 	WebElement_wait(accountOwnerName);
 	return accountOwnerName;}

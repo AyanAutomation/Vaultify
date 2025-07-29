@@ -30,7 +30,35 @@ public class Staff_employee_locators extends Repeatative_Codes{
 	@FindBy(xpath="//div[@class='@container']")
 	private WebElement role_section;  
 	@FindBy(xpath="//*[text()='Remove Role']")
-	private WebElement  role_remove_option;  
+	private WebElement  role_remove_option;
+	@FindBy(xpath="(//div[@class='flex flex-col @lg:flex-row @lg:items-center @lg:justify-between'])[3]//button")
+	private WebElement  Admin_user_Add_Button;/*
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ;
+	@FindBy(xpath="")
+	private WebElement  ; */
 	
 	
 	public Staff_employee_locators(WebDriver d){
@@ -101,5 +129,44 @@ public class Staff_employee_locators extends Repeatative_Codes{
     public WebElement role_remove_option(){
 	WebElement_wait(role_remove_option);	
 	return role_remove_option;}
-	
+	public WebElement Admin_user_Add_Button(){
+	WebElement_wait(Admin_user_Add_Button);	
+	return Admin_user_Add_Button;} /*
+	public WebElement (){
+	WebElement_wait();
+	return ;}
+	public WebElement (){
+	WebElement_wait();
+	return ;}
+	public WebElement (){
+	WebElement_wait();
+	return ;}
+	public WebElement (){
+	WebElement_wait();
+	return ;}
+	public WebElement (){
+	wait_for_theElement();
+	return ;}
+	public WebElement (){
+	wait_for_theElement();	
+	return ;}
+	public WebElement (){
+	wait_for_theElement();
+	return ;}
+	public WebElement (){
+	wait_for_theElement();
+	return ;}
+	public WebElement (){
+	wait_for_theElement();
+	return ;}
+	public WebElement (){
+	wait_for_theElement();
+	return ;}
+	public WebElement (){
+	wait_for_theElement();
+	return ;}
+*/
+    
+    
+    
 }
