@@ -6,12 +6,14 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,6 +25,7 @@ import Locators.pom.Admin_modules_locators;
 import Locators.pom.Property_locaters;
 import Locators.pom.Refund_Module_Locators;
 import Locators.pom.Talk_to_Expert_locaters;
+import Locators.pom.yopmail_locaters;
 
 
 public class Admin_Modules_Access_and_check extends Admin_Login{
@@ -223,7 +226,7 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
         
         login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+8).click();
+		p.Menu_modules.get(v+7).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
@@ -560,5 +563,33 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
         b.append(" heading is ");
 		System.out.println(b);}*/
 	
+        public void yopmail_data_fetcher(String id)throws InterruptedException, IOException, AWTException{
+        
+        yopmail_locaters p = new yopmail_locaters(d);	
+        WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));	
+        	
+        String current_window = d.getWindowHandle();	
+        d.switchTo().newWindow(WindowType.TAB);
+        Thread.sleep(800);
+        Set<String> alltabs = d.getWindowHandles();
+        
+        for(String tab:alltabs){
+        	
+        	if(!tab.equals(current_window)){
+        		
+        		d.switchTo().window(tab);
+        		break;}}
+        Thread.sleep(800);
+        d.navigate().to("https://yopmail.com/");
+        w.until(ExpectedConditions.visibilityOf(p.search_bar()));
+        p.search_bar().sendKeys(id);	
+        p.search_button().click();
+        p.refresh_button().click();
+        Thread.sleep(800);
+        	
+        	
+        	
+        	
+        }
 
 }

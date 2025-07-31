@@ -13,28 +13,30 @@ import com.aventstack.extentreports.ExtentReports;
 
 public class Listeners extends Extented_Reports implements ITestListener{
   
-	ExtentTest test;
+	ExtentTest test_Result;
 	ExtentReports ext =  getReport();
 	
 	
 	@Override
     public void onTestStart(ITestResult result) {
        System.out.println("Test Started: " + result.getName());
-       test =  ext.createTest(result.getMethod().getMethodName());
+      String Methodname = result.getMethod().getMethodName();
+      test_Result =  ext.createTest(Methodname);
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         System.out.println("Test Passed: " + result.getName());
-        test =  ext.createTest(result.getMethod().getMethodName());
+        test_Result =  ext.createTest(result.getMethod().getMethodName());
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
        
-        
+    	String Methodname = result.getMethod().getMethodName();
         String pathString = null;
-        test.fail(result.getThrowable());
+        test_Result.fail(result.getThrowable());
+        
         try {
 			d = (WebDriver)result.getTestClass().getRealClass().getField("d").get(result.getInstance());
 		} catch (Exception ekk) {
@@ -42,12 +44,12 @@ public class Listeners extends Extented_Reports implements ITestListener{
 			ekk.printStackTrace();
 		}
         try {
-    			 pathString = Take_Screenshots(result.getMethod().getMethodName(),d);
+    			 pathString = Take_Screenshots(Methodname,d);
     		} catch (IOException e) {
     			// TODO Auto-generated catch block
     			e.printStackTrace();
     		}
-        test.addScreenCaptureFromPath(pathString, result.getMethod().getMethodName());
+        test_Result.addScreenCaptureFromPath(pathString, Methodname);
         
     }
 

@@ -119,112 +119,114 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
 		Object[][] roleData = role_data();
 		
 		TreeMap<String, String> emp1 = new TreeMap<>();
-		emp1.put("username", "emiliakapoor");
-		emp1.put("password", "Emilia@2025");
-		emp1.put("fullname", "Emilia Kapoor");
-		emp1.put("fathername", "Rajan Kapoor");
-		emp1.put("mothername", "Sunita Kapoor");
-		emp1.put("dob", "03/19/1992");
-		emp1.put("email", "emilia.kapoor@vaultify.com");
-		emp1.put("phone", "919800112233");
-		emp1.put("qualification", "Risk Analyst");
-		emp1.put("experience", "4");
-		emp1.put("doj", "02-02-2021");
-		emp1.put("accOwner", "Emilia Kapoor");
-		emp1.put("bankName", "ICICI Bank");
-		emp1.put("accNumber", "40817810099913334455");
-		emp1.put("ifsc", "ICIC0000876");
-		emp1.put("upi", "emiliakapoor@ybl");
+		emp1.put("username", "aaronfernandes");
+		emp1.put("password", "Aaron@2025");
+		emp1.put("fullname", "Aaron Fernandes");
+		emp1.put("fathername", "Lloyd Fernandes");
+		emp1.put("mothername", "Maria Fernandes");
+		emp1.put("dob", "04/09/1991");
+		emp1.put("email", "afern2901z@yopmail.com");
+		emp1.put("phone", "919860445512");
+		emp1.put("qualification", "Accounts Executive");
+		emp1.put("experience", "6");
+		emp1.put("doj", "06-06-2018");
+		emp1.put("accOwner", "Aaron Fernandes");
+		emp1.put("bankName", "HDFC Bank");
+		emp1.put("accNumber", "40817810099920112233");
+		emp1.put("ifsc", "HDFC0003210");
+		emp1.put("upi", "aaronfernandes@ybl");
 
 		TreeMap<String, String> emp2 = new TreeMap<>();
-		emp2.put("username", "yusufibrahim");
-		emp2.put("password", "Yusuf@999");
-		emp2.put("fullname", "Yusuf Ibrahim");
-		emp2.put("fathername", "Naseer Ibrahim");
-		emp2.put("mothername", "Fatima Ibrahim");
-		emp2.put("dob", "07/23/1985");
-		emp2.put("email", "yusuf.ibrahim@vaultify.com");
-		emp2.put("phone", "966590998877");
-		emp2.put("qualification", "Operations Manager");
-		emp2.put("experience", "12");
-		emp2.put("doj", "12-11-2012");
-		emp2.put("accOwner", "Yusuf Ibrahim");
-		emp2.put("bankName", "Al Rajhi Bank");
-		emp2.put("accNumber", "40817810099914445666");
-		emp2.put("ifsc", "RAJH0000456");
-		emp2.put("upi", "yusufibrahim@ybl");
+		emp2.put("username", "mehakbansal");
+		emp2.put("password", "Mehak@4321");
+		emp2.put("fullname", "Mehak Bansal");
+		emp2.put("fathername", "Ramesh Bansal");
+		emp2.put("mothername", "Kalpana Bansal");
+		emp2.put("dob", "03/14/1993");
+		emp2.put("email", "mehak9876q@yopmail.com");
+		emp2.put("phone", "917799665544");
+		emp2.put("qualification", "Legal Advisor");
+		emp2.put("experience", "4");
+		emp2.put("doj", "03-03-2021");
+		emp2.put("accOwner", "Mehak Bansal");
+		emp2.put("bankName", "Punjab National Bank");
+		emp2.put("accNumber", "40817810099921113344");
+		emp2.put("ifsc", "PUNB0002456");
+		emp2.put("upi", "mehakbansal@ybl");
 
 		TreeMap<String, String> emp3 = new TreeMap<>();
-		emp3.put("username", "sofiaandersson");
-		emp3.put("password", "Sofia@2024");
-		emp3.put("fullname", "Sofia Andersson");
-		emp3.put("fathername", "Lars Andersson");
-		emp3.put("mothername", "Eva Andersson");
-		emp3.put("dob", "12/11/1994");
-		emp3.put("email", "sofia.andersson@vaultify.com");
-		emp3.put("phone", "467089123456");
-		emp3.put("qualification", "UX Designer");
-		emp3.put("experience", "6");
-		emp3.put("doj", "01-08-2018");
-		emp3.put("accOwner", "Sofia Andersson");
-		emp3.put("bankName", "Swedbank");
-		emp3.put("accNumber", "40817810099915556777");
-		emp3.put("ifsc", "SWED0000987");
-		emp3.put("upi", "sofiaandersson@ybl");
+		emp3.put("username", "junwenli");
+		emp3.put("password", "Junwen@2024");
+		emp3.put("fullname", "Junwen Li");
+		emp3.put("fathername", "Feng Li");
+		emp3.put("mothername", "Zhao Li");
+		emp3.put("dob", "06/27/1989");
+		emp3.put("email", "jli_xt9981@yopmail.com");
+		emp3.put("phone", "8613800123456");
+		emp3.put("qualification", "Network Security Analyst");
+		emp3.put("experience", "9");
+		emp3.put("doj", "09-10-2014");
+		emp3.put("accOwner", "Junwen Li");
+		emp3.put("bankName", "Bank of China");
+		emp3.put("accNumber", "40817810099922224455");
+		emp3.put("ifsc", "BOC0000345");
+		emp3.put("upi", "junwenli@ybl");
 
 		TreeMap<String, String> emp4 = new TreeMap<>();
-		emp4.put("username", "naveenmukherjee");
-		emp4.put("password", "Naveen@007");
-		emp4.put("fullname", "Naveen Mukherjee");
-		emp4.put("fathername", "Subhash Mukherjee");
-		emp4.put("mothername", "Arpita Mukherjee");
-		emp4.put("dob", "06/05/1990");
-		emp4.put("email", "naveen.mukherjee@vaultify.com");
-		emp4.put("phone", "918888776655");
-		emp4.put("qualification", "DevOps Engineer");
-		emp4.put("experience", "7");
-		emp4.put("doj", "10-10-2016");
-		emp4.put("accOwner", "Naveen Mukherjee");
-		emp4.put("bankName", "Axis Bank");
-		emp4.put("accNumber", "40817810099916667888");
-		emp4.put("ifsc", "UTIB0000432");
-		emp4.put("upi", "naveenmukherjee@ybl");
+		emp4.put("username", "sarapatel");
+		emp4.put("password", "Sara@001");
+		emp4.put("fullname", "Sara Patel");
+		emp4.put("fathername", "Bhavin Patel");
+		emp4.put("mothername", "Smita Patel");
+		emp4.put("dob", "11/03/1996");
+		emp4.put("email", "sara349x@yopmail.com");
+		emp4.put("phone", "918604556788");
+		emp4.put("qualification", "Training Officer");
+		emp4.put("experience", "3");
+		emp4.put("doj", "01-04-2022");
+		emp4.put("accOwner", "Sara Patel");
+		emp4.put("bankName", "Bank of Baroda");
+		emp4.put("accNumber", "40817810099923335566");
+		emp4.put("ifsc", "BARB0VJSURA");
+		emp4.put("upi", "sarapatel@ybl");
 
 		TreeMap<String, String> emp5 = new TreeMap<>();
-		emp5.put("username", "elenagonzalez");
-		emp5.put("password", "Elena@321");
-		emp5.put("fullname", "Elena Gonzalez");
-		emp5.put("fathername", "Rafael Gonzalez");
-		emp5.put("mothername", "Isabel Gonzalez");
-		emp5.put("dob", "01/15/1991");
-		emp5.put("email", "elena.gonzalez@vaultify.com");
-		emp5.put("phone", "525512349876");
-		emp5.put("qualification", "HR Generalist");
-		emp5.put("experience", "8");
-		emp5.put("doj", "18-04-2015");
-		emp5.put("accOwner", "Elena Gonzalez");
-		emp5.put("bankName", "Santander Mexico");
-		emp5.put("accNumber", "40817810099917778999");
-		emp5.put("ifsc", "SANT0000667");
-		emp5.put("upi", "elenagonzalez@ybl");
+		emp5.put("username", "krystalmendez");
+		emp5.put("password", "Krystal@555");
+		emp5.put("fullname", "Krystal Mendez");
+		emp5.put("fathername", "Carlos Mendez");
+		emp5.put("mothername", "Lucia Mendez");
+		emp5.put("dob", "10/18/1990");
+		emp5.put("email", "kmnz4487z@yopmail.com");
+		emp5.put("phone", "529912349900");
+		emp5.put("qualification", "Internal Auditor");
+		emp5.put("experience", "7");
+		emp5.put("doj", "11-11-2016");
+		emp5.put("accOwner", "Krystal Mendez");
+		emp5.put("bankName", "Banorte");
+		emp5.put("accNumber", "40817810099924446677");
+		emp5.put("ifsc", "BANO0002211");
+		emp5.put("upi", "krystalmendez@ybl");
 
 		TreeMap<String, String> emp6 = new TreeMap<>();
-		emp6.put("username", "faizaanqureshi");
-		emp6.put("password", "Faizaan@123");
-		emp6.put("fullname", "Faizaan Qureshi");
-		emp6.put("fathername", "Javed Qureshi");
-		emp6.put("mothername", "Shabana Qureshi");
-		emp6.put("dob", "09/28/1987");
-		emp6.put("email", "faizaan.qureshi@vaultify.com");
-		emp6.put("phone", "971505556677");
-		emp6.put("qualification", "Business Intelligence Analyst");
-		emp6.put("experience", "10");
-		emp6.put("doj", "05-07-2013");
-		emp6.put("accOwner", "Faizaan Qureshi");
-		emp6.put("bankName", "Emirates NBD");
-		emp6.put("accNumber", "40817810099918899000");
-		emp6.put("ifsc", "ENBD0000111");
-		emp6.put("upi", "faizaanqureshi@ybl");
+		emp6.put("username", "ahmedrashwan");
+		emp6.put("password", "Ahmed@789");
+		emp6.put("fullname", "Ahmed Rashwan");
+		emp6.put("fathername", "Osman Rashwan");
+		emp6.put("mothername", "Sahar Rashwan");
+		emp6.put("dob", "08/30/1986");
+		emp6.put("email", "arx9671q@yopmail.com");
+		emp6.put("phone", "201114455667");
+		emp6.put("qualification", "Compliance Manager");
+		emp6.put("experience", "11");
+		emp6.put("doj", "07-12-2013");
+		emp6.put("accOwner", "Ahmed Rashwan");
+		emp6.put("bankName", "Banque du Caire");
+		emp6.put("accNumber", "40817810099925557788");
+		emp6.put("ifsc", "BDCE0009876");
+		emp6.put("upi", "ahmedrashwan@ybl");
+
+
 
         
 		
@@ -617,19 +619,15 @@ public class Staff_and_Team extends Admin_Modules_Access_and_check{
     			p.Employee_add_button();
     			p.list_sort_buttons();
     			p.first_name_inlist();
-    			if(!p.first_name_inlist().getText().equalsIgnoreCase(employee.get("username"))){
-    				
     			
-    		/*	a.doubleClick(p.list_sort_buttons().get(0)).build().perform();
-    			Thread.sleep(800); */
-    				
-    				IntStream.range(0, 1).forEach(i->{
-    					p.list_sort_buttons().get(0);
-    					p.list_sort_buttons().get(0).click();
-    				});}
-    			p.first_name_inlist();
+    			
     			System.out.println(p.first_name_inlist().getText().equalsIgnoreCase(employee.get("username"))?"Testcase Passed":"Testcase Failed");
-    		}
+    			yopmail_data_fetcher(employee.get("email"));
+      
+      
+      
+      
+      }
     	  
     	  
     	  
