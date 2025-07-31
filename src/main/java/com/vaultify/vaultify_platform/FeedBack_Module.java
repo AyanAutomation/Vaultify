@@ -26,7 +26,7 @@ public class FeedBack_Module extends Admin_Modules_Access_and_check{
 	List<String> Sub_list_section_two_Texts = new ArrayList<String>();
 	
 	
-	public TreeMap<String,WebElement> FeedBack_List_Data_Fetcher() 
+	public void FeedBack_List_Data_Fetcher() 
 			throws InterruptedException, IOException, AWTException{
 		
 		FeedBack_Locaters p = new FeedBack_Locaters(d);
@@ -40,12 +40,12 @@ public class FeedBack_Module extends Admin_Modules_Access_and_check{
 			Category_eye.put(categories.get(k).getText(), View_Buttons.get(k));
 		});
 		
-		return Category_eye;}
+		}
 	
 	
 	
 	@Test
-	public void view_details()throws InterruptedException, IOException, AWTException{
+	public void FeedBack_View_details()throws InterruptedException, IOException, AWTException{
 		
 		FeedBack_Locaters p = new FeedBack_Locaters(d);
 		JavascriptExecutor js = (JavascriptExecutor)d;
@@ -90,7 +90,32 @@ public class FeedBack_Module extends Admin_Modules_Access_and_check{
         	}
         	
         	System.out.println();}
-        all_collections_cleaner();}
+        //all_collections_cleaner();
+        }
+	
+	@Test
+	public void feedback_management_search() throws InterruptedException, IOException, AWTException{
+		
+		FeedBack_Locaters p = new FeedBack_Locaters(d);
+		
+		FeedBack_View_details();
+		d.navigate().refresh();
+		String creation_date_from_details= null;
+		for(String Sub_list_section_one_Text :Sub_list_section_one_Texts){
+			
+			if(Sub_list_section_one_Text.trim().contains("Created At:")){
+				String[] createddetails= Sub_list_section_one_Text.split("At:");
+				String[] date_Time = createddetails[1].split(",");
+				creation_date_from_details = date_Time[0].trim();
+				break;}}
+		
+		
+		
+		
+	}
+	
+	
+	
 	
 	@Test
 	public void all_collections_cleaner(){
@@ -121,17 +146,6 @@ public class FeedBack_Module extends Admin_Modules_Access_and_check{
 		       System.out.println();}}
 	
 	
-	public void feedback_management_search(){
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	}
 	
 
 }
