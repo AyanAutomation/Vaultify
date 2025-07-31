@@ -21,7 +21,7 @@ public class FeedBack_Module extends Admin_Modules_Access_and_check{
 	TreeMap<String,WebElement> Category_eye = new TreeMap<String,WebElement>();
 	List<String> Sub_listText = new ArrayList<String>();
 	List<String> Headings_Text = new ArrayList<String>();
-	TreeMap<String,List<String>> popup_inner_texta = new TreeMap<String,List<String>>();
+	TreeMap<String,List<String>> popup_inner_text = new TreeMap<String,List<String>>();
 	List<String> Sub_list_section_one_Texts = new ArrayList<String>();
 	List<String> Sub_list_section_two_Texts = new ArrayList<String>();
 	
@@ -77,10 +77,10 @@ public class FeedBack_Module extends Admin_Modules_Access_and_check{
 			Sub_list_section_two_Texts.add(Sub_listText.get(n));
 			});
         
-        popup_inner_texta.put(Headings_Text.get(0),Sub_list_section_one_Texts);
-        popup_inner_texta.put(Headings_Text.get(1),Sub_list_section_two_Texts);
+		popup_inner_text.put(Headings_Text.get(0),Sub_list_section_one_Texts);
+		popup_inner_text.put(Headings_Text.get(1),Sub_list_section_two_Texts);
         
-        for(Map.Entry<String,List<String>> key_value:popup_inner_texta.entrySet()){
+        for(Map.Entry<String,List<String>> key_value:popup_inner_text.entrySet()){
         	
         	System.out.println(key_value.getKey()+" :----- ");
         	System.out.println();
@@ -89,12 +89,49 @@ public class FeedBack_Module extends Admin_Modules_Access_and_check{
         		System.out.println();
         	}
         	
-        	System.out.println();
-        	
-        }
+        	System.out.println();}
+        all_collections_cleaner();}
+	
+	@Test
+	public void all_collections_cleaner(){
+		
+		Category_eye.clear();
+		if(Category_eye.size()==0){
+		       System.out.println("Category_eye cleared");
+		       System.out.println();}
+		Sub_listText.clear();
+		if(Sub_listText.size()==0){
+		       System.out.println("Sub_listText cleared");
+		       System.out.println();}
+		Headings_Text.clear();
+		if(Headings_Text.size()==0){
+		       System.out.println("Headings_Text cleared");
+		       System.out.println();}
+		popup_inner_text.clear();
+		if(popup_inner_text.size()==0){
+		       System.out.println("popup_inner_text cleared");
+		       System.out.println();}
+		Sub_list_section_one_Texts.clear();
+		if(Sub_list_section_one_Texts.size()==0){
+		       System.out.println("Sub_list_section_one_Texts cleared");
+		       System.out.println();}
+		Sub_list_section_two_Texts.clear();
+		if(Sub_list_section_two_Texts.size()==0){
+		       System.out.println("Sub_list_section_two_Texts cleared");
+		       System.out.println();}}
+	
+	
+	public void feedback_management_search(){
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
-	
-	
 	
 
 }
