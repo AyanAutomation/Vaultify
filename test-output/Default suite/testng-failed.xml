@@ -5,7 +5,7 @@
     <classes>
       <class name="com.vaultify.vaultify_platform.FeedBack_Module">
         <methods>
-          <include name="view_details"/>
+          <include name="feedback_management_date_comparator_check"/>
           <include name="setUP"/>
           <include name="driverkill"/>
         </methods>

@@ -20,11 +20,11 @@ public class FeedBack_Locaters extends Repeatative_Codes{
 	@FindBy(xpath="//*[@class='p-4 space-y-4']")
 	private WebElement  popup;
 	@FindBy(xpath="//td[5]//time[1]")
-	private List <WebElement> dates_in_List; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement> dates_in_List; 
+	@FindBy(xpath="//*[@type='search']")
+	private WebElement Feedback_search; 
+	@FindBy(xpath="(//*[@type='button'])[4]")
+	private WebElement search_button; /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -68,13 +68,13 @@ public class FeedBack_Locaters extends Repeatative_Codes{
 	return popup_headings;} 
     public List<WebElement> dates_in_List(){
 	WebElements_waits(dates_in_List);
-	return dates_in_List;} /*
-	public WebElement (){
-	WebElement_wait();
-	return ;}
-	public WebElement (){
-	WebElement_wait();
-	return ;}
+	return dates_in_List;} 
+	public WebElement Feedback_search(){
+	WebElement_wait(Feedback_search);
+	return Feedback_search;} 
+	public WebElement search_button(){
+	WebElement_wait(search_button);
+	return search_button;} /*
 	public WebElement (){
 	WebElement_wait();
 	return ;}

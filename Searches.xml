@@ -36,6 +36,11 @@
       <include name="Refund_list_search"/>
       </methods>
       </class>
+        <class name="com.vaultify.vaultify_platform.FeedBack_Module">
+      <methods>
+      <include name="feedback_Search"/>
+      </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

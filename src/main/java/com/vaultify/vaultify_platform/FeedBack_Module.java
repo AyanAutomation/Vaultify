@@ -3,9 +3,11 @@ package com.vaultify.vaultify_platform;
 import java.awt.AWTException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.stream.IntStream;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,26 +19,30 @@ import Locators.pom.FeedBack_Locaters;
 
 @Listeners(Reports_and_Listeners.Listeners.class)
 public class FeedBack_Module extends Admin_Modules_Access_and_check{
-	
-	TreeMap<String,WebElement> Category_eye = new TreeMap<String,WebElement>();
+
+	HashMap<String,WebElement> Category_eye = new HashMap<String,WebElement>();
 	List<String> Sub_listText = new ArrayList<String>();
 	List<String> Headings_Text = new ArrayList<String>();
-	TreeMap<String,List<String>> popup_inner_text = new TreeMap<String,List<String>>();
+	HashMap<String,List<String>> popup_inner_text = new HashMap<String,List<String>>();
 	List<String> Sub_list_section_one_Texts = new ArrayList<String>();
 	List<String> Sub_list_section_two_Texts = new ArrayList<String>();
-	
+	TreeSet<String> Category = new TreeSet<String>();
+	String Category_key;
+	List<String> category_key_listList = new ArrayList<String>();
 	
 	public void FeedBack_List_Data_Fetcher() 
 			throws InterruptedException, IOException, AWTException{
 		
 		FeedBack_Locaters p = new FeedBack_Locaters(d);
-		
+		JavascriptExecutor js = (JavascriptExecutor)d;
 		
 		Feedback_Management();
 		Thread.sleep(800);
 		List<WebElement> categories = p.Category_details();
 		List<WebElement> View_Buttons = p.Eye_buttons();
-		IntStream.range(0, View_Buttons.size()).forEach(k->{
+		Thread.sleep(800);
+		js.executeScript("arguments[0].scrollIntoView(true);",View_Buttons.get(0) );
+		IntStream.range(0, categories.size()).forEach(k->{
 			Category_eye.put(categories.get(k).getText(), View_Buttons.get(k));
 		});
 		
@@ -52,12 +58,9 @@ public class FeedBack_Module extends Admin_Modules_Access_and_check{
 		
 		FeedBack_List_Data_Fetcher();	
 		Thread.sleep(800);
-		for(Map.Entry<String, WebElement> pair:Category_eye.entrySet()){
-			
-			System.out.println("Keys are  "+pair.getKey());
-			System.out.println();}
-		Thread.sleep(800);
-		WebElement eye_button_to_be_clicked = Category_eye.get("feedback for expert advice");
+		category_key_data_viewer();
+		Category_key = category_key_listList.get(1);
+		WebElement eye_button_to_be_clicked = Category_eye.get(Category_key);
 		js.executeScript("arguments[0].scrollIntoView(true);",eye_button_to_be_clicked );
 		Thread.sleep(800);
 		eye_button_to_be_clicked.click();
@@ -76,44 +79,40 @@ public class FeedBack_Module extends Admin_Modules_Access_and_check{
 		IntStream.range(8, 10).forEach(n->{
 			Sub_list_section_two_Texts.add(Sub_listText.get(n));
 			});
-        
-		popup_inner_text.put(Headings_Text.get(0),Sub_list_section_one_Texts);
+        popup_inner_text.put(Headings_Text.get(0),Sub_list_section_one_Texts);
 		popup_inner_text.put(Headings_Text.get(1),Sub_list_section_two_Texts);
         
-        for(Map.Entry<String,List<String>> key_value:popup_inner_text.entrySet()){
-        	
-        	System.out.println(key_value.getKey()+" :----- ");
-        	System.out.println();
-        	for(String subitems:key_value.getValue()){
-        		System.out.println(subitems);
-        		System.out.println();
-        	}
-        	
-        	System.out.println();}
-        //all_collections_cleaner();
+
         }
 	
 	@Test
-	public void feedback_management_search() throws InterruptedException, IOException, AWTException{
+	public void feedback_Search() throws InterruptedException, IOException, AWTException{
 		
 		FeedBack_Locaters p = new FeedBack_Locaters(d);
 		
-		FeedBack_View_details();
-		d.navigate().refresh();
-		String creation_date_from_details= null;
-		for(String Sub_list_section_one_Text :Sub_list_section_one_Texts){
-			
-			if(Sub_list_section_one_Text.trim().contains("Created At:")){
-				String[] createddetails= Sub_list_section_one_Text.split("At:");
-				String[] date_Time = createddetails[1].split(",");
-				creation_date_from_details = date_Time[0].trim();
-				break;}}
-		
-		
-		
-		
+		FeedBack_List_Data_Fetcher();
+		category_key_data_viewer();
+		p.Feedback_search().sendKeys(category_key_listList.get(1));
+		p.search_button().click();
+		Thread.sleep(800);
+		List<WebElement> searched_categories = p.Category_details();
+		for(WebElement searched_category:searched_categories){
+			Category.add(searched_category.getText());}
+		System.out.println(Category.contains(category_key_listList.get(1))? " Testcase Passed search working search item "+Category+"  shown in result  ":"Testcase Failed search not working search item"+Category+" not shown in result");
+		System.out.println();  
 	}
+	 
 	
+	public void category_key_data_viewer() throws InterruptedException{
+		
+		
+		Thread.sleep(800);   
+		for(Map.Entry<String, WebElement> pair:Category_eye.entrySet()){
+			
+			System.out.println("Keys are  "+pair.getKey());
+			System.out.println();
+			category_key_listList.add(pair.getKey());}
+		Thread.sleep(800); }
 	
 	
 	
