@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\user1\AppData\Local\Temp\testng-eclipse-950495693\testng-customsuite.xml</span>
+                    <span>C:\Users\user1\AppData\Local\Temp\testng-eclipse--767400209\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.vaultify.vaultify_platform.FeedBack_Module" class="method navigator-link" hash-for-method="feedback_Search">feedback_Search</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.vaultify.vaultify_platform.Refund_Management" class="method navigator-link" hash-for-method="Refund_list_data_fetcher">Refund_list_data_fetcher</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +122,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.vaultify.vaultify_platform.FeedBack_Module</span>
+              <span class="class-name">com.vaultify.vaultify_platform.Refund_Management</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feedback_Search">
-                  </a> <!-- feedback_Search -->
-                  <span class="method-name">feedback_Search</span>
+                  <a name="Refund_list_data_fetcher">
+                  </a> <!-- Refund_list_data_fetcher -->
+                  <span class="method-name">Refund_list_data_fetcher</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\user1\AppData\Local\Temp\testng-eclipse-950495693\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\user1\AppData\Local\Temp\testng-eclipse--767400209\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +146,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.vaultify.vaultify_platform.FeedBack_Module&quot;&gt;
+      &lt;class name=&quot;com.vaultify.vaultify_platform.Refund_Management&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;feedback_Search&quot;/&gt;
+          &lt;include name=&quot;Refund_list_data_fetcher&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.vaultify.vaultify_platform.FeedBack_Module --&gt;
+      &lt;/class&gt; &lt;!-- com.vaultify.vaultify_platform.Refund_Management --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -192,9 +192,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'feedback_Search')
-data.setCell(0, 2, 'com.vaultify.vaultify_platform.FeedBack_Module')
-data.setCell(0, 3, 26290);
+data.setCell(0, 1, 'Refund_list_data_fetcher')
+data.setCell(0, 2, 'com.vaultify.vaultify_platform.Refund_Management')
+data.setCell(0, 3, 26553);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -214,17 +214,29 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">9 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.vaultify.vaultify_platform.FeedBack_Module</span>
+              <span class="ignored-class-name">com.vaultify.vaultify_platform.Refund_Management</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">FeedBack_View_details</span>
+                <span class="ignored-method-name">Refund_list_search</span>
+                <br/>
+                <span class="ignored-method-name">propertyList_filtercheck</span>
+                <br/>
+                <span class="ignored-method-name">Home_visit_pending_property_Search</span>
+                <br/>
+                <span class="ignored-method-name">Property_Search</span>
                 <br/>
                 <span class="ignored-method-name">login</span>
                 <br/>
-                <span class="ignored-method-name">all_collections_cleaner</span>
+                <span class="ignored-method-name">Refund_filter_check</span>
+                <br/>
+                <span class="ignored-method-name">Property_Staff_assign</span>
+                <br/>
+                <span class="ignored-method-name">Property_Update_Approval_Propertynames</span>
+                <br/>
+                <span class="ignored-method-name">propertydelete</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -236,18 +248,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.vaultify.vaultify_platform.FeedBack_Module</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.vaultify.vaultify_platform.Refund_Management</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUP</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">feedback_Search</span>
-                <span class="method-start">2837 ms</span>
+                <span class="method-name">Refund_list_data_fetcher</span>
+                <span class="method-start">4435 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverkill</span>
-                <span class="method-start">29131 ms</span>
+                <span class="method-start">30993 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

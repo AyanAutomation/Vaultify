@@ -23,19 +23,19 @@ public class Refund_Module_Locators extends Repeatative_Codes{
 	@FindBy(xpath="//div[@class='react-datepicker__month']//div[5]")
 	private WebElement  date_in_dropdown_calender; 
 	@FindBy(xpath="(//*[@class='flex h-full flex-col p-5']//button)[2]")
-	private WebElement  filter_result_submit_button; /*
+	private WebElement  filter_result_submit_button; 
+	@FindBy(xpath="//td[2]//p")
+	private List <WebElement>  second_column_datas;
+	@FindBy(xpath="//td[3]//p")
+	private List <WebElement> Third_column_datas;
+	@FindBy(xpath="//td[4]//p")
+	private List <WebElement>  fourth_column_datas;
+	@FindBy(xpath="//td[5]//p")
+	private List <WebElement>  fifth_column_datas;
+	@FindBy(xpath="//td[6]//p")
+	private List <WebElement>  sixth_column_datas; /*
 	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement>  ;
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -66,37 +66,22 @@ public class Refund_Module_Locators extends Repeatative_Codes{
 		return date_in_dropdown_calender;} 
 		public WebElement filter_result_submit_button(){
 		WebElement_wait(filter_result_submit_button);	
-		return filter_result_submit_button;} /*
-		public WebElement (){
-		WebElement_wait();	
-		return ;}
-		public WebElement (){
-		WebElement_wait();	
-		return ;}
-		public WebElement (){
-		WebElement_wait();	
-		return ;}
-		public WebElement (){
-		WebElement_wait();	
-		return ;}
-		public WebElement (){
-		WebElement_wait();	
-		return ;}
-		public WebElement (){
-		WebElement_wait();	
-		return ;}
-		public WebElement (){
-		WebElement_wait();	
-		return ;}
-		public WebElement (){
-		WebElement_wait();	
-		return ;}
-		public WebElement (){
-		WebElement_wait();	
-		return ;}
-		public WebElement (){
-		WebElement_wait();	
-		return ;}
+		return filter_result_submit_button;} 
+		public List <WebElement> second_column_datas(){
+		WebElements_waits(second_column_datas);	
+		return second_column_datas;}
+		public List <WebElement> Third_column_datas(){
+		WebElements_waits(Third_column_datas);	
+		return Third_column_datas;}
+		public List <WebElement> fourth_column_datas(){
+		WebElements_waits(fourth_column_datas);	
+		return fourth_column_datas;}
+		public List <WebElement> fifth_column_datas(){
+		WebElements_waits(fifth_column_datas);	
+		return fifth_column_datas;}
+		public List <WebElement> sixth_column_datas(){
+		WebElements_waits(sixth_column_datas);	
+		return sixth_column_datas;} /*
 		public WebElement (){
 		WebElement_wait();	
 		return ;}      */

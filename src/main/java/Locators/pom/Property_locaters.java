@@ -60,8 +60,8 @@ public class Property_locaters extends Repeatative_Codes{
 	private List <WebElement>  property_datas_inList;       
 	@FindBy(xpath="//td[4]//p")
 	private List <WebElement>  Employee_staff_list_phnumbers;   /*
-	@FindBy(xpath="")
-	private WebElement  ;
+	@FindBy(xpath="//tbody//tr")
+	private WebElement  Property_list_rows;
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
