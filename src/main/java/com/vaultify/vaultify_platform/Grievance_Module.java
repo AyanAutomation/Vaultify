@@ -31,7 +31,8 @@ public class Grievance_Module extends Admin_Modules_Access_and_check{
 		
 		Grievances_Locaters p = new Grievances_Locaters(d);
 		
-		Grivance_Management();
+		Grievance_List_data_fetcher();
+		
 		}
 	
 	
@@ -62,10 +63,10 @@ public class Grievance_Module extends Admin_Modules_Access_and_check{
 		
 		
 	    
-		public void Grievance_List_data_fetcher() {
+		public void Grievance_List_data_fetcher() throws InterruptedException, IOException, AWTException {
 		
 		
-		
+		Grievance_List_data_Inserter();
 		for(Map.Entry<String, List<String>> pair1:GRIEVANCE_ID.entrySet()) {
 		System.out.println(pair1.getKey());
 		System.out.println();

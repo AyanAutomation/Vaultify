@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.IntStream;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -32,6 +33,8 @@ public class Refund_Management extends Property_management {
 	List<String> BASEPRICE = new ArrayList<String>();
 	List<String> NO_OF_PAYMENTS = new ArrayList<String>();
 
+	
+	  int index = 2;
 	
 	
 
@@ -158,18 +161,18 @@ public class Refund_Management extends Property_management {
 			  System.out.println();
 			  for(String value5:pair5.getValue()){
 				  System.out.println(value5);
-				  System.out.println();}}
+				  System.out.println();}}}
+	  
+	  
+	  public void  Refund_details_page_accessor() throws InterruptedException, IOException, AWTException{
 		  
+		  Refund_Module_Locators p = new Refund_Module_Locators(d);
 		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
+		  Refund_list_data_fetcher();
+		  List<WebElement> details_button = p.view_details_button();
+		  details_button.get(index).click();
+		  p.property_details();
 		  
 	  }
+	  
 }

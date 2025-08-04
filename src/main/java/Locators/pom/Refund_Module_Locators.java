@@ -33,13 +33,13 @@ public class Refund_Module_Locators extends Repeatative_Codes{
 	@FindBy(xpath="//td[5]//p")
 	private List <WebElement>  fifth_column_datas;
 	@FindBy(xpath="//td[6]//p")
-	private List <WebElement>  sixth_column_datas; /*
-	@FindBy(xpath="")
-	private List <WebElement>  ;
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement>  sixth_column_datas; 
+	@FindBy(xpath="//*[@aria-label='View Property']")
+	private List <WebElement> view_details_button; 
+	@FindBy(xpath="(//*[@class='w-full']//div//div[2])[2]")
+	private WebElement  property_details; 
+	@FindBy(xpath="(//*[@class='w-full']//div//div[2])[2]//div//span/parent::div")
+	private List <WebElement>  detailed_values;/*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -81,9 +81,17 @@ public class Refund_Module_Locators extends Repeatative_Codes{
 		return fifth_column_datas;}
 		public List <WebElement> sixth_column_datas(){
 		WebElements_waits(sixth_column_datas);	
-		return sixth_column_datas;} /*
+		return sixth_column_datas;} 
+		public List <WebElement> view_details_button(){
+		WebElements_waits(view_details_button);	
+		return view_details_button;}      
+		public WebElement property_details(){
+		WebElement_wait(property_details);
+		return property_details;}
+		public List <WebElement> detailed_values(){
+		WebElements_waits(detailed_values);
+		return detailed_values;} /*
 		public WebElement (){
-		WebElement_wait();	
-		return ;}      */
-
+		WebElement_wait();
+			return ;} */
 }
