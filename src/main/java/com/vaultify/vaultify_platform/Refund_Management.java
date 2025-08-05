@@ -6,8 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.stream.IntStream;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -32,7 +34,7 @@ public class Refund_Management extends Property_management {
 	List<String> LOCATION = new ArrayList<String>();
 	List<String> BASEPRICE = new ArrayList<String>();
 	List<String> NO_OF_PAYMENTS = new ArrayList<String>();
-
+    TreeSet<String> detailed_data = new TreeSet<String>();
 	
 	  int index = 2;
 	
@@ -164,6 +166,7 @@ public class Refund_Management extends Property_management {
 				  System.out.println();}}}
 	  
 	  
+	  @Test
 	  public void  Refund_details_page_accessor() throws InterruptedException, IOException, AWTException{
 		  
 		  Refund_Module_Locators p = new Refund_Module_Locators(d);
@@ -172,7 +175,70 @@ public class Refund_Management extends Property_management {
 		  List<WebElement> details_button = p.view_details_button();
 		  details_button.get(index).click();
 		  p.property_details();
+		  List<WebElement> details = p.detailed_values();
+		  for(WebElement detail:details){
+			  
+			  detailed_data.add(detail.getText());
+			  System.out.println(detail.getText());
+			  System.out.println();}
 		  
-	  }
-	  
-}
+		  
+		  
+		  
+	  }}
+
+
+    class Service_ReFund extends Refund_Management{
+    	
+    	
+    	TreeMap<String,WebElement> payment_and_checkbox = new TreeMap<String,WebElement>();
+    	
+    	
+    	
+    	
+    	public void Refund_tab_Accessor(int k) throws InterruptedException, AWTException, IOException {
+    		
+    		Refund_Module_Locators p = new Refund_Module_Locators(d);
+    		
+    		
+    		Refund_management_access();
+    		p.Module_tabs().get(k).click();
+    		p.landed_in_service_tab();}
+    	
+    	
+    	@Test
+    	public void due_payment_info() throws InterruptedException, AWTException, IOException{
+    		
+    		Refund_Module_Locators p = new Refund_Module_Locators(d);
+    		JavascriptExecutor js = (JavascriptExecutor)d;
+    		
+    		Refund_tab_Accessor(1);
+    		List <WebElement> payments = p.due_payments();
+    		List <WebElement> checkboxes = p.checkboxes();
+    		
+            IntStream.range(0,payments.size()).forEach(h->{
+    			 payment_and_checkbox.put(payments.get(h).getText(), checkboxes.get(h+1));});
+    		 
+    		 for(Map.Entry<String,WebElement> pair:payment_and_checkbox.entrySet()){
+    			 System.out.println("Payments are "+pair.getKey());
+    			 System.out.println();
+    			 if(pair.getKey().equalsIgnoreCase("1")){
+    				 js.executeScript("arguments[0].scrollIntoView(true);",pair.getValue());
+    				 Thread.sleep(800);
+    				 js.executeScript("window.scrollBy(0,-150)");
+    				 Thread.sleep(800);
+    				 pair.getValue().click();				 
+    			 break;}}    		 
+    		 
+
+    		 Thread.sleep(2000);
+    	}
+    	
+    	
+    	
+    }
+
+
+
+
+

@@ -24,7 +24,7 @@ public class Repeatative_Codes {
 	
 	public void WebElement_wait(WebElement element){
 		
-		WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(10));
+		WebDriverWait w = new WebDriverWait(d,Duration.ofSeconds(16));
 		
 		w.until(ExpectedConditions.visibilityOf(element));}
 	

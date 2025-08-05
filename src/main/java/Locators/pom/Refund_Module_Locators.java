@@ -39,9 +39,29 @@ public class Refund_Module_Locators extends Repeatative_Codes{
 	@FindBy(xpath="(//*[@class='w-full']//div//div[2])[2]")
 	private WebElement  property_details; 
 	@FindBy(xpath="(//*[@class='w-full']//div//div[2])[2]//div//span/parent::div")
-	private List <WebElement>  detailed_values;/*
+	private List <WebElement>  detailed_values;
+	@FindBy(xpath="//div[@class='flex space-x-4 border-b-2 border-gray-200']//button")
+	private List <WebElement>  Module_tabs; 
+	@FindBy(xpath="//td[4]//p")
+	private List <WebElement>  due_payments; 
+	@FindBy(xpath="//table//label//input")
+	private List <WebElement>  checkboxes;    
+	@FindBy(xpath="//input[@type='search']")
+	private WebElement  landed_in_service_tab; /*
 	@FindBy(xpath="")
-	private WebElement  ;
+	private WebElement  ; 
+	@FindBy(xpath="")
+	private WebElement  ; 
+	@FindBy(xpath="")
+	private WebElement  ; 
+	@FindBy(xpath="")
+	private WebElement  ; 
+	@FindBy(xpath="")
+	private WebElement  ; 
+	@FindBy(xpath="")
+	private WebElement  ; 
+	@FindBy(xpath="")
+	private WebElement  ; 
 	@FindBy(xpath="")
 	private WebElement  ;  */
 	
@@ -90,8 +110,35 @@ public class Refund_Module_Locators extends Repeatative_Codes{
 		return property_details;}
 		public List <WebElement> detailed_values(){
 		WebElements_waits(detailed_values);
-		return detailed_values;} /*
+		return detailed_values;} 
+		public List <WebElement> Module_tabs(){
+		WebElements_waits(Module_tabs);
+		return Module_tabs;} 
+		public List <WebElement> due_payments(){
+		WebElements_waits(due_payments);
+		return due_payments;}
+		public List <WebElement> checkboxes(){
+		WebElements_waits(checkboxes);
+		return checkboxes;} 
+		public WebElement landed_in_service_tab(){
+		WebElement_wait(landed_in_service_tab);
+		return landed_in_service_tab;} /*
 		public WebElement (){
 		WebElement_wait();
-			return ;} */
+		return ;}
+		public WebElement (){
+		WebElement_wait();
+		return ;}
+		public WebElement (){
+		WebElement_wait();
+		return ;}
+		public WebElement (){
+		WebElement_wait();
+		return ;}
+		public WebElement (){
+		WebElement_wait();
+		return ;}
+		public WebElement (){
+		WebElement_wait();
+		return ;} */
 }

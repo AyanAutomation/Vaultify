@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.vaultify.vaultify_platform.FeedBack_Module">
+      <class name="com.vaultify.vaultify_platform.Service_ReFund">
         <methods>
-          <include name="feedback_management_date_comparator_check"/>
           <include name="setUP"/>
+          <include name="due_payment_info"/>
           <include name="driverkill"/>
         </methods>
-      </class> <!-- com.vaultify.vaultify_platform.FeedBack_Module -->
+      </class> <!-- com.vaultify.vaultify_platform.Service_ReFund -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
