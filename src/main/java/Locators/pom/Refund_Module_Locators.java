@@ -42,9 +42,9 @@ public class Refund_Module_Locators extends Repeatative_Codes{
 	private List <WebElement>  detailed_values;
 	@FindBy(xpath="//div[@class='flex space-x-4 border-b-2 border-gray-200']//button")
 	private List <WebElement>  Module_tabs; 
-	@FindBy(xpath="//td[4]//p")
+	@FindBy(xpath="//tbody//td[4]//p")
 	private List <WebElement>  due_payments; 
-	@FindBy(xpath="//table//label//input")
+	@FindBy(xpath="//tbody//label//input[@type='checkbox']")
 	private List <WebElement>  checkboxes;    
 	@FindBy(xpath="//input[@type='search']")
 	private WebElement  landed_in_service_tab; /*

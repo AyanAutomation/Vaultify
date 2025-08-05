@@ -14,6 +14,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.vaultify.Repeat_codes.Repeatative_Codes;
+
 import Locators.pom.Bidding_Management_Locaters;
 import Locators.pom.Property_locaters;
 import Locators.pom.Refund_Module_Locators;
@@ -207,31 +209,35 @@ public class Refund_Management extends Property_management {
     	
     	
     	@Test
-    	public void due_payment_info() throws InterruptedException, AWTException, IOException{
+    	public void Initiate_refund() throws InterruptedException, AWTException, IOException{
     		
     		Refund_Module_Locators p = new Refund_Module_Locators(d);
     		JavascriptExecutor js = (JavascriptExecutor)d;
+    		Repeatative_Codes w = new Repeatative_Codes(d);
     		
     		Refund_tab_Accessor(1);
     		List <WebElement> payments = p.due_payments();
     		List <WebElement> checkboxes = p.checkboxes();
     		
-            IntStream.range(0,payments.size()).forEach(h->{
-    			 payment_and_checkbox.put(payments.get(h).getText(), checkboxes.get(h+1));});
+            IntStream.range(0,Math.min(payments.size(), checkboxes.size())).forEach(h->{
+    			 payment_and_checkbox.put(payments.get(h).getText(), checkboxes.get(h));});
     		 
     		 for(Map.Entry<String,WebElement> pair:payment_and_checkbox.entrySet()){
     			 System.out.println("Payments are "+pair.getKey());
     			 System.out.println();
     			 if(pair.getKey().equalsIgnoreCase("1")){
-    				 js.executeScript("arguments[0].scrollIntoView(true);",pair.getValue());
+    				 WebElement box= pair.getValue();
+    				 w.WebElement_wait(box);
+    				 w.movetoElements(box);
     				 Thread.sleep(800);
-    				 js.executeScript("window.scrollBy(0,-150)");
+    			/*	 js.executeScript("arguments[0].scrollIntoView(true);",box);
     				 Thread.sleep(800);
-    				 pair.getValue().click();				 
+    				 js.executeScript("window.scrollBy(0,-150)"); */
+    				 Thread.sleep(800);
+    				 js.executeScript("arguments[0].click();", box);			 
     			 break;}}    		 
     		 
-
-    		 Thread.sleep(2000);
+               Thread.sleep(2000);
     	}
     	
     	
