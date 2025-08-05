@@ -2,10 +2,8 @@ package com.vaultify.vaultify_platform;
 
 import java.awt.AWTException;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.stream.IntStream;
@@ -13,8 +11,6 @@ import java.util.stream.IntStream;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -35,14 +31,14 @@ public class Property_management extends Admin_Modules_Access_and_check{
 	public List<WebElement> employeepresent_in_eachroles;
 	public List<String> societies_in_list = new ArrayList<>();;
 	List<String> hiddengems_status = new ArrayList<>();
-	
+
 	
 	@Test
 	public void Property_Search() throws InterruptedException, IOException, AWTException{
 		
 		
 		Property_locaters p = new Property_locaters(d);
-		TreeSet <String> tree = new TreeSet();
+		TreeSet <String> tree = new TreeSet<String>();
 		
 		Property_Soceity_Management(0);
 		p.property_searchbar();
@@ -65,7 +61,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
     	
     	Property_locaters p = new Property_locaters(d);
     	JavascriptExecutor js = (JavascriptExecutor)d;
-    	TreeSet <String> tree = new TreeSet();
+    	TreeSet <String> tree = new TreeSet<String>();
     	
     	Thread.sleep(800);
     	js.executeScript("window.scrollBy(0,1800)");
@@ -109,8 +105,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
         	
         Property_locaters p = new Property_locaters(d);
         Admin_modules_locators ad = new Admin_modules_locators(d);	
-        List_slide lsd = new List_slide(d);	
-        TreeSet<String> st = new TreeSet();
+        TreeSet<String> st = new TreeSet<String>();
         
         
         st.addAll(Home_visit_Pending_Module_Access());
@@ -132,7 +127,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
         public void Property_Update_Approval_Propertynames() throws InterruptedException, IOException, AWTException{
         	
         Property_locaters p = new Property_locaters(d);	
-        TreeSet <String> tree = new TreeSet();
+        TreeSet <String> tree = new TreeSet<String>();
         	
         Property_Update_Approval_Module_Access();	
         p.property_update_list_loaded();	
@@ -151,9 +146,6 @@ public class Property_management extends Admin_Modules_Access_and_check{
         	
        Property_locaters p = new Property_locaters(d);
        TreeMap <String,String> treemap = new TreeMap<String, String>();
-       JavascriptExecutor js = (JavascriptExecutor)d;
-       
-       
        
        property_view_details_accessor(0);
        p.Assign_Employee_button().click();
@@ -228,7 +220,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
    		   List <WebElement> employees_inside_roles = p.inside_employees();
    		   Thread.sleep(600);
    		   for(WebElement eachemployee: employees_inside_roles){
-   		   		 if(!eachemployee.getText().contains("Assigned")){
+   		   		 if(!eachemployee.getText().contains("Nikolai Ivanov")){
    		   			System.out.println("Civil engineer Assigned is  "+eachemployee.getText());
    		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
    		   			break;}}}}}
@@ -250,7 +242,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
        		   List <WebElement> employees_inside_roles = p.inside_employees();
        		   Thread.sleep(600);
        		   for(WebElement eachemployee: employees_inside_roles){
-       		   		 if(!eachemployee.getText().contains("Assigned")){
+       		   		 if(!eachemployee.getText().contains("Nikolai Ivanov")){
        		   			System.out.println("Loan Advisors Assigned is  "+eachemployee.getText());
        		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
        		   			break;}}}}}
@@ -270,7 +262,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
        		   List <WebElement> employees_inside_roles = p.inside_employees();
        		   Thread.sleep(600);
        		   for(WebElement eachemployee: employees_inside_roles){
-       		   		 if(!eachemployee.getText().contains("Assigned")){
+       		   		 if(!eachemployee.getText().contains("Nikolai Ivanov")){
        		   			System.out.println("Lawyers Assigned is  "+eachemployee.getText());
        		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
        		   			break;}}}}}
@@ -290,7 +282,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
          		   List <WebElement> employees_inside_roles = p.inside_employees();
          		   Thread.sleep(600);
          		   for(WebElement eachemployee: employees_inside_roles){
-         		   		 if(!eachemployee.getText().contains("Assigned")){
+         		   		 if(!eachemployee.getText().contains("Nikolai Ivanov")){
          		   			System.out.println("Relationship Managers Assigned is  "+eachemployee.getText());
          		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
          		   			break;}}}}}
@@ -313,7 +305,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
          		   List <WebElement> employees_inside_roles = p.inside_employees();
          		   Thread.sleep(600);
          		   for(WebElement eachemployee: employees_inside_roles){
-         		   		 if(!eachemployee.getText().contains("Assigned")){
+         		   		 if(!eachemployee.getText().contains("Nikolai Ivanov")){
          		   			System.out.println("CA Assigned is  "+eachemployee.getText());
          		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
          		   			break;}}}}}
@@ -335,7 +327,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
          		   List <WebElement> employees_inside_roles = p.inside_employees();
          		   Thread.sleep(600);
          		   for(WebElement eachemployee: employees_inside_roles){
-         		   		 if(!eachemployee.getText().contains("Assigned")){
+         		   		 if(!eachemployee.getText().contains("Nikolai Ivanov")){
          		   			System.out.println("Investment Advisors Assigned is  "+eachemployee.getText());
          		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
          		   			break;}}}}}
@@ -356,7 +348,7 @@ public class Property_management extends Admin_Modules_Access_and_check{
          		   List <WebElement> employees_inside_roles = p.inside_employees();
          		   Thread.sleep(600);
          		   for(WebElement eachemployee: employees_inside_roles){
-         		   		 if(!eachemployee.getText().contains("Assigned")){
+         		   		 if(!eachemployee.getText().contains("Nikolai Ivanov")){
          		   			System.out.println("Multitasking Partner Assigned is  "+eachemployee.getText());
          		   			eachemployee.findElement(By.xpath(".//button[contains(text(),'Assign')]")).click();
          		   			break;}}}}}
@@ -367,8 +359,6 @@ public class Property_management extends Admin_Modules_Access_and_check{
         public TreeMap<String,String> property_details_Data_fetch()throws InterruptedException, IOException, AWTException{
         	
         	 Property_locaters p = new Property_locaters(d);
-             TreeMap <String,String> Tmap = new TreeMap<String, String>();
-             List_slide lsd = new List_slide(d);	
              JavascriptExecutor js = (JavascriptExecutor)d;
              List<String> property_card_details = new ArrayList<>();
              List<String> property_details_below_Datas = new ArrayList<>();

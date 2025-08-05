@@ -198,7 +198,7 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
 		System.out.println(b);
 		System.out.println();}
 	
-  
+    @Test
 	public void Grivance_Management() throws InterruptedException, IOException, AWTException{
 		
     	Admin_modules_locators p = new Admin_modules_locators(d);
@@ -290,9 +290,7 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
 		
 		for(int n=0;n<assign_buttons.size();n++){
             
-            talk_to_expert_status_assign.put(assign_buttons.get(n).getText(), assign_buttons.get(n));
-            
-			}
+            talk_to_expert_status_assign.put(assign_buttons.get(n).getText(), assign_buttons.get(n));}
 		
 		
 	    
