@@ -230,10 +230,7 @@ public class Refund_Management extends Property_management {
     				 w.WebElement_wait(box);
     				 w.movetoElements(box);
     				 Thread.sleep(800);
-    			/*	 js.executeScript("arguments[0].scrollIntoView(true);",box);
-    				 Thread.sleep(800);
-    				 js.executeScript("window.scrollBy(0,-150)"); */
-    				 Thread.sleep(800);
+    			     Thread.sleep(800);
     				 js.executeScript("arguments[0].click();", box);			 
     			 break;}}    		 
     		 
