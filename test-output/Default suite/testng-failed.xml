@@ -5,8 +5,8 @@
     <classes>
       <class name="com.vaultify.vaultify_platform.Service_ReFund">
         <methods>
+          <include name="Initiate_refund"/>
           <include name="setUP"/>
-          <include name="due_payment_info"/>
           <include name="driverkill"/>
         </methods>
       </class> <!-- com.vaultify.vaultify_platform.Service_ReFund -->

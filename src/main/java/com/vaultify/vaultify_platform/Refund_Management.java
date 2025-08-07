@@ -17,6 +17,7 @@ import org.testng.annotations.Test;
 import com.vaultify.Repeat_codes.Repeatative_Codes;
 
 import Locators.pom.Bidding_Management_Locaters;
+import Locators.pom.Login_locaters;
 import Locators.pom.Property_locaters;
 import Locators.pom.Refund_Module_Locators;
 
@@ -214,6 +215,7 @@ public class Refund_Management extends Property_management {
     		Refund_Module_Locators p = new Refund_Module_Locators(d);
     		JavascriptExecutor js = (JavascriptExecutor)d;
     		Repeatative_Codes w = new Repeatative_Codes(d);
+    		Login_locaters  l = new Login_locaters(d);
     		
     		Refund_tab_Accessor(1);
     		List <WebElement> payments = p.due_payments();
@@ -234,7 +236,15 @@ public class Refund_Management extends Property_management {
     				 js.executeScript("arguments[0].click();", box);			 
     			 break;}}    		 
     		 
-               Thread.sleep(2000);
+               Thread.sleep(800);
+               w.movetoElements(p.Intiate_refund_button());
+               p.Intiate_refund_button().click();
+               Thread.sleep(800);
+               p.yes_button().click();
+               Thread.sleep(800);
+               l.success_Toast();
+               System.out.println(l.success_Toast().getText());
+               System.out.println();
     	}
     	
     	

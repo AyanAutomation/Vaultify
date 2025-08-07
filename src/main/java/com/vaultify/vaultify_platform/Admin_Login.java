@@ -26,7 +26,7 @@ public class Admin_Login extends Base{
 	public void login() throws IOException, InterruptedException, AWTException{
 		
     	dd = new Data_File_Reader();
-		p = new Login_locaters(d);p = new Login_locaters(d);
+		p = new Login_locaters(d);
 	    Robot r = new Robot();
 		
 		try {p.Login_confirmed();}

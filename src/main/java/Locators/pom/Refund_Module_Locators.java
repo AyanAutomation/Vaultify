@@ -47,11 +47,11 @@ public class Refund_Module_Locators extends Repeatative_Codes{
 	@FindBy(xpath="//tbody//label//input[@type='checkbox']")
 	private List <WebElement>  checkboxes;    
 	@FindBy(xpath="//input[@type='search']")
-	private WebElement  landed_in_service_tab; /*
-	@FindBy(xpath="")
-	private WebElement  ; 
-	@FindBy(xpath="")
-	private WebElement  ; 
+	private WebElement  landed_in_service_tab; 
+	@FindBy(xpath="//div[@class='mb-4 ml-6']//button[text()='INITIATE REFUND']")
+	private WebElement  Intiate_refund_button;
+	@FindBy(xpath="//button[text()='Yes']")
+	private WebElement yes_button;   /*
 	@FindBy(xpath="")
 	private WebElement  ; 
 	@FindBy(xpath="")
@@ -122,13 +122,13 @@ public class Refund_Module_Locators extends Repeatative_Codes{
 		return checkboxes;} 
 		public WebElement landed_in_service_tab(){
 		WebElement_wait(landed_in_service_tab);
-		return landed_in_service_tab;} /*
-		public WebElement (){
-		WebElement_wait();
-		return ;}
-		public WebElement (){
-		WebElement_wait();
-		return ;}
+		return landed_in_service_tab;}
+		public WebElement Intiate_refund_button(){
+		WebElement_wait(Intiate_refund_button);
+		return Intiate_refund_button;}  
+		public WebElement yes_button(){
+		WebElement_wait(yes_button);
+		return yes_button;} /*
 		public WebElement (){
 		WebElement_wait();
 		return ;}
