@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -74,14 +75,8 @@ public class Admin_Login extends Base{
 		fluentWait.until(d->{WebElement element = p.OTP_page_Title();
 	    return (element != null && element.isDisplayed()) ? element : null;});
 		w.until(ExpectedConditions.visibilityOfAllElements(p.inputs));
-		List<String> otpValues = new ArrayList<>();
-		otpValues.add("1");
-		otpValues.add("4");
-		otpValues.add("3");
-		otpValues.add("1");
-		otpValues.add("2");
-		otpValues.add("1");
-
+		List<String> otpValues = new ArrayList<>(Arrays.asList("1","4","3","1","2","1"));
+        
 		for(int i=0 ; i<p.inputs.size();i++){
 			
 			System.out.println(otpValues.get(i));

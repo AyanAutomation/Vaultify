@@ -396,19 +396,10 @@ public class Property_management extends Admin_Modules_Access_and_check{
          Thread.sleep(800);
          p.property_name_text();
          user_property_names.put("property name", p.property_name_text().getText());
-         return user_property_names;
-        	
-        }
+         return user_property_names;}
         
         
-        
-        
-        
-        
-        
-        
-        
-        
+
         @Test 
         public void propertyList_filtercheck()throws InterruptedException, IOException, AWTException{
     	  
@@ -439,12 +430,10 @@ public class Property_management extends Admin_Modules_Access_and_check{
     	if(settr.contains("Not Marked")){
     		
     		System.out.println(" testcase failed filter not working selected hidden gems showing non hidden gems");
-    		System.out.println();}
-    	}}catch(Exception keo){
-    		
+    		System.out.println();}}}
+    	catch(Exception keo){
     		System.out.println(" testcase failed filter not working selected hidden gems showing not hidden gems");
-    		System.out.println();
-    		}}}
+    		System.out.println();}}}
 
 
 
