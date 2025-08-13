@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.IntStream;
 
@@ -28,9 +29,10 @@ public class Bidding_management extends Property_management{
 	List<String> propertynamesin; 
 	List<String> statuses =  new ArrayList<String>();
 	TreeMap<String,String> trmap = new TreeMap<String,String>();
+	TreeMap<String,WebElement> PropName_and_viewButton = new TreeMap<String,WebElement>();
 	int v;
 	int g;
-	
+	String Bidstatus_value;
 	
 	@Test
 	public void privateBid_console_search()throws InterruptedException, IOException, AWTException{
@@ -52,8 +54,8 @@ public class Bidding_management extends Property_management{
 	}
 
 	
-	@Test
-	public void bidstatus_checker() throws InterruptedException, IOException, AWTException{
+	
+	public String bidstatus_checker() throws InterruptedException, IOException, AWTException{
 		
 	
 	Bidding_Management_Locaters p = new Bidding_Management_Locaters(d);	
@@ -65,13 +67,28 @@ public class Bidding_management extends Property_management{
 	p.property_names_inbidlist();
 	Thread.sleep(800);
 	
-	
+	List <WebElement> viewButtons = p.View_buttons();
 	for(WebElement each_propertyName:p.property_names_inbidlist()){
 		trmap.put(statuses.get(v) , each_propertyName.getText());
+		PropName_and_viewButton.put(each_propertyName.getText(), viewButtons.get(v));
 	  System.out.println(statuses.get(v) +"   "+ each_propertyName.getText());
 	  System.out.println();
-	  v++;
-	}}
+	  v++;}
+	
+	if(trmap.containsKey("started")){
+		
+		return trmap.get("started");
+		}
+	else{
+		
+		return Bidstatus_value ="No active Bidding present";}	
+		
+	
+	
+	
+	
+	
+	}
 	
 	@Test
 	public void bid_filter_checker() throws InterruptedException, IOException, AWTException{
@@ -105,6 +122,21 @@ public class Bidding_management extends Property_management{
 	    for(WebElement each_propertyName:p.property_names_inbidlist()){
 		  System.out.println(each_propertyName.getText() +"   "+ allbidstats.get(g));
 		  System.out.println();
-		g++;}}}
+		g++;}}
+	
+
+       public void Active_bid_Details_Accessor() throws InterruptedException, IOException, AWTException{
+    	   
+    	   Bidding_Management_Locaters p = new Bidding_Management_Locaters(d);	  
+    	 String Active_bidding_property= bidstatus_checker();
+    	   
+    	 PropName_and_viewButton.get(Active_bidding_property).click();
+    	 p.Inside_bid_details();
+    	   
+    	   
+       }
+
+
+}
 	
 

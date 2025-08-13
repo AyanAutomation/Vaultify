@@ -23,11 +23,11 @@ public class Bidding_Management_Locaters extends Repeatative_Codes{
 	@FindBy(xpath="//*[text()='Show Results']")
 	private WebElement  filter_result_submit_Button; 
 	@FindBy(xpath="//td//div[@class='flex items-center']")
-	private List <WebElement> statses; /*
-	@FindBy(xpath="")
-	private WebElement  ;
-	@FindBy(xpath="")
-	private WebElement  ;
+	private List <WebElement> statses; 
+	@FindBy(xpath="//td//button")
+	private List <WebElement> View_buttons;
+	@FindBy(xpath="(//*[text()='Bid Details'])[2]")
+	private WebElement Inside_bid_details;  /*
 	@FindBy(xpath="")
 	private WebElement  ;
 	@FindBy(xpath="")
@@ -69,13 +69,13 @@ public class Bidding_Management_Locaters extends Repeatative_Codes{
 	return filter_result_submit_Button;} 
 	public List <WebElement> statses(){
 	WebElements_waits(statses);
-	return statses;} /*
-	public WebElement (){
-		WebElement_wait();
-	return ;}
-	public WebElement (){
-	wait_for_theElement();
-	return ;}
+	return statses;} 
+	public List <WebElement> View_buttons(){
+	WebElements_waits(View_buttons);
+	return View_buttons;} 
+	public WebElement Inside_bid_details(){
+	WebElement_wait(Inside_bid_details);
+	return Inside_bid_details;} /*
 	public WebElement (){
 	wait_for_theElement();	
 	return ;}
