@@ -190,7 +190,7 @@ public void Property_Soceity_Management(int k) throws InterruptedException, IOEx
         
         login();
     	w.until(ExpectedConditions.visibilityOfAllElements(p.Menu_modules));	
-		p.Menu_modules.get(v+6).click();
+		p.Menu_modules.get(v+5).click();
 		Thread.sleep(750);
 		w.until(ExpectedConditions.visibilityOf(p.page_headeings()));
 		StringBuffer b = new StringBuffer(" heading is ");
