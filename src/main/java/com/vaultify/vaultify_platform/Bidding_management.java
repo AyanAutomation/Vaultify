@@ -124,7 +124,7 @@ public class Bidding_management extends Property_management{
 		  System.out.println();
 		g++;}}
 	
-
+       @Test
        public void Active_bid_Details_Accessor() throws InterruptedException, IOException, AWTException{
     	   
     	   Bidding_Management_Locaters p = new Bidding_Management_Locaters(d);	  
