@@ -14,6 +14,7 @@ import Locators.pom.Incentives_locaters;
 public class Incentives extends Admin_Modules_Access_and_check{
 	
 	
+	
 	@Test(dataProvider="Incentive_amounts")
 	public void Incetive_add_form(TreeMap<String, Object> data) throws InterruptedException, IOException, AWTException{
 		
@@ -32,8 +33,7 @@ public class Incentives extends Admin_Modules_Access_and_check{
 			if(pair1.getText().equalsIgnoreCase((String) data.get("Enter User Type"))){
 				
 				pair1.click();
-				break;
-			}}
+				break;}}
 		p.Form_dropdown_buttons().get(1).click();
 		Thread.sleep(800);
 		List<WebElement> RoleTypes = p.Dropdown_Options();
@@ -42,8 +42,7 @@ public class Incentives extends Admin_Modules_Access_and_check{
 			if(pair2.getText().equalsIgnoreCase((String) data.get("Enter Role"))){
 				
 				pair2.click();
-				break;
-			}}
+				break;}}
 		p.Form_dropdown_buttons().get(2).click();
 		Thread.sleep(800);
 		List<WebElement> IncentiveTypes = p.Dropdown_Options();
@@ -52,8 +51,7 @@ public class Incentives extends Admin_Modules_Access_and_check{
 			if(pair3.getText().equalsIgnoreCase((String) data.get("Enter Incentive Type"))){
 				
 				pair3.click();
-				break;
-			}}}
+				break;}}}
 	
 	@DataProvider
 	public Object[][] Incentive_amounts(){
@@ -66,7 +64,9 @@ public class Incentives extends Admin_Modules_Access_and_check{
         incentive_value_pair_1.put("Enter User Type", "NRI");
         incentive_value_pair_1.put("Enter Incentive Type", "Property Incentive");
         incentive_value_pair_1.put("Enter Role", "Bidding Manager");
-
+       
+        
+        
         TreeMap<String, Object> incentive_value_pair_2 = new TreeMap<>();
         incentive_value_pair_2.put("Incentive Amount", 3000);
         incentive_value_pair_2.put("Property Amount", 10000000);   // 1 cr
@@ -226,5 +226,5 @@ public class Incentives extends Admin_Modules_Access_and_check{
 		
 	}
 	
-
+	
 }
