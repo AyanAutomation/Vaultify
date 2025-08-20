@@ -13,7 +13,7 @@ import com.aventstack.extentreports.ExtentReports;
 
 public class Listeners extends Extented_Reports implements ITestListener{
   
-	ExtentTest test_Result;
+	
 	ExtentReports ext =  getReport();
 	
 	
@@ -21,13 +21,13 @@ public class Listeners extends Extented_Reports implements ITestListener{
     public void onTestStart(ITestResult result) {
        System.out.println("Test Started: " + result.getName());
       String Methodname = result.getMethod().getMethodName();
-      test_Result =  ext.createTest(Methodname);
+      ext.createTest(Methodname);
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         System.out.println("Test Passed: " + result.getName());
-        test_Result =  ext.createTest(result.getMethod().getMethodName());
+        ext.createTest(result.getMethod().getMethodName());
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Listeners extends Extented_Reports implements ITestListener{
        
     	String Methodname = result.getMethod().getMethodName();
         String pathString = null;
-        test_Result.fail(result.getThrowable());
+        ext.createTest(Methodname).fail(result.getThrowable());
         
         try {
 			d = (WebDriver)result.getTestClass().getRealClass().getField("d").get(result.getInstance());
@@ -49,7 +49,7 @@ public class Listeners extends Extented_Reports implements ITestListener{
     			// TODO Auto-generated catch block
     			e.printStackTrace();
     		}
-        test_Result.addScreenCaptureFromPath(pathString, Methodname);
+        ext.createTest(Methodname).addScreenCaptureFromPath(pathString, Methodname);
         
     }
 
